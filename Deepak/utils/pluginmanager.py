@@ -13,24 +13,24 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _format, _legendtools, _legendutils, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("LegendDeepak")
 
 
 def load_module(shortname, plugin_path=None):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        path = Path(f"userbot/plugins/{shortname}.py")
+        path = Path(f"Deepak/plugins/{shortname}.py")
         checkplugins(path)
-        name = "userbot.plugins.{}".format(shortname)
+        name = "Deepak.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info("Successfully imported " + shortname)
     else:
         if plugin_path is None:
-            path = Path(f"userbot/plugins/{shortname}.py")
-            name = f"userbot.plugins.{shortname}"
+            path = Path(f"Deepak/plugins/{shortname}.py")
+            name = f"Deepak.plugins.{shortname}"
         else:
             path = Path((f"{plugin_path}/{shortname}.py"))
             name = f"{plugin_path}/{shortname}".replace("/", ".")
@@ -57,7 +57,7 @@ def load_module(shortname, plugin_path=None):
         mod.borg = legend
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["userbot.plugins." + shortname] = mod
+        sys.modules["Deepak.plugins." + shortname] = mod
         LOGS.info("LegendBot " + shortname)
 
 
@@ -83,7 +83,7 @@ def remove_plugin(shortname):
     except BaseException:
         pass
     try:
-        name = f"userbot.plugins.{shortname}"
+        name = f"Deepak.plugins.{shortname}"
         for i in reversed(range(len(legend._event_builders))):
             ev, cb = legend._event_builders[i]
             if cb.__module__ == name:
