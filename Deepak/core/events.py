@@ -97,7 +97,7 @@ async def safe_check_text(msg):  # sourcery no-metrics
     phone = str((await legend.get_entity(legend.uid)).phone)
     return bool(
         (
-            (Config.LEGEND_STRING in msg)
+            (Config.DEEPAK_STRING in msg)
             or (phone[-10:] in msg)
             or (Config.API_HASH in msg)
             or (Config.BOT_TOKEN in msg)
