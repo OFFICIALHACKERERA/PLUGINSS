@@ -49,7 +49,7 @@ async def startup_process():
         await killer()
         print("----------------")
         print("Starting Bot Mode!")
-        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
+        print("❤️‍🔥 LegendBot Has Been Deployed Successfully 💝")
         print("OWNER - @LegendBoy_XD")
         print("Group - @LegendBot_XD")
         print("----------------")
