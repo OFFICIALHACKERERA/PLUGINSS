@@ -1,6 +1,6 @@
 from telethon import functions
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core import CMD_INFO, GRP_INFO, PLG_INFO
