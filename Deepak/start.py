@@ -8,7 +8,7 @@ from telethon import Button, events
 api_id = os.environ.get("APP_ID")
 api_hash = os.environ.get("API_HASH")
 
-from userbot import *
+from Deepak import *
 
 from . import *
 from .helpers.hack import *
