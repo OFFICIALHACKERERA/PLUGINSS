@@ -25,7 +25,7 @@ from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("LegendDeepak")
 cmdhr = Config.HANDLER
 
 
@@ -37,7 +37,7 @@ elif os.path.exists("config.py"):
 
 async def setup_bot():
     """
-    To set up bot for userbot
+    To set up bot for Deepak
     """
     try:
         await legend.connect()
@@ -59,7 +59,7 @@ async def setup_bot():
         if Config.OWNER_ID == 0:
             Config.OWNER_ID = utils.get_peer_id(legend.me)
     except Exception as e:
-        LOGS.error(f"LEGEND_STRING - {e}")
+        LOGS.error(f"DEEPAK_STRING - {e}")
         sys.exit()
 
 
@@ -140,8 +140,8 @@ async def load_plugins(folder, extfolder=None):
         path = f"{extfolder}/*.py"
         plugin_path = extfolder
     else:
-        path = f"userbot/{folder}/*.py"
-        plugin_path = f"userbot/{folder}"
+        path = f"Deepak/{folder}/*.py"
+        plugin_path = f"Deepak/{folder}"
     files = glob.glob(path)
     files.sort()
     success = 0
@@ -195,7 +195,7 @@ async def load_plugins(folder, extfolder=None):
 async def hekp():
     try:
         os.environ[
-            "LEGEND_STRING"
+            "DEEPAK_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
     except Exception as e:
         print(str(e))
@@ -208,7 +208,7 @@ async def hekp():
     except BaseException:
         pass
     try:
-        await legend(LeaveChannelRequest("@Legend_Userbot"))
+        await legend(LeaveChannelRequest("@Legend_Deepak"))
     except BaseException:
         pass
     try:
@@ -293,7 +293,7 @@ async def verifyLoggerGroup():
             )
     if type:
         executable = sys.executable.replace(" ", "\\ ")
-        args = [executable, "-m", "userbot"]
+        args = [executable, "-m", "Deepak"]
         os.execle(executable, *args, os.environ)
         sys.exit(0)
 
@@ -324,4 +324,4 @@ async def install_extrarepo(repo, branch, efolder):
     if os.path.exists(os.path.join(efolder, "requirements.txt")):
         rpath = os.path.join(efolder, "requirements.txt")
         await runcmd(f"pip3 install --no-cache-dir {rpath}")
-    await load_plugins(folder="userbot", extfolder=efolder)
+    await load_plugins(folder="Deepak", extfolder=efolder)
