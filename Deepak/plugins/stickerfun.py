@@ -8,7 +8,7 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers.functions import deEmojify, hide_inlinebot, soft_deEmojify, waifutxt
@@ -158,7 +158,7 @@ async def sticklet(event):
             sticktext = reply_message.message
         else:
             return await eor(event, "need something, hmm")
-    # delete the userbot command,
+    # delete the Deepak command,
     # i don't know why this is required
     await event.delete()
     sticktext = deEmojify(sticktext)
@@ -179,7 +179,7 @@ async def sticklet(event):
         ((512 - width) / 2, (512 - height) / 2), sticktext, font=font, fill=(R, G, B)
     )
     image_stream = io.BytesIO()
-    image_stream.name = "LegendUserBot.webp"
+    image_stream.name = "LegendDeepak.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
     # finally, reply the sticker
@@ -226,7 +226,7 @@ async def honk(event):
     info={
         "header": "Make a cool tweet of your account",
         "usage": "{tr}twt <text/reply to msg>",
-        "examples": "{tr}twt Legenduserbot",
+        "examples": "{tr}twt LegendDeepak",
     },
 )
 async def twt(event):
@@ -287,7 +287,7 @@ async def glax(event):
     info={
         "header": "Search in google animation",
         "usage": "{tr}googl <text/reply to msg>",
-        "examples": "{tr}googl Legenduserbot",
+        "examples": "{tr}googl LegendDeepak",
     },
 )
 async def twt(event):

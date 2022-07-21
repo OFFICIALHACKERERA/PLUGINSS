@@ -1,10 +1,10 @@
-# speech to text module for LegendUserBot by uniborg (@spechide)
+# speech to text module for LegendDeepak by uniborg (@spechide)
 import os
 from datetime import datetime
 
 import requests
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor

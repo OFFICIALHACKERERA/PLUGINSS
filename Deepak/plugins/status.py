@@ -3,7 +3,7 @@ import urllib
 
 from telethon.tl import functions
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..sql_helper.globals import addgvar, gvarstatus

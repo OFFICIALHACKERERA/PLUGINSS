@@ -1,4 +1,4 @@
-from userbot import legend
+from Deepak import legend
 
 from . import mention
 

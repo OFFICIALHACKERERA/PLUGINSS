@@ -1,7 +1,7 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 # Licensed under the Raphielscape Public License, Version 1.b (the "License");
 # you may not use this file except in compliance with the License.
-# LegendUserBot module for having some fun with people.
+# LegendDeepak module for having some fun with people.
 import asyncio
 import random
 import re
@@ -11,7 +11,7 @@ from cowpy import cow
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins, MessageEntityMentionName
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers import swtmemes
@@ -111,9 +111,9 @@ async def get_user(event):
             "{tr}<type>say <text>",
         ],
         "examples": [
-            "{tr}squirrelsay Legenduserbot",
-            "{tr}milksay LegendUserBot",
-            "{tr}ghostbustersghostbusterssay Legenduserbot",
+            "{tr}squirrelsay LegendDeepak",
+            "{tr}milksay LegendDeepak",
+            "{tr}ghostbustersghostbusterssay LegendDeepak",
         ],
     },
 )

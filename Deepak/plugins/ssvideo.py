@@ -90,3 +90,8 @@ async def ssvideo(event):
         await event.edit(f"{e}")
 
     os.system("rm -rf *.png *.mp4")
+
+
+
+
+#official Hacker 

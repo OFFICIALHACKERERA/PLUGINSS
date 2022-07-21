@@ -1,6 +1,6 @@
 import asyncio
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 
@@ -110,7 +110,7 @@ async def typewriter(typew):
     info={
         "header": "repeats the given text with given no of times.",
         "usage": "{tr}repeat <count> <text>",
-        "examples": "{tr}repeat 10 LegendUserBot",
+        "examples": "{tr}repeat 10 LegendDeepak",
     },
 )
 async def _(event):

@@ -10,7 +10,7 @@ import urllib
 
 import requests
 
-from userbot import legend
+from Deepak import legend
 
 from ..helpers.functions import age_verification
 from . import eod, eor, reply_id, useless

@@ -14,7 +14,7 @@ from telethon.errors.rpcerrorlist import FloodWaitError
 from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.logger import logging

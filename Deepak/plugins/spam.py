@@ -6,7 +6,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.tools import media_type
@@ -269,7 +269,7 @@ async def tiny_pic_spam(e):
         "header": "Spam the text letter by letter",
         "description": "Spam the chat with every letter in given text as new message.",
         "usage": "{tr}cspam <text>",
-        "examples": "{tr}cspam Legenduserbot",
+        "examples": "{tr}cspam LegendDeepak",
     },
 )
 async def tmeme(event):
@@ -307,7 +307,7 @@ async def tmeme(event):
         "header": "Spam the text word by word.",
         "description": "Spams the chat with every word in given text as new message.",
         "usage": "{tr}wspam <text>",
-        "examples": "{tr}wspam I am using LegendUserBot",
+        "examples": "{tr}wspam I am using LegendDeepak",
     },
 )
 async def tmeme(event):

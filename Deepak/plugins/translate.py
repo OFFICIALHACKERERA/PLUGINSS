@@ -1,6 +1,6 @@
 from googletrans import LANGUAGES, Translator
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.functions.functions import getTranslate
@@ -21,7 +21,7 @@ menu_category = "utils"
             "{tr}tl <language code> ; <text>",
             "{tr}tl <language codes>",
         ],
-        "examples": "{tr}tl te ; Legenduserbot is one of the popular bot",
+        "examples": "{tr}tl te ; LegendDeepak is one of the popular bot",
     },
 )
 async def _(event):

@@ -4,7 +4,7 @@ from asyncio import sleep
 import requests
 from bs4 import BeautifulSoup
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor

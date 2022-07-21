@@ -5,7 +5,7 @@ import os
 
 from telegraph import exceptions, upload_file
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers.utils import _legendtools, reply_id

@@ -3,7 +3,7 @@ import os
 import time
 from datetime import datetime
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor

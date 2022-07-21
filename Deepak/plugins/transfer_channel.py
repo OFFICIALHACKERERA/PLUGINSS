@@ -5,7 +5,7 @@ Available Commands:
 import telethon.password as pwd_mod
 from telethon.tl import functions
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 

@@ -16,7 +16,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers import convert_tosticker, media_type, process
@@ -48,7 +48,7 @@ def get_warp_length(width):
             "-s": "To output file as sticker",
         },
         "usage": "{tr}qpic <type> <input/reply to text msg>",
-        "examples": ["{tr}qpic LegendUserBot.", "{tr}qpic -b LegendUserBot."],
+        "examples": ["{tr}qpic LegendDeepak.", "{tr}qpic -b LegendDeepak."],
     },
 )
 async def q_pic(event):  # sourcery no-metrics
@@ -133,10 +133,10 @@ async def q_pic(event):  # sourcery no-metrics
         )
     output = io.BytesIO()
     if sticker:
-        output.name = "LegendUserBot.Webp"
+        output.name = "LegendDeepak.Webp"
         img.save(output, "webp")
     else:
-        output.name = "LegendUserBot.png"
+        output.name = "LegendDeepak.png"
         img.save(output, "PNG")
     output.seek(0)
     await event.client.send_file(event.chat_id, output, reply_to=reply_to)

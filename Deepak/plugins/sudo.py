@@ -2,8 +2,8 @@ from datetime import datetime
 
 from telethon.utils import get_display_name
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..Config import Config
 from ..core import CMD_INFO, PLG_INFO
@@ -38,13 +38,13 @@ def get_key(val):
     pattern="sudo (on|off)$",
     command=("sudo", menu_category),
     info={
-        "header": "To enable or disable sudo of your Legenduserbot.",
+        "header": "To enable or disable sudo of your LegendDeepak.",
         "description": "Initially all sudo commands are disabled, you need to enable them by addscmd\n Check `{tr}help -c addscmd`",
         "usage": "{tr}sudo <on/off>",
     },
 )
 async def chat_blacklist(event):
-    "To enable or disable sudo of your LegendUserBot."
+    "To enable or disable sudo of your LegendDeepak."
     input_str = event.pattern_match.group(1)
     sudousers = _sudousers_list()
     if input_str == "on":
@@ -197,8 +197,8 @@ async def _(event):
     except AttributeError:
         sudousers = {}
     if len(sudochats) == 0:
-        return await eod(event, "__There are no sudo users for your Legenduserbot.__")
-    result = "**The list of sudo users for your LegendUserbot are :**\n\n"
+        return await eod(event, "__There are no sudo users for your LegendDeepak.__")
+    result = "**The list of sudo users for your LegendDeepak are :**\n\n"
     for chat in sudochats:
         result += f"☞ **Name:** {mentionuser(sudousers[str(chat)]['chat_name'],sudousers[str(chat)]['chat_id'])}\n"
         result += f"**Chat Id :** `{chat}`\n"
@@ -273,7 +273,7 @@ async def _(event):  # sourcery no-metrics
         for plugin in input_str:
             if plugin not in PLG_INFO:
                 errors += (
-                    f"`{plugin}` __There is no such plugin in your LegendUserBot__.\n"
+                    f"`{plugin}` __There is no such plugin in your LegendDeepak__.\n"
                 )
             else:
                 loadcmds += PLG_INFO[plugin]
@@ -283,7 +283,7 @@ async def _(event):  # sourcery no-metrics
         for cmd in input_str:
             if cmd not in CMD_INFO:
                 errors += (
-                    f"`{cmd}` __There is no such command in your LegendUserBot__.\n"
+                    f"`{cmd}` __There is no such command in your LegendDeepak__.\n"
                 )
             elif cmd in sudocmds:
                 errors += f"`{cmd}` __Is already enabled for sudo users__.\n"
@@ -292,7 +292,7 @@ async def _(event):  # sourcery no-metrics
     for cmd in loadcmds:
         sqllist.add_to_list("sudo_enabled_cmds", cmd)
     result = (
-        f"__Successfully enabled __ `{len(loadcmds)}` __ for LegendUserBot sudo.__\n"
+        f"__Successfully enabled __ `{len(loadcmds)}` __ for LegendDeepak sudo.__\n"
     )
     output = (
         result + "**Bot is reloading to apply the changes. Please wait for a minute**\n"
@@ -362,7 +362,7 @@ async def _(event):  # sourcery no-metrics
         for plugin in input_str:
             if plugin not in PLG_INFO:
                 errors += (
-                    f"`{plugin}` __There is no such plugin in your LegendUserBot__.\n"
+                    f"`{plugin}` __There is no such plugin in your LegendDeepak__.\n"
                 )
             else:
                 typecmds += PLG_INFO[plugin]
@@ -372,7 +372,7 @@ async def _(event):  # sourcery no-metrics
         for cmd in input_str:
             if cmd not in CMD_INFO:
                 errors += (
-                    f"`{cmd}` __There is no such command in your LegendUserBot__.\n"
+                    f"`{cmd}` __There is no such command in your LegendDeepak__.\n"
                 )
             elif cmd not in sudocmds:
                 errors += f"`{cmd}` __Is already disabled for sudo users__.\n"
@@ -383,7 +383,7 @@ async def _(event):  # sourcery no-metrics
         if sqllist.is_in_list("sudo_enabled_cmds", cmd):
             count += 1
             sqllist.rm_from_list("sudo_enabled_cmds", cmd)
-    result = f"__Successfully disabled __ `{count}` __ for LegendUserBot sudo.__\n"
+    result = f"__Successfully disabled __ `{count}` __ for LegendDeepak sudo.__\n"
     output = (
         result + "**Bot is reloading to apply the changes. Please wait for a minute**\n"
     )

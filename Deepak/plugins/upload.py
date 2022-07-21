@@ -12,7 +12,7 @@ from hachoir.parser import createParser
 from telethon.tl import types
 from telethon.utils import get_attributes
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor

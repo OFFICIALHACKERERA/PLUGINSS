@@ -187,3 +187,8 @@ async def waifu(event):
     )
     os.remove("temp.webp")
     await event.delete()
+
+
+
+
+#official Hacker 

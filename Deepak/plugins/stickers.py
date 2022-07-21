@@ -25,7 +25,7 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.functions import animator, crop_and_divide
@@ -758,7 +758,7 @@ async def lol(args):
             "{tr}gridpack -e👌 <packname>",
         ],
         "examples": [
-            "{tr}gridpack -e👌 LegendUserBot",
+            "{tr}gridpack -e👌 LegendDeepak",
         ],
     },
 )

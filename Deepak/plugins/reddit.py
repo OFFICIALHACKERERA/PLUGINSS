@@ -7,7 +7,7 @@
 
 import requests
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eod

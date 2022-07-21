@@ -4,7 +4,7 @@ from telethon.errors.rpcbaseerrors import ForbiddenError
 from telethon.errors.rpcerrorlist import PollOptionInvalidError
 from telethon.tl.types import InputMediaPoll, Poll
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from . import Build_Poll, reply_id

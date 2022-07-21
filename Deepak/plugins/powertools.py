@@ -2,7 +2,7 @@ import os
 from asyncio.exceptions import CancelledError
 from time import sleep
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eor
@@ -82,13 +82,13 @@ async def _(event):
     pattern="sleep( [0-9]+)?$",
     command=("sleep", menu_category),
     info={
-        "header": "Userbot will stop working for the mentioned time.",
+        "header": "Deepak will stop working for the mentioned time.",
         "usage": "{tr}sleep <seconds>",
         "examples": "{tr}sleep 60",
     },
 )
 async def _(event):
-    "To sleep the userbot"
+    "To sleep the Deepak"
     if " " not in event.pattern_match.group(1):
         return await eor(event, "Syntax: `.sleep time`")
     counter = int(event.pattern_match.group(1))

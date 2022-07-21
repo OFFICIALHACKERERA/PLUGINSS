@@ -1,7 +1,7 @@
 import requests
 from validators.url import url
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 

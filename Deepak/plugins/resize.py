@@ -68,3 +68,9 @@ async def size(e):
     await e.reply(file=img)
     os.remove(img)
     await k.delete()
+
+
+
+
+
+#official Hacker 

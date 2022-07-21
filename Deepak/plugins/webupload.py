@@ -6,8 +6,8 @@ import subprocess
 
 import requests
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..Config import Config
 from ..core.managers import eor
@@ -16,7 +16,7 @@ menu_category = "misc"
 LOGS = logging.getLogger(__name__)
 
 # originally created by
-# https://github.com/Total-Noob-69/X-tra-Telegram/blob/master/userbot/plugins/webupload.py
+# https://github.com/Total-Noob-69/X-tra-Telegram/blob/master/Deepak/plugins/webupload.py
 
 
 link_regex = re.compile(

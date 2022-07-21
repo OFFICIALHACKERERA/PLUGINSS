@@ -1,8 +1,8 @@
 # ported from paperplaneExtended by avinashreddy3108 for media support
 from telethon import events
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..core.managers import eod, eor
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus

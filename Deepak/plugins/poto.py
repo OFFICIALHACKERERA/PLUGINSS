@@ -1,10 +1,10 @@
 """
-Thenks goes to Emily ( The creater of Poto cmd) from ftg userbot
+Thenks goes to Emily ( The creater of Poto cmd) from ftg Deepak
 """
 
 from PIL import Image, ImageFilter, UnidentifiedImageError
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 

@@ -4,7 +4,7 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 

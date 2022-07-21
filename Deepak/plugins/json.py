@@ -1,4 +1,4 @@
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers.utils import _format

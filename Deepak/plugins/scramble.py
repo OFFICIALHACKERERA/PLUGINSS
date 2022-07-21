@@ -34,3 +34,9 @@ def scramble_word(word):
     random.shuffle(middle_letters)
 
     return first_letter + "".join(middle_letters) + last_letter
+
+
+
+
+
+#official Hacker 

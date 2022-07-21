@@ -6,7 +6,7 @@ import requests
 from selenium import webdriver
 from validators.url import url
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eor

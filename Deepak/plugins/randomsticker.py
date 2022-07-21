@@ -6,7 +6,7 @@ from urllib import parse
 import requests
 from telethon import functions, types, utils
 
-from userbot import legend
+from Deepak import legend
 
 from ..helpers import reply_id
 
@@ -89,7 +89,7 @@ async def handler(event):
     await event.respond(file=random.choice(docs), reply_to=reply_to_id)
 
 
-# HeadPat Module for Userbot (http://headp.at)
+# HeadPat Module for Deepak (http://headp.at)
 # cmd:- .pat username or reply to msg
 # By:- git: jaskaranSM tg: @Zero_cool7870
 

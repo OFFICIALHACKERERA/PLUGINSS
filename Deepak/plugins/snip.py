@@ -1,6 +1,6 @@
 # ported from paperplaneExtended by avinashreddy3108 for media support
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import reply_id

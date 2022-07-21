@@ -10,7 +10,7 @@ import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import HEROKU_APP, UPSTREAM_REPO_URL, legend
+from Deepak import HEROKU_APP, UPSTREAM_REPO_URL, legend
 
 from ..Config import Config
 from ..core.logger import logging
@@ -146,11 +146,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     )
     if heroku_app is None:
         await event.edit(
-            f"{txt}\n" "`Invalid Heroku credentials for deploying userbot dyno.`"
+            f"{txt}\n" "`Invalid Heroku credentials for deploying Deepak dyno.`"
         )
         return repo.__del__()
     LEGEND = await event.edit(
-        "`Userbot dyno build in progress, please wait until the process finishes it usually takes 4 to 5 minutes .`"
+        "`Deepak dyno build in progress, please wait until the process finishes it usually takes 4 to 5 minutes .`"
     )
     try:
         ulist = get_collectionlist_items()
@@ -197,7 +197,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     pattern="update(| now)?$",
     command=("update", menu_category),
     info={
-        "header": "To update userbot.",
+        "header": "To update Deepak.",
         "description": "I recommend you to do update deploy atlest once a week.",
         "options": {
             "now": "Will update bot but requirements doesnt update.",
@@ -237,7 +237,7 @@ async def upstream(event):
     except InvalidGitRepositoryError as error:
         if conf is None:
             return await event.edit(
-                f"`Unfortunately, the directory {error} does not seem to be a git repository.\nBut we can fix that by force updating the userbot using .update now.`"
+                f"`Unfortunately, the directory {error} does not seem to be a git repository.\nBut we can fix that by force updating the Deepak using .update now.`"
             )
         repo = Repo.init()
         origin = repo.create_remote("upstream", off_repo)
@@ -269,7 +269,7 @@ async def upstream(event):
             parse_mode="HTML",
         )
         """await event.edit(
-            "\n`LegendUserBot is`  **up-to-date**  `with`  "
+            "\n`LegendDeepak is`  **up-to-date**  `with`  "
             f"**{UPSTREAM_REPO_BRANCH}**\n"
         )"""
         return repo.__del__()
@@ -281,10 +281,10 @@ async def upstream(event):
         )
     if force_update:
         await event.edit(
-            "`Force-Syncing to latest stable userbot code, please wait...`"
+            "`Force-Syncing to latest stable Deepak code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`Updating userbot, please wait....`")
+        await event.edit("`Updating Deepak, please wait....`")
         await update_legend(event, repo, ups_rem, ac_br)
     return
 
@@ -324,7 +324,7 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
-    await event.edit("`Deploying userbot, please wait....`")
+    await event.edit("`Deploying Deepak, please wait....`")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
@@ -352,4 +352,4 @@ async def variable(var):
         )
     heroku_var = app.config()
     await eor(var, "`Changing PRO to MULTI wait for 2-3 minutes.`")
-    heroku_var["UPSTREAM_REPO"] = "https://github.com/ITS-LEGENDBOT/LEGENDUSERBOT"
+    heroku_var["UPSTREAM_REPO"] = "https://github.com/ITS-LEGENDBOT/LEGENDDeepak"

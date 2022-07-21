@@ -51,9 +51,9 @@ async def note(e):
     else:
         return await eod(e, "Give me Text")
     k = await eor(e, "Processing")
-    img = Image.open("userbot/resources/extras/template.jpg")
+    img = Image.open("Deepak/resources/extras/template.jpg")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("userbot/resources/fonts/assfont.ttf", 30)
+    font = ImageFont.truetype("Deepak/resources/fonts/assfont.ttf", 30)
     x, y = 150, 140
     lines = text_set(text)
     line_height = font.getsize("hg")[1]

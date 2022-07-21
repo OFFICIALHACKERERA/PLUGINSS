@@ -170,7 +170,7 @@ async def download_audio(event):
                 url, download=False
             )
         except ExtractorError:
-            vid_data = {"title": url, "uploader": "Legenduserbot", "formats": []}
+            vid_data = {"title": url, "uploader": "LegendDeepak", "formats": []}
         startTime = time()
         retcode = await _mp3Dl(url=url, starttime=startTime, uid="320")
         if retcode != 0:
@@ -430,7 +430,7 @@ async def insta_dl(event):
                     error = checker.splitlines()[2]
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        f"**#V1_ERROR :-**\n\n__Currently we using @instasave_bot for v1, that need users to join this chat : {error}__\n\n__If you know any good bot which does'nt need join channel, inform us here: @catuserbot_support__",
+                        f"**#V1_ERROR :-**\n\n__Currently we using @instasave_bot for v1, that need users to join this chat : {error}__\n\n__If you know any good bot which does'nt need join channel, inform us here: @catDeepak_support__",
                     )
                 await legendevent.delete()
                 await event.client.send_file(event.chat_id, media)

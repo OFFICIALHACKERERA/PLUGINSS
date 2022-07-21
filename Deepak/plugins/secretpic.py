@@ -26,3 +26,8 @@ Pic captured By Lêɠêɳ̃dẞø†
   """,
     )
     await event.delete()
+
+
+
+
+#official Hacker 

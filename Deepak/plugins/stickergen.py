@@ -1,10 +1,10 @@
 # created by @Legend_K_Boy
-# LegendUserBot
+# LegendDeepak
 
 import os
 import urllib
 
-from userbot import legend
+from Deepak import legend
 
 from ..helpers.functions import (
     clippy,

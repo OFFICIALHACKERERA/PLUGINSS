@@ -1,6 +1,6 @@
 import random
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from . import swtmemes
@@ -138,7 +138,7 @@ async def proo(e):
     pattern="react ?([\s\S]*)",
     command=("react", menu_category),
     info={
-        "header": "Make your userbot react",
+        "header": "Make your Deepak react",
         "flags": [
             "happy",
             "think",
@@ -154,7 +154,7 @@ async def proo(e):
     },
 )
 async def _(e):
-    "Make your userbot react."
+    "Make your Deepak react."
     input_str = e.pattern_match.group(1)
     if input_str in "happy":
         emoticons = swtmemes.FACEREACTS[0]

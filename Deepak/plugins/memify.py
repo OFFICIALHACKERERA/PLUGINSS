@@ -1,5 +1,5 @@
 # Made by @LEGEND_K_BOY and @LEGEND_K_BOY
-# memify plugin for LegendUserBot
+# memify plugin for LegendDeepak
 import asyncio
 import base64
 import io
@@ -10,7 +10,7 @@ import string
 from PIL import Image, ImageFilter
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot import BOTLOG_CHATID, legend
+from Deepak import BOTLOG_CHATID, legend
 
 from ..core.managers import eod, eor
 from ..helpers import asciiart, media_type, swt_meeme, swt_meme
@@ -182,7 +182,7 @@ async def memes(event):
     meme_file = convert_toimage(output[1])
     meme = os.path.join("./temp", "legendmeme.jpg")
     if gvarstatus("CNG_FONTS") is None:
-        CNG_FONTS = "userbot/helpers/styles/impact.ttf"
+        CNG_FONTS = "Deepak/helpers/styles/impact.ttf"
     else:
         CNG_FONTS = gvarstatus("CNG_FONTS")
     if max(len(top), len(bottom)) < 21:
@@ -220,7 +220,7 @@ async def lang(event):
         await asyncio.sleep(1)
         await legendevent.edit(f"**Available Fonts names are here:-**\n\n{FONTS}")
     else:
-        arg = f"userbot/helpers/styles/{input_str}"
+        arg = f"Deepak/helpers/styles/{input_str}"
         addgvar("CNG_FONTS", arg)
         await eor(event, f"**Fonts for Memify changed to :-** `{input_str}`")
 

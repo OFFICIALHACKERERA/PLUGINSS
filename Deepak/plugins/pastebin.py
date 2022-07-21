@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.utils import get_extension
 from urlextract import URLExtract
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.events import MessageEdited
@@ -310,3 +310,8 @@ async def _(event):
         if result == "":
             result = "I can't make it as instant view"
         await legendevent.edit(result, link_preview=True)
+
+
+
+
+#official Hacker 

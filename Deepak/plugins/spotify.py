@@ -16,7 +16,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from validators.url import url
 
-from userbot.core.logger import logging
+from Deepak.core.logger import logging
 
 from ..core.managers import eod, eor
 from ..helpers.functions.functions import (
@@ -48,7 +48,7 @@ except AttributeError:
 
 
 USER_INITIAL_BIO = {}  # Saves Users Original Bio
-PATH = "userbot/cache/spotify_database.json"
+PATH = "Deepak/cache/spotify_database.json"
 
 # [---------------------------] Constants [------------------------------]
 KEY = "🎶"

@@ -3,7 +3,7 @@ import random
 
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.functions import age_verification

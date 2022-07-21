@@ -1,6 +1,6 @@
 """
 Created by @Legend_K_Boy
-#LegendUserBot
+#LegendDeepak
 """
 
 import asyncio
@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument, InputMessagesFilterPhotos
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.functions import clippy

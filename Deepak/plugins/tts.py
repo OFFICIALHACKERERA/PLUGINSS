@@ -9,7 +9,7 @@ from datetime import datetime
 
 from gtts import gTTS
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from . import deEmojify, reply_id

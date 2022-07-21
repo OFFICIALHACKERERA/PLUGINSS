@@ -1,4 +1,4 @@
-# Userbot module for purging unneeded messages(usually spam or ot).
+# Deepak module for purging unneeded messages(usually spam or ot).
 import re
 from asyncio import sleep
 
@@ -16,7 +16,7 @@ from telethon.tl.types import (
     InputMessagesFilterVoice,
 )
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import reply_id

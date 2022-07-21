@@ -1,6 +1,6 @@
 from asyncio import sleep
 
-from userbot import legend
+from Deepak import legend
 
 menu_category = "utils"
 

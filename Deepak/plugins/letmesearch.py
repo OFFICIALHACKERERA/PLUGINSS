@@ -1,6 +1,6 @@
 from asyncio import sleep
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 

@@ -4,7 +4,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eor

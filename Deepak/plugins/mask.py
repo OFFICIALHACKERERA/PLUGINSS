@@ -6,7 +6,7 @@ from telegraph import exceptions, upload_file
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eor

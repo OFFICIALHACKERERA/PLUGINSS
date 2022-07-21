@@ -1,7 +1,7 @@
 # inspired from uniborg Quotes plugin
 import random
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eod, eor

@@ -503,3 +503,9 @@ async def legend(event):
             f"<b><i>{count}. <a href = {link}>{n.replace('_',' ').title()}</a></b>\n"
         )
     await eor(event, string, parse_mode="html")
+
+
+
+
+
+#official Hacker 

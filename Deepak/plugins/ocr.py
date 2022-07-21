@@ -109,3 +109,7 @@ async def ocr(event):
 )
 async def ocr(event):
     "To read text in media & paste with translated."
+
+
+
+#official Hacker 

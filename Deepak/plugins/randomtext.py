@@ -2,7 +2,7 @@ import asyncio
 import random
 from asyncio import sleep
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from . import mention
@@ -12,7 +12,7 @@ menu_category = "extra"
 import asyncio
 import random
 
-from userbot import legend
+from Deepak import legend
 
 
 @legend.legend_cmd(

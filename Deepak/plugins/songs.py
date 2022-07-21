@@ -22,7 +22,7 @@ from yt_dlp.utils import (
     XAttrMetadataError,
 )
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.logger import logging

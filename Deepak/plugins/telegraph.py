@@ -1,4 +1,4 @@
-# telegraph utils for LegendUserBot
+# telegraph utils for LegendDeepak
 import os
 import random
 import string
@@ -10,7 +10,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.logger import logging

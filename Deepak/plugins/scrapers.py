@@ -5,7 +5,7 @@ from pySmartDL import SmartDL
 from wikipedia import summary
 from wikipedia.exceptions import DisambiguationError, PageError
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers.functions import get_cast, get_moviecollections, imdb, mov_titles

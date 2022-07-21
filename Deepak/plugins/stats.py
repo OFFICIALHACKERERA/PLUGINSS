@@ -5,7 +5,7 @@ from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import Channel, Chat, User
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 

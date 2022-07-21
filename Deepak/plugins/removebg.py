@@ -2,7 +2,7 @@ import os
 
 import requests
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor
