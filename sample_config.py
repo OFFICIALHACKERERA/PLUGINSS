@@ -17,7 +17,7 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH") or None
     # Datbase url heroku sets it automatically else get this from elephantsql
     DB_URI = os.environ.get("DATABASE_URL", None)
-    LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
+    DEEPAK_STRING = os.environ.get("DEEPAK_STRING", None)
     # Telegram BOT Token and bot username from @BotFather
     BOT_TOKEN = os.environ.get("BOT_TOKEN") or os.environ.get("BOT_TOKEN_BF_HER", None)
     BOT_USERNAME = None
