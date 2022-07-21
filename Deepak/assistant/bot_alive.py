@@ -1,6 +1,6 @@
 from telethon import Button
 
-from userbot import Config, legend, legendversion
+from Deepak import Config, legend, legendversion
 
 from ..core.logger import logging
 from ..helpers import reply_id
