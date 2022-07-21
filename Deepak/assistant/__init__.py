@@ -1,5 +1,5 @@
-from userbot import BOTLOG, BOTLOG_CHATID
-from userbot.core.session import legend, tgbot
+from Deepak import BOTLOG, BOTLOG_CHATID
+from Deepak.core.session import legend, tgbot
 
 from ..Config import Config
 from ..core.inlinebot import *
