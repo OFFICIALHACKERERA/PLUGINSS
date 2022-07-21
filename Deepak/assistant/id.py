@@ -1,6 +1,6 @@
 from telethon.utils import pack_bot_file_id
 
-from userbot import Config, legend
+from Deepak import Config, legend
 
 from ..core.logger import logging
 

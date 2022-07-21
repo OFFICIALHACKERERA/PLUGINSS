@@ -38,3 +38,7 @@ async def spam(e):
     else:
 
         await e.reply(usage, parse_mode=None, link_preview=None)
+
+
+
+#official Hacker 

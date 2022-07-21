@@ -4,7 +4,7 @@ from telethon import Button
 from telethon.errors import MessageNotModifiedError
 from telethon.events import CallbackQuery
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.logger import logging

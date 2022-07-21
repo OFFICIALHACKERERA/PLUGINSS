@@ -1,6 +1,6 @@
 from telethon.utils import get_extension
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..helpers.tools import media_type

@@ -1,6 +1,6 @@
 import asyncio
 
-from userbot import bot
+from Deepak import bot
 
 from ..helpers.utils import unsavegif
 from . import *

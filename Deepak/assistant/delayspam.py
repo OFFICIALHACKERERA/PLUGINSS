@@ -42,3 +42,8 @@ async def delayspam(e):
                     await asyncio.sleep(sleeptime)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
+
+
+
+
+#official Hacker 

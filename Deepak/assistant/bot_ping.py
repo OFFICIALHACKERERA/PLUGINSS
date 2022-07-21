@@ -2,7 +2,7 @@ from datetime import datetime
 
 from telethon import Button
 
-from userbot import Config, legend
+from Deepak import Config, legend
 
 from ..core.logger import logging
 from ..helpers import reply_id
