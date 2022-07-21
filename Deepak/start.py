@@ -75,7 +75,7 @@ async def killer():
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_file("@BotFather", "userbot/resources/pics/main.jpg")
+            await bot.send_file("@BotFather", "Deepak/resources/pics/main.jpg")
             await asyncio.sleep(2)
         except Exception as e:
             print(e)
@@ -610,7 +610,7 @@ async def users(event):
                 await event.respond("Something is wrong")
         except Exception as e:
             await event.respond(
-                "SEND THIS ERROR TO - @Legend_Userbot\n**LOGS**\n" + str(e)
+                "SEND THIS ERROR TO - @Legend_Deepak\n**LOGS**\n" + str(e)
             )
 
 

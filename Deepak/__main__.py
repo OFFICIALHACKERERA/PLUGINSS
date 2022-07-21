@@ -17,10 +17,10 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("LegendDeepak")
 
-print(userbot.__copyright__)
-print("Licensed under the terms of the " + userbot.__license__)
+print(Deepak.__copyright__)
+print("Licensed under the terms of the " + Deepak.__license__)
 
 cmdhr = Config.HANDLER
 
