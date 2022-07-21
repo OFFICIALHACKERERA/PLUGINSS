@@ -3,7 +3,7 @@ from datetime import datetime
 
 from telethon.tl import functions, types
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eod, eor
