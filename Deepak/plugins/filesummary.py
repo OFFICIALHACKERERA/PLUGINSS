@@ -1,9 +1,9 @@
-# file summary plugin for LegendUserBot  by @LEGEND_K_BOY
+# file summary plugin for LegendDeepak  by @LEGEND_K_BOY
 import time
 
 from prettytable import PrettyTable
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.progress import humanbytes

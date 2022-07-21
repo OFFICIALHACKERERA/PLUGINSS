@@ -8,7 +8,7 @@ from PIL import Image, ImageFilter, ImageOps
 from telegraph import upload_file
 from telethon.tl.types import MessageMediaPhoto
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers import media_type
@@ -49,10 +49,10 @@ async def imirror(event):  # sourcery no-metrics
     legendevent = await event.edit("__Reflecting the image....__")
     args = event.pattern_match.group(1)
     if args:
-        filename = "LegendUserBot.webp"
+        filename = "LegendDeepak.webp"
         f_format = "webp"
     else:
-        filename = "LegendUserBot.jpg"
+        filename = "LegendDeepak.jpg"
         f_format = "jpeg"
     try:
         imag = await _legendtools.media_to_pic(legendevent, reply, noedits=True)
@@ -210,7 +210,7 @@ async def irotate(event):
         return await eod(event, "**Error**\n" + str(e))
     await event.delete()
     img = io.BytesIO()
-    img.name = "LegendUserBot.png"
+    img.name = "LegendDeepak.png"
     image.save(img, "PNG")
     img.seek(0)
     await event.client.send_file(event.chat_id, img, reply_to=reply)
@@ -270,7 +270,7 @@ async def iresize(event):
         return await eod(legendevent, f"**Error:** __While resizing.\n{e}__")
     await event.delete()
     img = io.BytesIO()
-    img.name = "LegendUserBot.png"
+    img.name = "LegendDeepak.png"
     image.save(img, "PNG")
     img.seek(0)
     await event.client.send_file(event.chat_id, img, reply_to=reply)
@@ -317,7 +317,7 @@ async def square_cmd(event):
     await legendevent.delete()
 
 
-pathdc = "./userbot/"
+pathdc = "./Deepak/"
 if not os.path.isdir(pathdc):
     os.makedirs(pathdc)
 

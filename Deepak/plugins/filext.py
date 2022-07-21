@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 

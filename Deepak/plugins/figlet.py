@@ -75,3 +75,9 @@ async def figlet(event):
     else:
         result = pyfiglet.figlet_format(deEmojify(text))
     await eor(event, result, parse_mode=_format.parse_pre)
+
+
+
+
+
+#official Hacker 

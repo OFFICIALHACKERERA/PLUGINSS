@@ -322,3 +322,8 @@ async def hcosplay(event):
             await event.delete()
             xxxx = await event.client.send_file(event.chat_id, response.message)
             await unsave_gif(event, xxxx)
+
+
+
+
+#official Hacker 

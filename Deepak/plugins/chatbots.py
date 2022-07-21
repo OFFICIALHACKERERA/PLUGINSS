@@ -5,7 +5,7 @@ import json
 import requests
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..sql_helper.schatbot_sql import (

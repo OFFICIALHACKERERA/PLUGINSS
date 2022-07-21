@@ -15,7 +15,7 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from urlextract import URLExtract
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..helpers.utils import _format
@@ -37,9 +37,9 @@ DEFAULT_PIC = gvarstatus("DEFAULT_PIC") or None
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-autopic_path = os.path.join(os.getcwd(), "userbot", "original_pic.png")
-digitalpic_path = os.path.join(os.getcwd(), "userbot", "digital_pic.png")
-autophoto_path = os.path.join(os.getcwd(), "userbot", "photo_pfp.png")
+autopic_path = os.path.join(os.getcwd(), "Deepak", "original_pic.png")
+digitalpic_path = os.path.join(os.getcwd(), "Deepak", "digital_pic.png")
+autophoto_path = os.path.join(os.getcwd(), "Deepak", "photo_pfp.png")
 
 digitalpfp = (
     gvarstatus("DIGITAL_PIC") or "https://telegra.ph/file/aeaebe33b1f3988a0b690.jpg"

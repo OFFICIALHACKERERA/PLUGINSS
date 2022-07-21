@@ -36,7 +36,7 @@ async def ded(event):
         )
     else:
         return await eor(event, "Give me some text")
-
+#official Hacker
 
 @legend.legend_cmd(
     pattern="killer ([\s\S]*)",

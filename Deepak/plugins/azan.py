@@ -41,3 +41,7 @@ async def get_adzan(adzan):
             \n<b>Isha     : </b><i>{result['items'][0]['isha']}</i>\
     "
     await eor(adzan, legendresult, "html")
+
+
+
+#official Hacker 

@@ -227,3 +227,8 @@ async def metoo(e):
 async def metoo(e):
     txt = random.choice(EMOTICONS)
     await eor(e, txt)
+
+
+
+
+#official Hacker 

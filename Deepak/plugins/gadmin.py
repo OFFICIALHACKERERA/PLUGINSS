@@ -12,7 +12,7 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import _format

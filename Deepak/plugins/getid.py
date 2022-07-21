@@ -1,7 +1,7 @@
 from telethon.utils import pack_bot_file_id
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..core.managers import eod, eor
 

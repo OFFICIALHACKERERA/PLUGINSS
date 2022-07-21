@@ -6,7 +6,7 @@ import heroku3
 import requests
 import urllib3
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -125,7 +125,7 @@ async def variable(var):  # sourcery no-metrics
     pattern="usage$",
     command=("usage", menu_category),
     info={
-        "header": "To Check dyno usage of userbot and also to know how much left.",
+        "header": "To Check dyno usage of Deepak and also to know how much left.",
         "usage": "{tr}usage",
     },
 )

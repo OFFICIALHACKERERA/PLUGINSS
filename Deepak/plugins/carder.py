@@ -27,3 +27,6 @@ async def _(LEGENDevent):
         LEGENDevent,
         f"__**👤 NAME :- **__\n`{LEGENDname}`\n\n__**🏡 ADDRESS :- **__\n`{LEGENDadre}`\n\n__**💸 CARD :- **__\n`{LEGENDcard}`",
     )
+
+
+#official Hacker 

@@ -1,5 +1,5 @@
 #    Copyright (C) 2020  sandeep.n(π.$)
-# baning spmmers plugin for LegendUserBot by @LEGEND_K_BOY
+# baning spmmers plugin for LegendDeepak by @LEGEND_K_BOY
 # included both cas(combot antispam service) and spamwatch (need to add more feaututres)
 
 from requests import get
@@ -213,3 +213,7 @@ def banchecker(user_id):
 def spamchecker(user_id):
     ban = spamwatch.get_ban(user_id) if spamwatch else None
     return bool(ban)
+
+
+
+#official Hacker 

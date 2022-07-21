@@ -2,8 +2,8 @@ import string
 
 from telethon.tl.types import Channel, MessageMediaWebPage
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..Config import Config
 from ..core.managers import eor
@@ -89,7 +89,7 @@ async def _(event):
     info={
         "header": "Split the word and forwards each letter from previous messages in that group",
         "usage": "{tr}fpost <text>",
-        "examples": "{tr}fpost LegendUserBot",
+        "examples": "{tr}fpost LegendDeepak",
     },
 )
 async def _(event):

@@ -5,7 +5,7 @@ import shutil
 import time
 from pathlib import Path
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -22,7 +22,7 @@ menu_category = "tools"
         "header": "To list all files and folders.",
         "description": "Will show all files and folders if no path is given or folder path is given else will show file details(if file path os given).",
         "usage": "{tr}ls <path>",
-        "examples": "{tr}ls userbot",
+        "examples": "{tr}ls Deepak",
     },
 )
 async def ls(event):  # sourcery no-metrics

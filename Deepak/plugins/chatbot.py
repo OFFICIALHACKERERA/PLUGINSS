@@ -2,7 +2,7 @@ import random
 
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers import get_user_from_event, rs_client
@@ -204,7 +204,7 @@ async def ai_reply(event):
             response = await rs_client.get_ai_response(
                 message=event.message.text,
                 server="primary",
-                master="LegendUserBot",
+                master="LegendDeepak",
                 bot=master_name,
                 uid=event.client.uid,
                 language=AI_LANG,

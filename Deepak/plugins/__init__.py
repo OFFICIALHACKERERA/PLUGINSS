@@ -46,17 +46,17 @@ legend_mention = f"[{LEGEND_USER}](tg://user?id={Legend_Boy})"
 
 
 # pic
-gban_pic = "./userbot/resources/pics/gban.mp4"
-main_pic = "./userbot/resources/pics/main.jpg"
-core_pic = "./userbot/resources/pics/core.jpg"
-chup_pic = "./userbot/resources/pics/chup.mp4"
-bsdk_pic = "./userbot/resources/pics/bsdk.jpg"
-bsdkwale_pic = "./userbot/resources/pics/bsdk_wale.jpg"
-chutiya_pic = "./userbot/resources/pics/chutiya.jpg"
-promote_pic = "./userbot/resources/pics/promote.jpg"
-demote_pic = "./userbot/resources/pics/demote.jpg"
-mute_pic = "./userbot/resources/pics/mute.jpg"
-ban_pic = "./userbot/resources/pics/ban.jpg"
+gban_pic = "./Deepak/resources/pics/gban.mp4"
+main_pic = "./Deepak/resources/pics/main.jpg"
+core_pic = "./Deepak/resources/pics/core.jpg"
+chup_pic = "./Deepak/resources/pics/chup.mp4"
+bsdk_pic = "./Deepak/resources/pics/bsdk.jpg"
+bsdkwale_pic = "./Deepak/resources/pics/bsdk_wale.jpg"
+chutiya_pic = "./Deepak/resources/pics/chutiya.jpg"
+promote_pic = "./Deepak/resources/pics/promote.jpg"
+demote_pic = "./Deepak/resources/pics/demote.jpg"
+mute_pic = "./Deepak/resources/pics/mute.jpg"
+ban_pic = "./Deepak/resources/pics/ban.jpg"
 
 
 # channel

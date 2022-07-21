@@ -31,7 +31,7 @@ async def _(event):
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
     LegendUSer = await event.client.get_me()
-    curruser = LegendUSer.username or "LegendUserBot"
+    curruser = LegendUSer.username or "LegendDeepak"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"```{curruser}:~#``` ```{cmd}```\n```{result}```"
@@ -56,7 +56,7 @@ async def _(event):
     info={
         "header": "To Execute python script/statements in a subprocess.",
         "usage": "{tr}eval <command>",
-        "examples": "{tr}eval print('LegendUserBot')",
+        "examples": "{tr}eval print('LegendDeepak')",
     },
 )
 async def _(event):

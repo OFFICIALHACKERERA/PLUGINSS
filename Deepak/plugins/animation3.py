@@ -23,7 +23,7 @@ async def star(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-
+of
 @legend.legend_cmd(
     pattern="boxs$",
     command=("boxs", menu_category),
@@ -81,10 +81,10 @@ async def deploy(event):
         "**State changed from up to starting**",
         "**Stopping all processes with SIGTERM**",
         "**Process exited with** `status 143`",
-        "**Starting process with command** `python3 -m userbot`",
+        "**Starting process with command** `python3 -m Deepak`",
         "**State changed from starting to up**",
-        "__INFO:Userbot:Logged in as 557667062__",
-        "__INFO:Userbot:Successfully loaded all plugins__",
+        "__INFO:Deepak:Logged in as 557667062__",
+        "__INFO:Deepak:Successfully loaded all plugins__",
         "**Build Succeeded**",
     ]
     for i in animation_ttl:

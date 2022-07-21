@@ -1,6 +1,6 @@
-# Urban Dictionary for LegendUserBot by @LEGEND_K_BOY
+# Urban Dictionary for LegendDeepak by @LEGEND_K_BOY
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eod, eor

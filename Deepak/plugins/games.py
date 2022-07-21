@@ -4,7 +4,7 @@ import random
 
 import requests
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import reply_id

@@ -6,7 +6,7 @@ from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins, ChatAdminRights
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import get_user_from_event

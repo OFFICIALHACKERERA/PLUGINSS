@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 from requests import get
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eor

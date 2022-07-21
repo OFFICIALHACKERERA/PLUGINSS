@@ -53,7 +53,7 @@ because he reached the defined flood limit.""",
             reply_to=event.message.id,
         )
 
-
+#official Hacker 
 @legend.legend_cmd(
     pattern="setflood(?:\s|$)([\s\S]*)",
     command=("setflood", menu_category),

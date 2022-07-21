@@ -21,8 +21,8 @@ from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from telethon import events
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -34,7 +34,7 @@ from . import BOTLOG, BOTLOG_CHATID, TMP_DOWNLOAD_DIRECTORY
 LOGS = logging.getLogger(__name__)
 menu_category = "misc"
 
-# Legenduserbot Google Drive managers  ported from Projectbish and added extra things by @LEGEND_K_BOY
+# LegendDeepak Google Drive managers  ported from Projectbish and added extra things by @LEGEND_K_BOY
 
 
 # =========================================================== #
@@ -603,7 +603,7 @@ async def upload(gdrive, service, file_path, file_name, mimeType, dir_id=None):
         pass
     body = {
         "name": file_name,
-        "description": "Uploaded from Telegram using Legenduserbot.",
+        "description": "Uploaded from Telegram using LegendDeepak.",
         "mimeType": mimeType,
         "parents": [dir_id] if dir_id is not None else [GDRIVE_.parent_Id],
     }
@@ -1470,7 +1470,7 @@ async def set_upload_folder(gdrive):
     command=("gdown", menu_category),
     info={
         "header": "To download files form gdrive.",
-        "description": "G-Drive File Downloader Plugin For Userbot. only gdrive files are supported now",
+        "description": "G-Drive File Downloader Plugin For Deepak. only gdrive files are supported now",
         "flags": {
             "u": "to directly upload to telegram",
         },

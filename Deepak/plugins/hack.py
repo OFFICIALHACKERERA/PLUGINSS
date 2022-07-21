@@ -2,7 +2,7 @@
 # thx to @r4v4n4
 import asyncio
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers.utils import _format

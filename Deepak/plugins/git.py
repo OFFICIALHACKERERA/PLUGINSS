@@ -8,7 +8,7 @@ from pySmartDL import SmartDL
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.logger import logging
@@ -35,14 +35,14 @@ msg = f"""
     pattern="repo$",
     command=("repo", menu_category),
     info={
-        "header": "Source code link of userbot",
+        "header": "Source code link of Deepak",
         "usage": [
             "{tr}repo",
         ],
     },
 )
 async def source(e):
-    "Source code link of userbot"
+    "Source code link of Deepak"
     reply_to_id = await reply_id(e)
     try:
         legend = await e.client.inline_query(Config.BOT_USERNAME, "repo")
@@ -123,7 +123,7 @@ async def _(event):
     command=("commit", menu_category),
     info={
         "header": "To commit the replied plugin to github.",
-        "description": "It uploads the given file to your github repo in **userbot/plugins** folder\
+        "description": "It uploads the given file to your github repo in **Deepak/plugins** folder\
         \nTo work commit plugin set `GITHUB_ACCESS_TOKEN` and `GIT_REPO_NAME` Variables in Heroku vars First",
         "note": "As of now not needed i will sure develop it ",
         "usage": "{tr}commit",
@@ -135,7 +135,7 @@ async def download(event):
         return await eod(event, "`Please ADD Proper Access Token from github.com`", 5)
     if Config.GIT_REPO_NAME is None:
         return await eod(
-            event, "`Please ADD Proper Github Repo Name of your userbot`", 5
+            event, "`Please ADD Proper Github Repo Name of your Deepak`", 5
         )
     mone = await eor(event, "`Processing ...`")
     if not os.path.isdir(GIT_TEMP_DIR):
@@ -178,7 +178,7 @@ async def git_commit(file_name, mone):
         if i == 'ContentFile(path="' + file_name + '")':
             return await mone.edit("`File Already Exists`")
     if create_file:
-        file_name = f"userbot/plugins/{file_name}"
+        file_name = f"Deepak/plugins/{file_name}"
         LOGS.info(file_name)
         try:
             repo.create_file(
@@ -188,7 +188,7 @@ async def git_commit(file_name, mone):
             ccess = Config.GIT_REPO_NAME
             ccess = ccess.strip()
             await mone.edit(
-                f"`Commited On Your Github Repo`\n\n[Your PLUGINS](https://github.com/{ccess}/tree/master/userbot/plugins/)"
+                f"`Commited On Your Github Repo`\n\n[Your PLUGINS](https://github.com/{ccess}/tree/master/Deepak/plugins/)"
             )
         except BaseException:
             LOGS.info("Cannot Create Plugin")

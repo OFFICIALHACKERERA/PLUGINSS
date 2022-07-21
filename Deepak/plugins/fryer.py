@@ -6,7 +6,7 @@ from PIL import Image, ImageEnhance, ImageOps
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeFilename
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.functions import delete_conv

@@ -14,7 +14,7 @@ from jikanpy.exceptions import APIException
 from pySmartDL import SmartDL
 from telegraph import exceptions, upload_file
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers import media_type, time_formatter

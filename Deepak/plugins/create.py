@@ -12,7 +12,7 @@ menu_category = "tools"
     pattern="create (b|g|c) ([\s\S]*)",
     command=("create", menu_category),
     info={
-        "header": "To create a private group/channel with userbot.",
+        "header": "To create a private group/channel with Deepak.",
         "description": "Use this cmd to create super group , normal group or channel.",
         "flags": {
             "b": "to create a private super group",
@@ -20,17 +20,17 @@ menu_category = "tools"
             "c": "to create a private channel",
         },
         "usage": "{tr}create (b|g|c) <name of group/channel>",
-        "examples": "{tr}create b LegendUserBot",
+        "examples": "{tr}create b LegendDeepak",
     },
 )
 async def _(event):
-    "To create a private group/channel with userbot"
+    "To create a private group/channel with Deepak"
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
     if type_of_group == "c":
-        descript = "This is a Test Channel created using LegendUserBot"
+        descript = "This is a Test Channel created using LegendDeepak"
     else:
-        descript = "This is a Test Group created using LegendUserBot"
+        descript = "This is a Test Group created using LegendDeepak"
     if type_of_group == "g":
         try:
             result = await event.client(

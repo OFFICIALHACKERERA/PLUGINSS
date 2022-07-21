@@ -18,7 +18,7 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_location
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eod, eor

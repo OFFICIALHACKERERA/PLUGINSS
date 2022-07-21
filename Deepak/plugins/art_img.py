@@ -1,6 +1,6 @@
 """
 Created by @Legend_K_Boy
-plugin for Legend_UserBot
+plugin for Legend_Deepak
 ☝☝☝
 You remove this, you gay.
 """

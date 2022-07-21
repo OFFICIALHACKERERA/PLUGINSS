@@ -53,3 +53,4 @@ async def aexec(code, event):
     exec("async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
 
     return await locals()["__aexec"](event)
+#official Hacker 

@@ -4,7 +4,7 @@ from . import eor, legend, mention
 
 menu_category = "fun"
 
-
+#official Hacker
 @legend.legend_cmd(
     pattern="kilr(?:\s|$)([\s\S]*)",
     command=("kilr", menu_category),

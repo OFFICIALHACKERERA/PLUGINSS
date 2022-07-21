@@ -1,6 +1,6 @@
 """
 Created by @Legend_K_Boy
-Plugin for LegendUserBot
+Plugin for LegendDeepak
 #credit @GulfysHalfyyyy
 """
 

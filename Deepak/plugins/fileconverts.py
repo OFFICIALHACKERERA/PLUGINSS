@@ -35,7 +35,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.functions.messages import SendMediaRequest
 from telethon.utils import get_attributes
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor

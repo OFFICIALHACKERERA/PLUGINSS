@@ -2,7 +2,7 @@ import os
 
 import requests
 
-from userbot import legend
+from Deepak import legend
 
 menu_category = "useless"
 
@@ -12,7 +12,7 @@ menu_category = "useless"
     command=("fpic", menu_category),
     info={
         "header": "Fake Pic Generation",
-        "description": "Fake Pic Generation From UserBot.",
+        "description": "Fake Pic Generation From Deepak.",
         "usage": "{tr}fpic",
     },
 )
@@ -28,4 +28,4 @@ async def _(event):
     fole = "LEGENDBOT.jpg"
     await event.client.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/userbot/LEGENDBOT.jpg ")
+    os.system("rm /root/Deepak/LEGENDBOT.jpg ")

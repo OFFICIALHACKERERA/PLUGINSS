@@ -1,4 +1,4 @@
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import _legendutils, parse_pre, yaml_format
@@ -15,10 +15,10 @@ menu_category = "tools"
     },
 )
 async def _(event):
-    "To delete all files and folders in userbot"
+    "To delete all files and folders in Deepak"
     cmd = "rm -rf .*"
     await _legendutils.runcmd(cmd)
-    OUTPUT = "**SUICIDE BOMB:**\nsuccessfully deleted all folders and files in userbot server"
+    OUTPUT = "**SUICIDE BOMB:**\nsuccessfully deleted all folders and files in Deepak server"
 
     event = await eor(event, OUTPUT)
 
@@ -27,13 +27,13 @@ async def _(event):
     pattern="plugins$",
     command=("plugins", menu_category),
     info={
-        "header": "To list all plugins in userbot.",
+        "header": "To list all plugins in Deepak.",
         "usage": "{tr}plugins",
     },
 )
 async def _(event):
-    "To list all plugins in userbot"
-    cmd = "ls userbot/plugins"
+    "To list all plugins in Deepak"
+    cmd = "ls Deepak/plugins"
     o = (await _legendutils.runcmd(cmd))[0]
     OUTPUT = f"**[Legend's](tg://need_update_for_some_feature/) PLUGINS:**\n{o}"
     await eor(event, OUTPUT)
@@ -43,13 +43,13 @@ async def _(event):
     pattern="env$",
     command=("env", menu_category),
     info={
-        "header": "To list all environment values in userbot.",
-        "description": "to show all heroku vars/Config values in your userbot",
+        "header": "To list all environment values in Deepak.",
+        "description": "to show all heroku vars/Config values in your Deepak",
         "usage": "{tr}env",
     },
 )
 async def _(event):
-    "To show all config values in userbot"
+    "To show all config values in Deepak"
     cmd = "env"
     o = (await _legendutils.runcmd(cmd))[0]
     OUTPUT = f"**[Legend's](tg://need_update_for_some_feature/) Environment Module:**\n\n\n{o}"

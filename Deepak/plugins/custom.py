@@ -1,8 +1,8 @@
 from telegraph import upload_file
 from validators.url import url
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -212,7 +212,7 @@ async def bad(event):  # sourcery no-metrics
     pattern="custom (pmpermit|pmblock|startmsg)$",
     command=("custom", menu_category),
     info={
-        "header": "To customize your LegendUserBot.",
+        "header": "To customize your LegendDeepak.",
         "options": {
             "pmpermit": "To customize pmpermit text. ",
             "pmblock": "To customize pmpermit block message.",
@@ -238,8 +238,8 @@ async def bad(event):  # sourcery no-metrics
         "NOTE": "You can set,fetch or delete these by `{tr}setdv` , `{tr}getdv` & `{tr}deldv` as well.",
     },
 )
-async def custom_LegendUserBot(event):
-    "To customize your LegendUserBot."
+async def custom_LegendDeepak(event):
+    "To customize your LegendDeepak."
     reply = await event.get_reply_message()
     text = None
     if reply:
@@ -273,7 +273,7 @@ async def custom_LegendUserBot(event):
     pattern="delcustom (pmpermit|pmpic|pmblock|startmsg)$",
     command=("delcustom", menu_category),
     info={
-        "header": "To delete costomization of your CatUserbot.",
+        "header": "To delete costomization of your CatDeepak.",
         "options": {
             "pmpermit": "To delete custom pmpermit text",
             "pmblock": "To delete custom pmpermit block message",
@@ -287,7 +287,7 @@ async def custom_LegendUserBot(event):
     },
 )
 async def custom_ksks(event):
-    "To delete costomization of your CatUserbot."
+    "To delete costomization of your CatDeepak."
     input_str = event.pattern_match.group(1)
     if input_str == "pmpermit":
         if gvarstatus("pmpermit_txt") is None:

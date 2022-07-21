@@ -6,7 +6,7 @@ import os
 import time
 from datetime import datetime
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -27,7 +27,7 @@ menu_category = "utils"
 
 
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = os.path.join(
-    Config.TMP_DOWNLOAD_DIRECTORY, "LegendUserBot.media.ffmpeg"
+    Config.TMP_DOWNLOAD_DIRECTORY, "LegendDeepak.media.ffmpeg"
 )
 
 FINISHED_PROGRESS_STR = Config.FINISHED_PROGRESS_STR

@@ -3,7 +3,7 @@ import re
 
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..sql_helper.filters_sql import (
@@ -144,7 +144,7 @@ async def add_new_filter(event):
     command=("filters", menu_category),
     info={
         "header": "To list all filters in that chat.",
-        "description": "Lists all active (of your userbot) filters in a chat.",
+        "description": "Lists all active (of your Deepak) filters in a chat.",
         "usage": "{tr}filters",
     },
 )

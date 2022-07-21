@@ -1,6 +1,6 @@
 """
 Created by  LegendBoy.  tg @Legend_K_Boy
-Plugin for LegendUserBot
+Plugin for LegendDeepak
 """
 import asyncio
 from collections import deque

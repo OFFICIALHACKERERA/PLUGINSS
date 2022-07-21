@@ -5,7 +5,7 @@ import time
 from subprocess import PIPE
 from subprocess import run as runapp
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -21,7 +21,7 @@ menu_category = "tools"
     info={
         "header": "Find the md5, sha1, sha256, sha512 of the string when written into a txt file.",
         "usage": "{tr}hash <text>",
-        "examples": "{tr}hash LegendUserBot",
+        "examples": "{tr}hash LegendDeepak",
     },
 )
 async def gethash(hash_q):
@@ -62,7 +62,7 @@ async def gethash(hash_q):
             "-d": "use this to decode the given text.",
         },
         "usage": ["{tr}base -e <text to encode>", "{tr}base -d <encoded text>"],
-        "examples": ["{tr}base -d TGVnZW5kVXNlckJvdA==", "{tr}base -e LegendUserBot"],
+        "examples": ["{tr}base -d TGVnZW5kVXNlckJvdA==", "{tr}base -e LegendDeepak"],
     },
 )
 async def endecrypt(event):

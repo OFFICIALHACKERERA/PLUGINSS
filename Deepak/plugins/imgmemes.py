@@ -4,7 +4,7 @@ import asyncio
 import os
 import re
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers.utils import reply_id
@@ -28,7 +28,7 @@ menu_category = "fun"
     info={
         "header": "Fake google search meme",
         "usage": "{tr}fakegs search query ; what you mean text",
-        "examples": "{tr}fakegs Legenduserbot ; One of the Popular userbot",
+        "examples": "{tr}fakegs LegendDeepak ; One of the Popular Deepak",
     },
 )
 async def nekobot(lol):
@@ -65,7 +65,7 @@ async def nekobot(lol):
     info={
         "header": "trump tweet sticker with given custom text",
         "usage": "{tr}trump <text>",
-        "examples": "{tr}trump Legenduserbot is One of the Popular userbot",
+        "examples": "{tr}trump LegendDeepak is One of the Popular Deepak",
     },
 )
 async def nekobot(lol):
@@ -96,7 +96,7 @@ async def nekobot(lol):
     info={
         "header": "modi tweet sticker with given custom text",
         "usage": "{tr}modi <text>",
-        "examples": "{tr}modi Legenduserbot is One of the Popular userbot",
+        "examples": "{tr}modi LegendDeepak is One of the Popular Deepak",
     },
 )
 async def nekobot(lol):
@@ -127,7 +127,7 @@ async def nekobot(lol):
     info={
         "header": "Change my mind banner with given custom text",
         "usage": "{tr}cmm <text>",
-        "examples": "{tr}cmm Legenduserbot is One of the Popular userbot",
+        "examples": "{tr}cmm LegendDeepak is One of the Popular Deepak",
     },
 )
 async def nekobot(lol):
@@ -157,7 +157,7 @@ async def nekobot(lol):
     info={
         "header": "kanna chan sticker with given custom text",
         "usage": "{tr}kanna text",
-        "examples": "{tr}kanna Legenduserbot is One of the Popular userbot",
+        "examples": "{tr}kanna LegendDeepak is One of the Popular Deepak",
     },
 )
 async def nekobot(lol):
@@ -188,7 +188,7 @@ async def nekobot(lol):
     info={
         "header": "The desired person tweet sticker with given custom text",
         "usage": "{tr}tweet <username> ; <text>",
-        "examples": "{tr}tweet iamsrk ; Legenduserbot is One of the Popular userbot",
+        "examples": "{tr}tweet iamsrk ; LegendDeepak is One of the Popular Deepak",
     },
 )
 async def nekobot(lol):

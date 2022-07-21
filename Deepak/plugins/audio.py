@@ -5,8 +5,8 @@ from datetime import datetime
 
 from gtts import gTTS
 
-from userbot import legend
-from userbot.Config import Config
+from Deepak import legend
+from Deepak.Config import Config
 
 menu_category = "fun"
 

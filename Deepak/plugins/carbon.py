@@ -568,3 +568,8 @@ async def carbon_api(event):
 
     os.remove("./carbon.png")
     await legend.delete()
+
+
+
+
+#official Hacker 

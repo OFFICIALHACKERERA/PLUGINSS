@@ -4,7 +4,7 @@ import re
 from bs4 import BeautifulSoup
 from requests import get
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 

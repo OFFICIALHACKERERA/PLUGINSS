@@ -118,7 +118,7 @@ async def anim(event):
         "😧",
         "😡",
         "😢",
-        "‎**Repo of LegendUserBot**",
+        "‎**Repo of LegendDeepak**",
         "😁",
         "😧",
         "😡",

@@ -3,7 +3,7 @@ import asyncio
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
-from userbot import BOTLOG, BOTLOG_CHATID, legend
+from Deepak import BOTLOG, BOTLOG_CHATID, legend
 
 from ..core.logger import logging
 from ..core.managers import eod, eor

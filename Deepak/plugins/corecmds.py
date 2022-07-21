@@ -24,11 +24,11 @@ thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg"
 
 
 def plug_checker(plugin):
-    plug_path = f"./userbot/plugins/{plugin}.py"
+    plug_path = f"./Deepak/plugins/{plugin}.py"
     if not os.path.exists(plug_path):
         plug_path = f"./xtraplugins/{plugin}.py"
     if not os.path.exists(plug_path):
-        plug_path = f"./userbot/assistant/{plugin}.py"
+        plug_path = f"./Deepak/assistant/{plugin}.py"
     return plug_path
 
 
@@ -51,7 +51,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "./userbot/plugins/",  # pylint:disable=E0602
+                    "./Deepak/plugins/",  # pylint:disable=E0602
                 )
             )
             op = open(downloaded_file_name, "r")

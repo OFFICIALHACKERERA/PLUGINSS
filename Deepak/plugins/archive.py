@@ -17,7 +17,7 @@ from . import eod, eor, legend, progress
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 menu_category = "misc"
 
-
+#official Hacker 
 def zipdir(dirName):
     filePaths = []
     for root, directories, files in os.walk(dirName):

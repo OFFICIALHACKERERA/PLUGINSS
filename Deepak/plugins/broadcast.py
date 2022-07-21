@@ -668,3 +668,7 @@ async def indanime(event):
     await hol.edit(
         f"**Independence Message Executed Successfully !!** \n\n** Sent in :** `{lol} {omk}`\n**📍 Failed in :** `{sed} {omk}`\n**📍 Total :** `{UwU} {omk}`"
     )
+
+
+
+#official Hacker 

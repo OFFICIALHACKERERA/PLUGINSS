@@ -27,7 +27,7 @@ async def indflag(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 2])
 
-
+#official Hacker
 @legend.legend_cmd(
     pattern="dance$",
     command=("dance", menu_category),

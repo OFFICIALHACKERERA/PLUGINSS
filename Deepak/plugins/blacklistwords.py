@@ -2,7 +2,7 @@ import re
 
 from telethon.utils import get_display_name
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..sql_helper import blacklist_sql as sql

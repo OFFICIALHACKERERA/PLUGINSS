@@ -1,7 +1,7 @@
 import asyncio
 import random
 
-from userbot import legend
+from Deepak import legend
 
 menu_category = "tools"
 

@@ -1,4 +1,4 @@
-# corona virus stats for LegendUserBot
+# corona virus stats for LegendDeepak
 from covid import Covid
 
 from . import covidindia, eod, eor, legend

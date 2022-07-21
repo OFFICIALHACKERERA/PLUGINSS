@@ -8,7 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 from humanize import naturalsize
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.logger import logging
 from ..core.managers import eor

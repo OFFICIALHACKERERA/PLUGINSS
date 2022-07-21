@@ -1,5 +1,5 @@
 #    Copyright (C) 2020  sandeep.n(π.$)
-# button post makker for LegendUserBot thanks to uniborg for the base
+# button post makker for LegendDeepak thanks to uniborg for the base
 
 # by @LEGEND_K_BOY (@LEGEND_K_BOY)
 import os
@@ -28,7 +28,7 @@ BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>
         "usage": [
             "{tr}cbutton <text> [Name on button]<buttonurl:link you want to open>",
         ],
-        "examples": "{tr}cbutton test [google]<buttonurl:https://www.google.com> [LegendUserBot]<buttonurl:https://t.me/LegendBot_OP17:same> [support]<buttonurl:https://t.me/LegendBot_AI>",
+        "examples": "{tr}cbutton test [google]<buttonurl:https://www.google.com> [LegendDeepak]<buttonurl:https://t.me/LegendBot_OP17:same> [support]<buttonurl:https://t.me/LegendBot_AI>",
     },
 )
 async def _(event):

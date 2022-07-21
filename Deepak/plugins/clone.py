@@ -93,3 +93,8 @@ async def revert(event):
             BOTLOG_CHATID,
             "#REVERT\nsuccessfully reverted back to your profile",
         )
+
+
+
+
+#official Hacker 

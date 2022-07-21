@@ -12,7 +12,7 @@ from search_engine_parser import BingSearch, GoogleSearch, YahooSearch
 from search_engine_parser.core.exceptions import NoResultsOrTrafficError
 from telegraph import Telegraph, exceptions, upload_file
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor
@@ -75,10 +75,10 @@ async def scam(results, lim):
             "{tr}gs <query>",
         ],
         "examples": [
-            "{tr}gs LegendUserBot",
-            "{tr}gs -l6 LegendUserBot",
-            "{tr}gs -p2 LegendUserBot",
-            "{tr}gs -p2 -l7 LegendUserBot",
+            "{tr}gs LegendDeepak",
+            "{tr}gs -l6 LegendDeepak",
+            "{tr}gs -p2 LegendDeepak",
+            "{tr}gs -p2 -l7 LegendDeepak",
         ],
     },
 )
@@ -235,7 +235,7 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.logger import logging

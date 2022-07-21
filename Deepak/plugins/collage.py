@@ -1,4 +1,4 @@
-# collage plugin for LegendUserBot by @LEGEND_K_BOY
+# collage plugin for LegendDeepak by @LEGEND_K_BOY
 
 # Copyright (C) 2020 Alfiananda P.A
 #
@@ -7,7 +7,7 @@
 
 import os
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 from ..helpers import reply_id

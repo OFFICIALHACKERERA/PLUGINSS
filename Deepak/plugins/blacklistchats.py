@@ -2,8 +2,8 @@ from datetime import datetime
 
 from telethon.utils import get_display_name
 
-from userbot import legend
-from userbot.core.logger import logging
+from Deepak import legend
+from Deepak.core.logger import logging
 
 from ..core.data import blacklist_chats_list
 from ..core.managers import eod, eor
@@ -20,9 +20,9 @@ LOGS = logging.getLogger(__name__)
     command=("chatblacklist", menu_category),
     info={
         "header": "To enable and disable chats blacklist.",
-        "description": "If you turn this on, then your userbot won't work on the chats stored\
+        "description": "If you turn this on, then your Deepak won't work on the chats stored\
          in database by addblkchat cmd. If you turn it off even though you added chats to database\
-         userbot won't stop working in that chat.",
+         Deepak won't stop working in that chat.",
         "usage": "{tr}chatblacklist <on/off>",
     },
 )

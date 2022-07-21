@@ -2,7 +2,7 @@
 from geopy.geocoders import Nominatim
 from telethon.tl import types
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers import reply_id
@@ -24,7 +24,7 @@ async def gps(event):
     reply_to_id = await reply_id(event)
     input_str = event.pattern_match.group(1)
     legendevent = await eor(event, "`finding.....`")
-    geolocator = Nominatim(user_agent="LegendUserBot")
+    geolocator = Nominatim(user_agent="LegendDeepak")
     geoloc = geolocator.geocode(input_str)
     if geoloc:
         lon = geoloc.longitude

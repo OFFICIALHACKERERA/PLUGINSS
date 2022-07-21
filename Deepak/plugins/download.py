@@ -10,7 +10,7 @@ from pySmartDL import SmartDL
 from telethon.tl import types
 from telethon.utils import get_extension
 
-from userbot import legend
+from Deepak import legend
 
 from ..Config import Config
 from ..core.managers import eod, eor

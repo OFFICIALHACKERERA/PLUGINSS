@@ -41,3 +41,7 @@ async def _(event):
     await eor(
         event, f"**Chain length :** `{count}`\n**Thread link :** [Here]({thread})"
     )
+
+
+
+#official Hacker 

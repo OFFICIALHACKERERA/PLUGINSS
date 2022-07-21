@@ -3,7 +3,7 @@ import os
 from glitch_this import ImageGlitcher
 from PIL import Image
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod
 from ..helpers.utils import _legendtools, _legendutils, reply_id

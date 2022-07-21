@@ -153,3 +153,9 @@ async def some(event):
         nood = await event.client.send_file(event.chat_id, i, reply_to=reply_to_id)
         await _legendutils.unsavegif(event, nood)
     await legendevent.delete()
+
+
+
+
+
+#official Hacker 

@@ -1,10 +1,10 @@
-# image search for LegendUserBot
+# image search for LegendDeepak
 import os
 import shutil
 
 from telethon.errors.rpcerrorlist import MediaEmptyError
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from ..helpers.google_image_download import googleimagesdownload

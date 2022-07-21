@@ -1,6 +1,6 @@
 import random
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eor
 from . import fonts
@@ -17,7 +17,7 @@ menu_category = "extra"
             "{tr}fmusical <text>",
             "{tr}fmusical reply this command to text message",
         ],
-        "examples": "{tr}fmusical LegendUserBot",
+        "examples": "{tr}fmusical LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -48,7 +48,7 @@ async def stylish_generator(event):
             "{tr}ancient <text>",
             "{tr}ancient reply this command to text message",
         ],
-        "examples": "{tr}ancient LegendUserBot",
+        "examples": "{tr}ancient LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -76,7 +76,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}vapor <text>", "{tr}vapor reply this command to text message"],
-        "examples": "{tr}vapor LegendUserBot",
+        "examples": "{tr}vapor LegendDeepak",
     },
 )
 async def vapor(event):
@@ -112,7 +112,7 @@ async def vapor(event):
             "{tr}smallcaps <text>",
             "{tr}smallcaps reply this command to text message",
         ],
-        "examples": "{tr}smallcaps LegendUserBot",
+        "examples": "{tr}smallcaps LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -143,7 +143,7 @@ async def stylish_generator(event):
             "{tr}blackbf <text>",
             "{tr}blackbf reply this command to text message",
         ],
-        "examples": "{tr}blackbf LegendUserBot",
+        "examples": "{tr}blackbf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -174,7 +174,7 @@ async def stylish_generator(event):
             "{tr}bubbles <text>",
             "{tr}bubbles reply this command to text message",
         ],
-        "examples": "{tr}bubbles LegendUserBot",
+        "examples": "{tr}bubbles LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -202,7 +202,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}tanf <text>", "{tr}tanf reply this command to text message"],
-        "examples": "{tr}tanf LegendUserBot",
+        "examples": "{tr}tanf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -230,7 +230,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}boxf <text>", "{tr}boxf reply this command to text message"],
-        "examples": "{tr}boxf LegendUserBot",
+        "examples": "{tr}boxf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -261,7 +261,7 @@ async def stylish_generator(event):
             "{tr}smothtext <text>",
             "{tr}smothtext reply this command to text message",
         ],
-        "examples": "{tr}smothtext LegendUserBot",
+        "examples": "{tr}smothtext LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -289,7 +289,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}egyptf <text>", "{tr}egyptf reply this command to text message"],
-        "examples": "{tr}egyptf LegendUserBot",
+        "examples": "{tr}egyptf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -317,7 +317,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}maref <text>", "{tr}maref reply this command to text message"],
-        "examples": "{tr}maref LegendUserBot",
+        "examples": "{tr}maref LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -345,7 +345,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}handcf <text>", "{tr}handcf reply this command to text message"],
-        "examples": "{tr}handcf LegendUserBot",
+        "examples": "{tr}handcf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -376,7 +376,7 @@ async def stylish_generator(event):
             "{tr}doublef <text>",
             "{tr}doublef reply this command to text message",
         ],
-        "examples": "{tr}doublef LegendUserBot",
+        "examples": "{tr}doublef LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -404,7 +404,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}mock <text>", "{tr}mock reply this command to text message"],
-        "examples": "{tr}mock LegendUserBot",
+        "examples": "{tr}mock LegendDeepak",
     },
 )
 async def spongemocktext(mock):
@@ -436,7 +436,7 @@ async def spongemocktext(mock):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}ghostf <text>", "{tr}ghostf reply this command to text message"],
-        "examples": "{tr}ghostf LegendUserBot",
+        "examples": "{tr}ghostf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -464,7 +464,7 @@ async def stylish_generator(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}handsf <text>", "{tr}handsf reply this command to text message"],
-        "examples": "{tr}handsf LegendUserBot",
+        "examples": "{tr}handsf LegendDeepak",
     },
 )
 async def stylish_generator(event):
@@ -663,7 +663,7 @@ bubbletextfont = [
             "{tr}weebify <text>",
             "{tr}weebify reply this command to text message",
         ],
-        "examples": "{tr}weebify LegendUserBot",
+        "examples": "{tr}weebify LegendDeepak",
     },
 )
 async def weebify(event):
@@ -688,7 +688,7 @@ async def weebify(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}tanify <text>", "{tr}tanify reply this command to text message"],
-        "examples": "{tr}tanify LegendUserBot",
+        "examples": "{tr}tanify LegendDeepak",
     },
 )
 async def tantxt(event):
@@ -713,7 +713,7 @@ async def tantxt(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}lintxt <text>", "{tr}lintxt reply this command to text message"],
-        "examples": "{tr}lintxt LegendUserBot",
+        "examples": "{tr}lintxt LegendDeepak",
     },
 )
 async def linetxt(event):
@@ -738,7 +738,7 @@ async def linetxt(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}boxify <text>", "{tr}boxify reply this command to text message"],
-        "examples": "{tr}boxify LegendUserBot",
+        "examples": "{tr}boxify LegendDeepak",
     },
 )
 async def boxtxt(event):
@@ -765,7 +765,7 @@ async def boxtxt(event):
     info={
         "header": "Font style command.(Changes font style of the given text)",
         "usage": ["{tr}bubble <text>", "{tr}bubble reply this command to text message"],
-        "examples": "{tr}bubble LegendUserBot",
+        "examples": "{tr}bubble LegendDeepak",
     },
 )
 async def bubbletxt(event):
