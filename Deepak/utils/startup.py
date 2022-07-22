@@ -25,7 +25,7 @@ from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
 
-LOGS = logging.getLogger("LegendDeepak")
+LOGS = logging.getLogger("♥️ USERBOT OFFICIALHACKERERA")
 cmdhr = Config.HANDLER
 
 
