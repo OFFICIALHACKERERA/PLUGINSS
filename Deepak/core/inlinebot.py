@@ -250,7 +250,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/ITS-LEGENDBOT/LEGENDBOT"),
+                    Button.url("Owner", "https://t.me/OFFICIALHACKERERA"),
                 ),
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
