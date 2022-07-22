@@ -2,7 +2,7 @@
 HERE IS ALL THE PLUGIN OF LEGENDBOT
 
 ## Deploy 
-- Click Here :- [main repo](https://github.com/LEGEND-AI/LEGENDBOT)
+- Click Here :- [main repo](https://github.com/OFFICIALHACKERERA/USERBOTT)
 - Fork The Main Repo 
 - Go to Setting Of Repo 
 - Rename the Fork Repo Put Anything Example : LEGEND1BOT, HSKSBOT, LEGENDOFFBOT etc...
