@@ -17,7 +17,7 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LEGENDBOT")
+LOGS = logging.getLogger("OFFICIALHACKERERA")
 
 print(Deepak.__copyright__)
 print("Licensed under the terms of the " + Deepak.__license__)
@@ -33,7 +33,7 @@ async def extrarepo():
 
 
 try:
-    LOGS.info("Starting Userbot")
+    LOGS.info("STARTING USERBOT..")
     legend.loop.run_until_complete(setup_bot())
     LOGS.info("TG BOT STARTUP COMPLETED")
 except Exception as e:
@@ -48,10 +48,9 @@ async def startup_process():
         await load_plugins("assistant")
         await killer()
         print("----------------")
-        print("Starting Bot Mode!")
-        print("❤️‍🔥 LEGENDBOT HAS BEEN DEPLOYED SUCCESSFULLY 💝")
-        print("OWNER - @LegendBoy_XD")
-        print("Group - @LegendBot_XD")
+        print("🩸STARTING BOT MODE!")
+        print("🩸USERBOT HAS BEEN DEPLOYED SUCCESSFULLY")
+        print("🩸OWNER - @OFFICIALHACKERERA")
         print("----------------")
         await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
