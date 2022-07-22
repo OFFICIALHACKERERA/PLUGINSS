@@ -255,7 +255,7 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
             if ALIVE_PIC is None:
-                I_IMG = "https://telegra.ph/file/f3facc08397bb5728de26.jpg"
+                I_IMG = "Downloaded to ./temp/photo_2022-07-22_06-55-30.jpg"
             else:
                 lol = list(ALIVE_PIC.split())
                 I_IMG = random.choice(lol)
