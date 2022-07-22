@@ -35,7 +35,7 @@ async def extrarepo():
 try:
     LOGS.info("Starting Userbot")
     legend.loop.run_until_complete(setup_bot())
-    LOGS.info("TG Bot Startup Completed")
+    LOGS.info("TG BOT STARTUP COMPLETED")
 except Exception as e:
     LOGS.error(f"{e}")
     sys.exit()
@@ -49,7 +49,7 @@ async def startup_process():
         await killer()
         print("----------------")
         print("Starting Bot Mode!")
-        print("❤️‍🔥 LegendBot Has Been Deployed Successfully 💝")
+        print("❤️‍🔥 LEGENDBOT HAS BEEN DEPLOYED SUCCESSFULLY 💝")
         print("OWNER - @LegendBoy_XD")
         print("Group - @LegendBot_XD")
         print("----------------")
