@@ -258,7 +258,7 @@ async def promote(event):
     )
     user, rank = await get_user_from_event(event)
     if not rank:
-        rank = "ℓєgєи∂"
+        rank = "Admin"
     if not user:
         return
     legendevent = await eor(event, "`Promoting...`")
