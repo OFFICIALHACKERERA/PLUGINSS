@@ -91,7 +91,7 @@ def main_menu():
         ],
         [
             custom.Button.inline("⚜ Alive ⚜", data="stats"),
-            Button.url("Support 🇮🇳", "https://t.me/LegendBot_AI"),
+            Button.url("Owner", "https://t.me/OFFICIALHACKERERA"),
         ],
         [custom.Button.inline("❌", data="clise")],
     ]
@@ -509,7 +509,7 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             oso = gvarstatus("HELP_IMG")
             if oso is None:
-                help_pic = "https://telegra.ph/file/144d8ea74fef8ca12253c.jpg"
+                help_pic = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
             else:
                 lol = [x for x in oso.split()]
                 PIC = list(lol)
@@ -518,7 +518,7 @@ async def inline_handler(event):  # sourcery no-metrics
             if oso == "OFF":
                 result = builder.article(
                     title="© LegendBot Help",
-                    description="Help menu for LegendBot",
+                    description="Help menu for OFFICIALHACKERERA",
                     text=_result[0],
                     buttons=_result[1],
                     link_preview=False,
