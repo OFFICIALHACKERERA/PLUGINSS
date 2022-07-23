@@ -2,7 +2,7 @@ from telethon import functions
 from telethon.tl import functions
 from telethon.tl.functions.channels import InviteToChannelRequest
 
-from userbot import legend
+from Deepak import legend
 
 from ..core.managers import eod, eor
 
