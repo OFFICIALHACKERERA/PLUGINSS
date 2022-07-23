@@ -10,7 +10,7 @@ from telethon.tl.functions.channels import GetFullChannelRequest, InviteToChanne
 from telethon.tl.functions.messages import GetFullChatRequest
 
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, eor, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from Deepak.cmdhelp import CmdHelp
 
 
 async def get_chatinfo(event):
