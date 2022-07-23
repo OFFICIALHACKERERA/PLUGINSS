@@ -90,7 +90,7 @@ def main_menu():
         ],
         [
             custom.Button.inline("⚜ Alive ⚜", data="stats"),
-            Button.url("Support 🇮🇳", "https://t.me/LegendBot_AI"),
+            Button.url("owner", "https://t.me/OFFICIALHACKERERA"),
         ],
         [custom.Button.inline("❌", data="clise")],
     ]
@@ -249,7 +249,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/ITS-LEGENDBOT/LEGENDBOT"),
+                    Button.url("owner", "https://t.me/OFFICIALHACKERERA"),
                 ),
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -263,7 +263,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 PIC = list(legend)
                 I_IMG = random.choice(PIC)
             elif not IALIVE_PIC:
-                I_IMG = "https://te.legra.ph/file/74530a36e7b5e60ced878.jpg"
+                I_IMG = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
             if I_IMG and I_IMG.endswith((".jpg", ".png")):
                 result = builder.photo(
                     I_IMG,
@@ -287,10 +287,12 @@ async def inline_handler(event):  # sourcery no-metrics
         elif query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚜ Legendary Af LegendBot ⚜**",
+                text=f"**⚜ OFFICIALHACKERERA  ⚜**",
                 buttons=[
-                    [Button.url("♥️ Tutorial ♥", "https://youtu.be/CH_KO1wim2o")],
-                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/LEGEND-AI/LegendBot")],
+                    [
+                    Button.url("♥️ Tutorial ♥", "https://youtu.be/CH_KO1wim2o"),
+                    Button.url("💝 𝙍𝙚𝙥𝙤 💝 ", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
+                    ],
                     [
                         Button.url(
                             "💞 Deploy 💞",
@@ -337,7 +339,7 @@ async def inline_handler(event):  # sourcery no-metrics
             query = query[7:]
             user, txct = query.split(" ", 1)
             builder = event.builder
-            troll = os.path.join("./userbot", "troll.txt")
+            troll = os.path.join("./Deepak", "troll.txt")
             try:
                 jsondata = json.load(open(troll))
             except Exception:
@@ -387,7 +389,7 @@ async def inline_handler(event):  # sourcery no-metrics
             query = query[7:]
             user, txct = query.split(" ", 1)
             builder = event.builder
-            secret = os.path.join("./userbot", "secrets.txt")
+            secret = os.path.join("./Deepak", "secrets.txt")
             try:
                 jsondata = json.load(open(secret))
             except Exception:
@@ -436,7 +438,7 @@ async def inline_handler(event):  # sourcery no-metrics
         elif match3:
             query = query[5:]
             builder = event.builder
-            hide = os.path.join("./userbot", "hide.txt")
+            hide = os.path.join("./Deepak", "hide.txt")
             try:
                 jsondata = json.load(open(hide))
             except Exception:
@@ -459,7 +461,7 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             oso = gvarstatus("HELP_IMG")
             if oso is None:
-                help_pic = "https://telegra.ph/file/144d8ea74fef8ca12253c.jpg"
+                help_pic = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
             else:
                 lol = [x for x in oso.split()]
                 help_pic = random.choice(lol)
@@ -588,7 +590,7 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             PM_PIC = (
                 gvarstatus("PM_PIC")
-                or "https://telegra.ph/file/69fa26f4659e377dea80e.jpg"
+                or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
             )
             if PM_PIC:
                 legend = [x for x in PM_PIC.split()]
@@ -607,13 +609,13 @@ async def inline_handler(event):  # sourcery no-metrics
             elif LEGEND_IMG:
                 result = builder.document(
                     LEGEND_IMG,
-                    title="Alive Legend",
+                    title="Alive User",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Alive Legend",
+                    title="Alive User",
                     text=query,
                     buttons=buttons,
                 )
@@ -621,14 +623,14 @@ async def inline_handler(event):  # sourcery no-metrics
         else:
             buttons = [
                 (
-                    Button.url("Source code", "https://github.com/LEGEND-AI/LEGENDBOT"),
+                    Button.url("Source code", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
                     Button.url(
                         "Deploy",
                         "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGEND-AI%2FLEGENDBOT&template=https%3A%2F%2Fgithub.com%2FLEGEND-AI%2FLEGENDBOT",
                     ),
                 )
             ]
-            ALV_PIC = "https://telegra.ph/file/8d79a264916a247fe28d2.jpg"
+            ALV_PIC = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
