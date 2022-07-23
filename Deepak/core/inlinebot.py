@@ -28,7 +28,6 @@ from .logger import logging
 
 LOGS = logging.getLogger(__name__)
 
-MEDIA_PATH_REGEX = re.compile(r"(:?\<\bmedia:(:?(?:.*?)+)\>)")
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 tr = Config.HANDLER
 
@@ -91,7 +90,7 @@ def main_menu():
         ],
         [
             custom.Button.inline("⚜ Alive ⚜", data="stats"),
-            Button.url("Owner", "https://t.me/OFFICIALHACKERERA"),
+            Button.url("Support 🇮🇳", "https://t.me/LegendBot_AI"),
         ],
         [custom.Button.inline("❌", data="clise")],
     ]
@@ -250,15 +249,21 @@ async def inline_handler(event):  # sourcery no-metrics
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("Owner", "https://t.me/OFFICIALHACKERERA"),
+                    Button.url("Repo", "https://github.com/ITS-LEGENDBOT/LEGENDBOT"),
                 ),
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
-            if ALIVE_PIC is None:
-                I_IMG = "https://telegra.ph/file/aea06e462ac14961f645b.jpg"
-            else:
-                lol = list(ALIVE_PIC.split())
-                I_IMG = random.choice(lol)
+            IALIVE_PIC = gvarstatus("IALIVE_PIC")
+            if IALIVE_PIC:
+                legend = [x for x in IALIVE_PIC.split()]
+                PIC = list(legend)
+                I_IMG = random.choice(PIC)
+            if not IALIVE_PIC and ALIVE_PIC:
+                legend = [x for x in ALIVE_PIC.split()]
+                PIC = list(legend)
+                I_IMG = random.choice(PIC)
+            elif not IALIVE_PIC:
+                I_IMG = "https://te.legra.ph/file/74530a36e7b5e60ced878.jpg"
             if I_IMG and I_IMG.endswith((".jpg", ".png")):
                 result = builder.photo(
                     I_IMG,
@@ -268,49 +273,13 @@ async def inline_handler(event):  # sourcery no-metrics
             elif I_IMG:
                 result = builder.document(
                     I_IMG,
-                    title="Alive Legend",
+                    title="Alive User",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Alive Legend",
-                    text=query,
-                    buttons=buttons,
-                )
-            await event.answer([result] if result else None)
-        if query.startswith("**⚜ UserBot"):
-            grp_username = gvarstatus("GROUP_USERNAME") or "LegendBot_OP"
-            chnl_username = gvarstatus("CHANNEL_USERNAME") or "LegendBot_AI"
-            buttons = [
-                (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
-                (
-                    Button.url("Group", f"t.me/{grp_username}"),
-                    Button.url("Channel", f"t.me/{chnl_username}"),
-                ),
-            ]
-            ALIVE_PIC = gvarstatus("ALIVE_PIC")
-            if ALIVE_PIC is None:
-                IMG = "https://telegra.ph/file/aea06e462ac14961f645b.jpg"
-            else:
-                PIC = list(ALIVE_PIC.split())
-                IMG = random.choice(PIC)
-            if IMG and IMG.endswith((".jpg", ".png")):
-                result = builder.photo(
-                    IMG,
-                    text=query,
-                    buttons=buttons,
-                )
-            elif IMG:
-                result = builder.document(
-                    IMG,
-                    title="Alive Legend",
-                    text=query,
-                    buttons=buttons,
-                )
-            else:
-                result = builder.article(
-                    title="Alive Legend",
+                    title="Alive User",
                     text=query,
                     buttons=buttons,
                 )
@@ -336,11 +305,6 @@ async def inline_handler(event):  # sourcery no-metrics
             prev = 0
             note_data = ""
             buttons = []
-            media = None
-            legendmedia = MEDIA_PATH_REGEX.search(markdown_note)
-            if legendmedia:
-                media = legendmedia.group(2)
-                markdown_note = markdown_note.replace(legendmedia.group(0), "")
             for match in BTN_URL_REGEX.finditer(markdown_note):
                 n_escapes = 0
                 to_check = match.start(1) - 1
@@ -362,26 +326,12 @@ async def inline_handler(event):  # sourcery no-metrics
                 note_data += markdown_note[prev:]
             message_text = note_data.strip()
             tl_ib_buttons = ibuild_keyboard(buttons)
-            if media and media.endswith((".jpg", ".png")):
-                result = builder.photo(
-                    media,
-                    text=message_text,
-                    buttons=tl_ib_buttons,
-                )
-            elif media:
-                result = builder.document(
-                    media,
-                    title="Inline creator",
-                    text=message_text,
-                    buttons=tl_ib_buttons,
-                )
-            else:
-                result = builder.article(
-                    title="Inline creator",
-                    text=message_text,
-                    buttons=tl_ib_buttons,
-                    link_preview=False,
-                )
+            result = builder.article(
+                title="Inline creator",
+                text=message_text,
+                buttons=tl_ib_buttons,
+                link_preview=False,
+            )
             await event.answer([result] if result else None)
         elif match:
             query = query[7:]
@@ -509,16 +459,15 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             oso = gvarstatus("HELP_IMG")
             if oso is None:
-                help_pic = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+                help_pic = "https://telegra.ph/file/144d8ea74fef8ca12253c.jpg"
             else:
                 lol = [x for x in oso.split()]
-                PIC = list(lol)
-                help_pic = random.choice(PIC)
+                help_pic = random.choice(lol)
             _result = main_menu()
             if oso == "OFF":
                 result = builder.article(
                     title="© LegendBot Help",
-                    description="Help menu for OFFICIALHACKERERA",
+                    description="Help menu for LegendBot",
                     text=_result[0],
                     buttons=_result[1],
                     link_preview=False,
@@ -637,16 +586,16 @@ async def inline_handler(event):  # sourcery no-metrics
             buttons = [
                 Button.inline(text="👨‍💻 Open PM Menu 💝", data="show_pmpermit_options"),
             ]
-            PM_IMG = (
-                gvarstatus("PM_IMG")
+            PM_PIC = (
+                gvarstatus("PM_PIC")
                 or "https://telegra.ph/file/69fa26f4659e377dea80e.jpg"
             )
-            if PM_IMG == "OFF":
-                LEGEND_IMG = None
-            else:
-                legend = [x for x in PM_IMG.split()]
+            if PM_PIC:
+                legend = [x for x in PM_PIC.split()]
                 PIC = list(legend)
                 LEGEND_IMG = random.choice(PIC)
+            else:
+                LEGEND_IMG = None
             query = gvarstatus("pmpermit_text")
             if LEGEND_IMG and LEGEND_IMG.endswith((".jpg", ".jpeg", ".png")):
                 result = builder.photo(
