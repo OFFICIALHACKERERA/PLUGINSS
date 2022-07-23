@@ -18,15 +18,6 @@ from ..sql_helper import pmpermit_sql
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from . import mention
 
-
-class PMPERMIT:
-    def __init__(self):
-        self.TEMPAPPROVED = []
-
-
-PMPERMIT_ = PMPERMIT()
-
-
 menu_category = "utils"
 LOGS = logging.getLogger(__name__)
 cmdhd = Config.HANDLER
@@ -129,12 +120,12 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
         )
     elif gvarstatus("pmmenu") is None:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
-You have {warns}/{totalwarns} warns until you get blocked by the LegendDeepak.
+You have {warns}/{totalwarns} warns until you get blocked by the LegendUserBot.
 Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
-You have {warns}/{totalwarns} warns until you get blocked by the LegendDeepak.
---Don't spam my inbox. say reason and wait until my response.--"""
+You have {warns}/{totalwarns} warns until you get blocked by the LegendUserBot.
+Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("pmpermit_text", USER_BOT_NO_WARN)
     PM_WARNS[str(chat.id)] += 1
     try:
@@ -142,16 +133,16 @@ You have {warns}/{totalwarns} warns until you get blocked by the LegendDeepak.
             results = await event.client.inline_query(Config.BOT_USERNAME, "pmpermit")
             msg = await results[0].click(chat.id, reply_to=reply_to_id, hide_via=True)
         else:
-            PM_IMG = (
-                gvarstatus("PM_IMG")
+            PM_PIC = (
+                gvarstatus("PM_PIC")
                 or "https://telegra.ph/file/69fa26f4659e377dea80e.jpg"
             )
-            if PM_IMG == "OFF":
-                LEGEND_IMG = None
-            else:
-                legend = [x for x in PM_IMG.split()]
+            if PM_PIC:
+                legend = [x for x in PM_PIC.split()]
                 PIC = list(legend)
                 LEGEND_IMG = random.choice(PIC)
+            else:
+                LEGEND_IMG = None
             if LEGEND_IMG is not None:
                 msg = await event.client.send_file(
                     chat.id,
@@ -413,8 +404,6 @@ async def on_new_private_message(event):
         return
     if pmpermit_sql.is_approved(chat.id):
         return
-    if chat.id in PMPERMIT_.TEMPAPPROVED:
-        return
     if event.chat_id == 5122474448:
         await event.client.send_message(chat, "👨‍💻 Welcome My Master 💝")
         reason = "**♡ My Pro Master Is Here ♡ **"
@@ -468,10 +457,6 @@ async def you_dm_other(event):
             f"{cmdhd}a",
             f"{cmdhd}da",
             f"{cmdhd}approve",
-            f"{cmdhd}tempapprove",
-            f"{cmdhd}tempa",
-            f"{cmdhd}tapprove",
-            f"{cmdhd}ta",
         )
     ):
         return
@@ -758,87 +743,6 @@ async def approve_p_m(event):  # sourcery no-metrics
 
 
 @legend.legend_cmd(
-    pattern="t(emp)?(a|approve)(?:\s|$)([\s\S]*)",
-    command=("tapprove", menu_category),
-    info={
-        "header": "To approve user to direct message you for temporarily.",
-        "note": "Heroku restarts every 24 hours so with every restart it dissapproves every temp approved user",
-        "usage": [
-            "{tr}ta/tapprove <username/reply reason> in group",
-            "{tr}ta/tapprove <reason> in pm",
-        ],
-    },
-)
-async def tapprove_pm(event):  # sourcery no-metrics
-    "Temporarily approve user to pm"
-    if gvarstatus("pmpermit") is None:
-        return await eor(
-            event,
-            f"__Turn on pmpermit by doing __`{cmdhd}pmguard on` __for working of this plugin__",
-        )
-    if event.is_private:
-        user = await event.get_chat()
-        reason = event.pattern_match.group(3)
-    else:
-        user, reason = await get_user_from_event(event, thirdgroup=True)
-        if not user:
-            return
-    if not reason:
-        reason = "Not mentioned"
-    try:
-        PM_WARNS = sql.get_collection("pmwarns").json
-    except AttributeError:
-        PM_WARNS = {}
-    if (user.id not in PMPERMIT_.TEMPAPPROVED) and (
-        not pmpermit_sql.is_approved(user.id)
-    ):
-        if str(user.id) in PM_WARNS:
-            del PM_WARNS[str(user.id)]
-        PMPERMIT_.TEMPAPPROVED.append(user.id)
-        chat = user
-        if str(chat.id) in sqllist.get_collection_list("pmspam"):
-            sqllist.rm_from_list("pmspam", chat.id)
-        if str(chat.id) in sqllist.get_collection_list("pmchat"):
-            sqllist.rm_from_list("pmchat", chat.id)
-        if str(chat.id) in sqllist.get_collection_list("pmrequest"):
-            sqllist.rm_from_list("pmrequest", chat.id)
-        if str(chat.id) in sqllist.get_collection_list("pmenquire"):
-            sqllist.rm_from_list("pmenquire", chat.id)
-        if str(chat.id) in sqllist.get_collection_list("pmoptions"):
-            sqllist.rm_from_list("pmoptions", chat.id)
-        await eod(
-            event,
-            f"[{user.first_name}](tg://user?id={user.id}) is __temporarily approved to pm__\n**Reason :** __{reason}__",
-        )
-        try:
-            PMMESSAGE_CACHE = sql.get_collection("pmmessagecache").json
-        except AttributeError:
-            PMMESSAGE_CACHE = {}
-        if str(user.id) in PMMESSAGE_CACHE:
-            try:
-                await event.client.delete_messages(
-                    user.id, PMMESSAGE_CACHE[str(user.id)]
-                )
-            except Exception as e:
-                LOGS.info(str(e))
-            del PMMESSAGE_CACHE[str(user.id)]
-        sql.del_collection("pmwarns")
-        sql.del_collection("pmmessagecache")
-        sql.add_collection("pmwarns", PM_WARNS, {})
-        sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    elif pmpermit_sql.is_approved(user.id):
-        await eod(
-            event,
-            f"[{user.first_name}](tg://user?id={user.id}) __is in approved list__",
-        )
-    else:
-        await eod(
-            event,
-            f"[{user.first_name}](tg://user?id={user.id}) __is already in temporary approved list__",
-        )
-
-
-@legend.legend_cmd(
     pattern="(da|disapprove)(?:\s|$)([\s\S]*)",
     command=("disapprove", menu_category),
     info={
@@ -878,12 +782,6 @@ async def disapprove_p_m(event):
         reason = "Not Mentioned."
     if pmpermit_sql.is_approved(user.id):
         pmpermit_sql.disapprove(user.id)
-        await eor(
-            event,
-            f"[{user.first_name}](tg://user?id={user.id}) __is disapproved to personal message me.__\n**Reason:**__ {reason}__",
-        )
-    elif user.id in PMPERMIT_.TEMPAPPROVED:
-        PMPERMIT_.TEMPAPPROVED.remove(user.id)
         await eor(
             event,
             f"[{user.first_name}](tg://user?id={user.id}) __is disapproved to personal message me.__\n**Reason:**__ {reason}__",
@@ -947,65 +845,9 @@ async def block_p_m(event):
     sql.add_collection("pmwarns", PM_WARNS, {})
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
     await event.client(functions.contacts.BlockRequest(user.id))
-    await eor(
-        event,
-        f"[{user.first_name}](tg://user?id={user.id}) __is blocked, he can no longer personal message you.__\n**Reason:** __{reason}__",
-    )
-
-
-@legend.legend_cmd(
-    pattern="blockall(?:\s|$)([\s\S]*)",
-    command=("blockall", menu_category),
-    info={
-        "header": "To block all the user to direct messaged you.",
-        "usage": [
-            "{tr}blockall <username/reply reason> in group",
-            "{tr}blockall <reason> in pm",
-        ],
-    },
-)
-async def block_p_m(event):
-    "To block user to direct message you."
-    if gvarstatus("pmpermit") is None:
-        return await eod(
-            event,
-            f"__Turn on pmpermit by doing __`{cmdhd}pmguard on` __for working of this plugin__",
-        )
-    try:
-        PM_WARNS = sql.get_collection("pmwarns").json
-    except AttributeError:
-        PM_WARNS = {}
-    try:
-        PMMESSAGE_CACHE = sql.get_collection("pmmessagecache").json
-    except AttributeError:
-        PMMESSAGE_CACHE = {}
-    if str(user.id) in PM_WARNS:
-        del PM_WARNS[str(user.id)]
-    if str(user.id) in PMMESSAGE_CACHE:
-        try:
-            await event.client.delete_messages(user.id, PMMESSAGE_CACHE[str(user.id)])
-        except Exception as e:
-            LOGS.info(str(e))
-        del PMMESSAGE_CACHE[str(user.id)]
-    if pmpermit_sql.is_approved(user.id):
-        pmpermit_sql.disapprove(user.id)
-    sql.del_collection("pmwarns")
-    sql.del_collection("pmmessagecache")
-    sql.add_collection("pmwarns", PM_WARNS, {})
-    sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    sed = 0
-    lol = 0
-    async for krishna in event.client.iter_dialogs():
-        if krishna.is_user and not krishna.entity.bot:
-            sweetie = krishna.id
-            try:
-                await event.client(functions.contacts.BlockRequest(sweetie.id))
-                lol += 1
-            except BaseException:
-                sed += 1
     await eod(
         event,
-        f"♦️ Successfully Blocked :- {lol}\n🚩 Fail To Block :- {sed}",
+        f"[{user.first_name}](tg://user?id={user.id}) __is blocked, he can no longer personal message you.__\n**Reason:** __{reason}__",
     )
 
 
