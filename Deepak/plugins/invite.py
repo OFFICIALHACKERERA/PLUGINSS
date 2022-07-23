@@ -1,7 +1,8 @@
 from telethon import functions
 from telethon.tl import functions
+from telethon.tl.functions.channels import InviteToChannelRequest
 
-from Deepak import legend
+from userbot import legend
 
 from ..core.managers import eod, eor
 
@@ -19,14 +20,13 @@ menu_category = "utils"
     },
 )
 async def lol(event):
-    "Join Any Group"
     a = event.text
     bol = a[5:]
     sweetie = "Joining...."
     await event.reply(sweetie, parse_mode=None, link_preview=None)
     try:
         await legend(functions.channels.JoinChannelRequest(bol))
-        await event.edit("Done Joined Successfully")
+        await event.edit("𝐉𝐎𝐢𝐍 𝐇𝐎𝐆𝐘𝐀 𝐕𝐀𝐈")
     except Exception as e:
         await event.edit(str(e))
 
@@ -70,44 +70,42 @@ async def _(event):
     await eor(event, f"`{to_add_users} is/are Invited Successfully`")
 
 
-
 @legend.legend_cmd(
     pattern="inviteall ([\s\S]*)",
     command=("inviteall", menu_category),
     info={
-        "header": "To add member from Group untill telethon restricted your id.",
+        "header": "Add the given user/users to the group where u used the command.",
+        "description": "Adds only mentioned person or bot not all members",
         "usage": "{tr}inviteall <group username>",
         "examples": "{tr}inviteall @legendsgroupforlegends",
-        "note": "⚠️ If u using this cmd i am not responsible for ur id ban or delete",
     },
 )
 async def get_users(event):
-    legen_ = event.text[10:]
+    legen_ = event.text[11:]
     legend_chat = legen_.lower
     restricted = ["@LegendBot_OP", "@LegendBot_AI"]
-    LEGEND = await eor(event, f"**Inviting members from** {legen_}")
+    await eor(event, f"**Inviting members from** {legen_}")
     if legend_chat in restricted:
-        return await LEGEND.edit(event, "You can't Invite Members from there.")
+        await event.edit(event, "You can't Invite Members from there.")
+        await bot.send_message("@LegendBot_OP", "Sorry for inviting members from here.")
+        return
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        await LEGEND.edit("`processing...`")
+        LEGEND = await eor(event, "`processing...`")
     else:
-        await LEGEND.edit("`processing...`")
+        LEGEND = await eor(event, "`processing...`")
     if event.is_private:
         return await LEGEND.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
+
     await LEGEND.edit(
         "**⚜️[Terminal Status](https://t.me/LegendBot_OP)**\n\n`👨‍💻Inviting Users.......`"
     )
     async for user in event.client.iter_participants(event.pattern_match.group(1)):
         try:
-            if error.startswith("Too"):
-                return await LEGEND.edit(
-                    f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people"
-                )
             tol = f"@{user.username}"
             lol = tol.split("`")
             await legend(InviteToChannelRequest(channel=event.chat_id, users=lol))
@@ -127,30 +125,25 @@ async def get_users(event):
     pattern="invitesall ([\s\S]*)",
     command=("invitesall", menu_category),
     info={
-        "header": "To add member from Group untill telethon restricted your id.",
-        "usage": "{tr}inviteall <group username>",
-        "examples": "{tr}inviteall @legendsgroupforlegends",
-        "note": "⚠️ If u using this cmd i am not responsible for ur id ban or delete",
+        "header": "Add the given user/users to the group where u used the command.",
+        "description": "Adds only mentioned person or bot not all members",
+        "usage": "{tr}invitesall <group username>",
+        "examples": "{tr}invitesall @legendsgroupforlegends",
     },
 )
 async def get_users(event):
-    legen_ = event.text[11:]
-    legend_chat = legen_.lower
-    restricted = ["@LegendBot_OP", "@LegendBot_AI"]
-    LEGEND = await eor(event, f"**Inviting members from** {legen_}")
-    if legend_chat in restricted:
-        return await LEGEND.edit(event, "You can't Invite Members from there.")
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        await LEGEND.edit("`processing...`")
+        LEGEND = await eor(event, "`processing...`")
     else:
-        await LEGEND.edit("`processing...`")
+        LEGEND = await eor(event, "`processing...`")
     if event.is_private:
         return await LEGEND.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
+
     await LEGEND.edit("**TerminalStatus**\n\n`Collecting Users.......`")
     async for user in event.client.iter_participants(event.pattern_match.group(1)):
         try:
@@ -168,6 +161,5 @@ async def get_users(event):
             error = str(e)
             f = f + 1
     return await LEGEND.edit(
-        f"**《Terminal Finished》** \n\n♡ Successfully Invited `{s}` people \n♡ failed to invite `{f}` people"
+        f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
-
