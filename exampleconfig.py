@@ -16,7 +16,7 @@ class Development(Config):
     # command handler
     HANDLER = "."
     # command hanler for sudo
-    SUDO_HANDLER = "."
+    SUDO_HANDLER = ","
     # External plugins repo
     EXTRA_REPO = "https://github.com/OFFICIALHACKERERA/PLUGINSS"
     UPSTREAM_REPO = "pro"
