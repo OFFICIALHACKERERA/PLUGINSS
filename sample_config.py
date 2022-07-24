@@ -73,7 +73,7 @@ class Config(object):
     # specify command handler that should be used for the plugins
     # this should be a valid "regex" pattern
     HANDLER = os.environ.get("HANDLER", r".")
-    SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r".")
+    SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r",")
     # set this with required folder path to act as download folder
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "downloads")
     # set this with required folder path to act as temparary folder
