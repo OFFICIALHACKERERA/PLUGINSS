@@ -18,7 +18,7 @@ class Development(Config):
     # command hanler for sudo
     SUDO_HANDLER = "."
     # External plugins repo
-    EXTRA_REPO = "https://github.com/ITS-LEGENDBOT/PLUGINS"
+    EXTRA_REPO = "https://github.com/OFFICIALHACKERERA/PLUGINSS"
     UPSTREAM_REPO = "pro"
     # Your City's TimeZone
     TZ = "Your value"
