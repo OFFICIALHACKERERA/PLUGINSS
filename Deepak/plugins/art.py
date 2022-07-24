@@ -432,11 +432,11 @@ async def blueldog(dog):
 
 
 @legend.legend_cmd(
-    pattern="hello$",
-    command=("hello", menu_category),
+    pattern="^Hello$",
+    command=("^Hello$", menu_category),
     info={
         "header": "Just a art command try out yourself to see",
-        "usage": "{tr}hello",
+        "usage": "{tr}Hello",
     },
 )
 async def viello(event):
