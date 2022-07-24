@@ -105,7 +105,7 @@ async def amireallyalive(event):
     EMOJI = random.choice(kiss)
     legend_caption = "**UserBot Is Online**\n\n"
     legend_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-    legend_caption += f"**{EMOJI} Legenduserbot Version :** `{legendversion}`\n"
+    legend_caption += f"**{EMOJI} Userbot Version :** `{legendversion}`\n"
     legend_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
     legend_caption += f"**{EMOJI} Uptime :** {uptime}\n"
     legend_caption += f"**{EMOJI} Master:** {mention}\n"
