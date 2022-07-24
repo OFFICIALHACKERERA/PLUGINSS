@@ -27,10 +27,10 @@ async def bot_start(event):
     if check_is_black_list(chat.id):
         return
     reply_to = await reply_id(event)
-    buttons = [(Button.url("⚜ Lêɠêɳ̃dẞø† ⚜", "https://t.me/LegendBot_XD"))]
+    buttons = [(Button.url("OFFICIAL HACKER", "https://t.me/OFFICIALHACKERERA"))]
     PM_IMG = (
         gvarstatus("BOT_PING_PIC")
-        or "https://telegra.ph/file/5c898421fdef6f53aab0a.jpg"
+        or "https://telegra.ph/file/320f3073cf2f910c7c8cf.jpg"
     )
     start = datetime.now()
     end = datetime.now()
