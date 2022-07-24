@@ -13,7 +13,7 @@ loop = None
 if Config.DEEPAK_STRING:
     session = StringSession(str(Config.DEEPAK_STRING))
 else:
-    session = "LegendUserBot"
+    session = "🩸USERBOT"
 
 try:
     legend = LegendClient(
