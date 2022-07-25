@@ -29,22 +29,22 @@ from telethon.errors.rpcerrorlist import (
     ParticipantJoinMissingError,
     ChatSendMediaForbiddenError,
 )
-from Deepak import HNDLR, LOGS, asst, udB, vcClient
-from Deepak._misc._decorators import compile_pattern
-from Deepak.functions.helper import (
+from pyUltroid import HNDLR, LOGS, asst, udB, vcClient
+from pyUltroid._misc._decorators import compile_pattern
+from pyUltroid.functions.helper import (
     bash,
     downloader,
     inline_mention,
     mediainfo,
     time_formatter,
 )
-from Deepak.functions.admins import admin_check
-from Deepak.functions.tools import is_url_ok
-from Deepak.functions.ytdl import get_videos_link
-from Deepak._misc import owner_and_sudos, sudoers
-from Deepak._misc._assistant import in_pattern
-from Deepak._misc._wrappers import eod, eor
-from Deepak.version import __version__ as UltVer
+from pyUltroid.functions.admins import admin_check
+from pyUltroid.functions.tools import is_url_ok
+from pyUltroid.functions.ytdl import get_videos_link
+from pyUltroid._misc import owner_and_sudos, sudoers
+from pyUltroid._misc._assistant import in_pattern
+from pyUltroid._misc._wrappers import eod, eor
+from pyUltroid.version import __version__ as UltVer
 from telethon import events
 from telethon.tl import functions, types
 from telethon.utils import get_display_name
