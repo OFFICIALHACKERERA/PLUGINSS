@@ -46,6 +46,7 @@ async def startup_process():
         await verifyLoggerGroup()
         await load_plugins("plugins")
         await load_plugins("assistant")
+        await load_plugins("vcbot")
         await killer()
         print("----------------")
         print("🩸STARTING BOT MODE!")
