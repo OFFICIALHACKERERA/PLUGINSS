@@ -75,6 +75,8 @@ htmlwebshot
 py-Ultroid==2022.6.6
 pytgcalls==3.0.0.dev21
 
+https://github.com/TeamUltroid/pyUltroid
+
 https://github.com/New-dev0/Telethon/archive/Cartoon.zip
 
 git+https://github.com/alexmercerind/youtube-search-python
