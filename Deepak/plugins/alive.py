@@ -26,13 +26,13 @@ menu_category = "utils"
 
 
 @legend.legend_cmd(
-    pattern="legend$",
-    command=("legend", menu_category),
+    pattern="^Repo$",
+    command=("Repo", menu_category),
     info={
         "header": "To check bot's alive status",
         "options": "To show media in this cmd you need to set ALIVE_PIC with media link, get this by replying the media by .tgm",
         "usage": [
-            "{tr}legend",
+            "{tr}Repo",
         ],
     },
 )
@@ -46,7 +46,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT")
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✥"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "★"
     lal = list(EMOJI.split())
     EMOTES = random.choice(lal)
     sweetie_caption = (
