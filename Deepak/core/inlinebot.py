@@ -636,7 +636,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
             )
             text, msg_entities = await event.client._parse_message_text(
-                f"⚜ **Lêɠêɳ̃dẞø†** ⚜\n------------\n🔰 Owner ~ {mention}\n\n👨‍💻 Support ~ {Legend_grp}",
+                f"**UserBot**\n------------\n Owner {mention}\n\n Support {Legend_grp}",
                 "md",
             )
             result = types.InputBotInlineResult(
