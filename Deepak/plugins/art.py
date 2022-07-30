@@ -443,12 +443,12 @@ async def viello(event):
     "fun art command"
     reply_to_id = await reply_id(event)
     event = await eor(event, "**(❛ Hi ❜!**")
-    HELL_PIC = "https://te.legra.ph/file/b86eff074051b0b2d4513.jpg"
-    K_PIC = "https://te.legra.ph/file/a679e3d061ac6b349cd60.jpg"
-    L_PIC = "https://te.legra.ph/file/96c2b61d6361f112ceac5.jpg"
+    HELL_PIC = "https://telegra.ph/file/d199f6089ac8b014afc09.jpg"
+    K_PIC = "https://telegra.ph/file/dd5689b532b4fa5ac70d4.jpg"
+    L_PIC = "https://telegra.ph/file/cf7c2624f4b1a658b7dbc.jpg"
     M_PIC = "https://te.legra.ph/file/4d0c641e085f7ed15dfec.jpg"
     if HELL_PIC:
-        HELLO = f"╔┓┏╦━╦┓╔┓╔━━╗\n"
+        HELLO =  f"╔┓┏╦━╦┓╔┓╔━━╗\n"
         HELLO += f"║┗┛║┗╣┃║┃║X X ║\n"
         HELLO += f"║┏┓║┏╣┗╣┗╣╰╯║\n"
         HELLO += f"╚┛┗╩━╩━╩━╩━━╝\n"
