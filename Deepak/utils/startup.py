@@ -263,7 +263,7 @@ async def verifyLoggerGroup():
     else:
         descript = "A Logger Group For LegendBot.Don't delete this group or change to group(If you change group all your previous snips, welcome will be lost.)"
         _, groupid = await create_supergroup(
-            "LegendBot Logger", legend, Config.BOT_USERNAME, descript
+            "UserBot Logger", legend, Config.BOT_USERNAME, descript
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
