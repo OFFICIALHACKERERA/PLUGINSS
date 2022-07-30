@@ -100,7 +100,7 @@ async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
-    a = gvarstatus("ALIVE_EMOJI") or "✥"
+    a = gvarstatus("ALIVE_EMOJI") or "♥️"
     kiss = list(a.split())
     EMOJI = random.choice(kiss)
     legend_caption = "**UserBot Is Online**\n\n"
@@ -122,13 +122,13 @@ file3 = "https://te.legra.ph/file/d2a5265abdc4e73af1f94.jpg"
 file4 = "https://telegra.ph/file/b6f0c65a337b1f2609d07.jpg"
 file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = f"**LegendBot Is Up**\n"
+pm_caption = f"**UserBot Is Up**\n"
 pm_caption += f"**╭────────────**\n"
 pm_caption += f"┣»»»『{mention}』«««\n"
-pm_caption += f"┣Lêɠêɳ̃dẞø† ~ {legendversion}\n"
-pm_caption += f"┣Lêɠêɳ̃d  ~ [Owner](https://t.me/Legend_K_Boy)\n"
-pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/LegendBot_OP)\n"
-pm_caption += f"┣Řepô    ~ [Rєρο](https://github.com/LEGEND-AI/LEGENDBOT)\n"
+pm_caption += f"┣Version ~ {legendversion}\n"
+pm_caption += f"┣Official ~ [Owner](https://t.me/OFFICIALHACKERERA)\n"
+pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/HEPPYLIFI)\n"
+pm_caption += f"┣Řepô    ~ [Rєρο](https://t.me/Broken_Heart_72/11)\n"
 pm_caption += f"**╰────────────**\n"
 
 
