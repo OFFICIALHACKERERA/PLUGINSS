@@ -46,7 +46,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT")
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "★"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "🩸"
     lal = list(EMOJI.split())
     EMOTES = random.choice(lal)
     sweetie_caption = (
@@ -100,7 +100,7 @@ async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
-    a = gvarstatus("ALIVE_EMOJI") or "♥️"
+    a = gvarstatus("ALIVE_EMOJI") or "⚡"
     kiss = list(a.split())
     EMOJI = random.choice(kiss)
     legend_caption = "**UserBot Is Online**\n\n"
@@ -116,19 +116,19 @@ async def amireallyalive(event):
 
 edit_time = 12
 """ =======================CONSTANTS====================== """
-file1 = "https://te.legra.ph/file/2426eab17330c6e6310ea.mp4"
-file2 = "https://te.legra.ph/file/11ec9dd576ee5536125b2.jpg"
-file3 = "https://te.legra.ph/file/d2a5265abdc4e73af1f94.jpg"
-file4 = "https://telegra.ph/file/b6f0c65a337b1f2609d07.jpg"
-file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+file1 = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+file2 = "https://telegra.ph/file/daf4f760b650632050353.jpg"
+file3 = "https://telegra.ph/file/4c6d0a06cbc8b61bbba60.jpg"
+file4 = "https://telegra.ph/file/1c54067a4e69a146f23e5.jpg"
+file5 = "https://telegra.ph/file/6fbba3c97fecbc463d8d4.mp4"
 """ =======================CONSTANTS====================== """
-pm_caption = f"**UserBot Is Up**\n"
+pm_caption = f"**𝗨𝘀𝗲𝗿𝗕𝗼𝘁 𝗜𝘀 𝗨𝗽**\n"
 pm_caption += f"**╭────────────**\n"
 pm_caption += f"┣»»»『{mention}』«««\n"
-pm_caption += f"┣Version ~ {legendversion}\n"
-pm_caption += f"┣Official ~ [Owner](https://t.me/OFFICIALHACKERERA)\n"
-pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/HEPPYLIFI)\n"
-pm_caption += f"┣Řepô    ~ [Rєρο](https://t.me/Broken_Heart_72/11)\n"
+pm_caption += f"┣⚡ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 ~ {legendversion}\n"
+pm_caption += f"┣⚡ 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 ~ [Owner](https://t.me/OFFICIALHACKERERA)\n"
+pm_caption += f"┣⚡ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 ~ [G𝖗ουρ](https://t.me/HEPPYLIFI)\n"
+pm_caption += f"┣⚡ 𝗥𝗲𝗽𝗼    ~ [Rєρο](https://t.me/Broken_Heart_72/11)\n"
 pm_caption += f"**╰────────────**\n"
 
 
