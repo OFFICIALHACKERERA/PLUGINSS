@@ -448,7 +448,7 @@ async def viello(event):
     L_PIC = "https://telegra.ph/file/cf7c2624f4b1a658b7dbc.jpg"
     M_PIC = "https://telegra.ph/file/daf4f760b650632050353.jpg"
     if HELL_PIC:
-        HELLO =  f"•[HELLO]•"            
+        HELLO =  f"•♥️•[HELLO]•♥️•"            
         on = await event.client.send_file(
             event.chat_id, file=HELL_PIC, caption=HELLO, reply_to=reply_to_id
         )
