@@ -446,7 +446,7 @@ async def viello(event):
     HELL_PIC = "https://telegra.ph/file/d199f6089ac8b014afc09.jpg"
     K_PIC = "https://telegra.ph/file/dd5689b532b4fa5ac70d4.jpg"
     L_PIC = "https://telegra.ph/file/cf7c2624f4b1a658b7dbc.jpg"
-    M_PIC = "https://te.legra.ph/file/4d0c641e085f7ed15dfec.jpg"
+    M_PIC = "https://telegra.ph/file/daf4f760b650632050353.jpg"
     if HELL_PIC:
         HELLO =  f"╔┓┏╦━╦┓╔┓╔━━╗\n"
         HELLO += f"║┗┛║┗╣┃║┃║X X ║\n"
