@@ -442,7 +442,7 @@ async def blueldog(dog):
 async def viello(event):
     "fun art command"
     reply_to_id = await reply_id(event)
-    event = await eor(event, "**(• HI •!**")
+    event = await eor(event, "**(❛ HI ❜**")
     HELL_PIC = "https://telegra.ph/file/d199f6089ac8b014afc09.jpg"
     K_PIC = "https://telegra.ph/file/dd5689b532b4fa5ac70d4.jpg"
     L_PIC = "https://telegra.ph/file/cf7c2624f4b1a658b7dbc.jpg"
