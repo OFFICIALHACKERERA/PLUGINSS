@@ -1,3 +1,7 @@
+import asyncio
+
+
+
 @legend.legend_cmd(
     pattern="^Mkc$",
     command=("^Mkc$", menu_category),
@@ -11,8 +15,7 @@ async def viello(event):
     reply_to_id = await reply_id(event)
     event = await eor(event, "**(❛ HI ❜!**")
     HELL_PIC = "https://telegra.ph/file/d199f6089ac8b014afc09.jpg"
-    if HELL_PIC:
-        HELLO =  f"•♥•[ HELLO ]•♥•"            
+    if HELL_PIC:         
         on = await event.client.send_file(
             event.chat_id, file=HELL_PIC, caption=Mkc, reply_to=reply_to_id
         )
