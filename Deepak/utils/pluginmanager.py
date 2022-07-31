@@ -13,7 +13,7 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _format, _legendtools, _legendutils, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("🔥⚡Userẞø†⚡🔥")
+LOGS = logging.getLogger("🔥plugins")
 
 
 def load_module(shortname, plugin_path=None):
@@ -58,7 +58,7 @@ def load_module(shortname, plugin_path=None):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Deepak.plugins." + shortname] = mod
-        LOGS.info("💞Installed💞 " + shortname)
+        LOGS.info("Installed⚡ " + shortname)
 
 
 def remove_plugin(shortname):
