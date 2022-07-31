@@ -40,7 +40,7 @@ async def _(event):
         llol = [x for x in sweetie.split()]
         IPIC = random.choice(llol)
         if sweetie == "OFF":
-            legendevent = await eor(event, "(❛ ᑭσɳց ❜! ⚡", "html")
+            legendevent = await eor(event, "•★★  ℘ơŋɠ ★★•", "html")
             end = datetime.now()
             ms = (end - start).microseconds / 1000
             await legendevent.edit(
@@ -48,7 +48,7 @@ async def _(event):
                 parse_mode="html",
             )
         else:
-            legendevent = await eor(event, "(❛ ᑭσɳց ❜! ⚡", "html")
+            legendevent = await eor(event, "•★★  ℘ơŋɠ ★★•", "html")
             end = datetime.now()
             ms = (end - start).microseconds / 1000
             await legendevent.delete()
