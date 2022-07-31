@@ -35,28 +35,30 @@ except Exception as e:
 
 
 async def startup_process():
-    await verifyLoggerGroup()
-    await load_plugins("plugins")
-    await load_plugins("assistant")
-    await killer()
-    await spams()
-    print("----------------")
-    print("Starting Bot Mode!")
-    print("⚜ LegendBot Has Been Deployed Successfully ⚜")
-    print("OWNER - @LegendBoy_XD")
-    print("Group - @LegendBot_XD")
-    print("----------------")
-    await verifyLoggerGroup()
-    await add_bot_to_logger_group(BOTLOG_CHATID)
-    if PM_LOGGER_GROUP_ID != -100:
-        await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
-    await startupmessage()
-    await legends()
-    return
+    try:
+        await verifyLoggerGroup()
+        await load_plugins("plugins")
+        await load_plugins("assistant")
+        await killer()
+        print("----------------")
+        print("Starting Bot Mode!")
+        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
+        print("OWNER - @LegendBoy_XD")
+        print("Group - @LegendBot_XD")
+        print("----------------")
+        await verifyLoggerGroup()
+        await add_bot_to_logger_group(BOTLOG_CHATID)
+        if PM_LOGGER_GROUP_ID != -100:
+            await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
+        await startupmessage()
+        await extrarepo()
+        await hekp()
+    except Exception as e:
+        LOGS.error(f"{str(e)}")
+        sys.exit()
 
 
 legend.loop.run_until_complete(startup_process())
-legend.loop.create_task(hekp())
 
 if len(sys.argv) not in (1, 3, 4):
     legend.disconnect()
