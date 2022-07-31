@@ -61,6 +61,41 @@ def load_module(shortname, plugin_path=None):
         LOGS.info("ιиѕтαℓℓє∂⚡" + shortname)
 
 
+def start_spam(shortname):
+    if shortname.startswith("__"):
+        pass
+    elif shortname.endswith("_"):
+        import importlib
+        import sys
+        from pathlib import Path
+
+        path = Path(f"userbot/plugins/Spam/{shortname}.py")
+        name = "userbot.plugins.Spam.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        print("Starting Your Spam Bot.")
+        print("SpamBot Sucessfully imported " + shortname)
+    else:
+        import importlib
+        import sys
+        from pathlib import Path
+
+        path = Path(f"Deepak/plugins/Spam/{shortname}.py")
+        name = "Deepak.plugins.Spam.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        mod.tgbot = legend.tgbot
+        spec.loader.exec_module(mod)
+        sys.modules["Spam" + shortname] = mod
+        print("[🔰Spam🔰 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
+
+
+
+
+
+
+
 def remove_plugin(shortname):
     try:
         cmd = []
