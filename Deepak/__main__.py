@@ -10,14 +10,14 @@ from .start import killer
 from .utils import (
     add_bot_to_logger_group,
     hekp,
+    install_extrarepo,
     load_plugins,
     setup_bot,
-    spams,
     startupmessage,
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendDeepak")
+LOGS = logging.getLogger("LegendUserBot")
 
 print(Deepak.__copyright__)
 print("Licensed under the terms of the " + Deepak.__license__)
@@ -25,8 +25,15 @@ print("Licensed under the terms of the " + Deepak.__license__)
 cmdhr = Config.HANDLER
 
 
+async def extrarepo():
+    if Config.EXTRA_REPO:
+        await install_extrarepo(
+            Config.EXTRA_REPO, Config.EXTRA_REPOBRANCH, "xtraplugins"
+        )
+
+
 try:
-    LOGS.info("Starting Deepak")
+    LOGS.info("Starting Userbot")
     legend.loop.run_until_complete(setup_bot())
     LOGS.info("TG Bot Startup Completed")
 except Exception as e:
@@ -43,8 +50,7 @@ async def startup_process():
         print("----------------")
         print("Starting Bot Mode!")
         print("⚜ LegendBot Has Been Deployed Successfully ⚜")
-        print("OWNER - @LegendBoy_XD")
-        print("Group - @LegendBot_XD")
+        print("OWNER - @OFFICIALHACKERERA")
         print("----------------")
         await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
