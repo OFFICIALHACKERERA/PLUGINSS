@@ -1,12 +1,10 @@
 import asyncio
 import random
-import time
 from datetime import datetime
 
 from ..core.managers import eor
-from ..helpers.functions import get_readable_time
 from ..sql_helper.globals import gvarstatus
-from . import StartTime, legend, mention
+from . import hmention, legend
 
 menu_category = "tools"
 
@@ -20,11 +18,9 @@ menu_category = "tools"
         "usage": ["{tr}ping", "{tr}ping -a"],
     },
 )
-async def ping(event):
+async def _(event):
     "To check ping"
     type = event.pattern_match.group(1)
-    reply_to_id = await reply_id(event)
-    uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     if type == " -a":
         legendevent = await eor(event, "`!....`")
@@ -37,31 +33,31 @@ async def ping(event):
         ms = round((tms - 0.6) / 3, 3)
         await legendevent.edit(f"**👨‍💻 Average Pong!**\n➥ {ms} ms")
     else:
-        legendevent = await eor(event, "<b><i>⚡ Pong! ⚡</b></i>", "html")
-        end = datetime.now()
-        ms = (end - start).microseconds / 1000
-        ping_temp = (gvarstatus("PING_TEMPLATE")) or "set ping template "
         sweetie = (
             gvarstatus("PING_IMG")
-            or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+            or "https://telegra.ph/file/e15a2fe1430358e26713c.jpg"
         )
-        caption = ping_temp.format(
-            mention=mention,
-            uptime=uptime,
-            ping=ms,
-        )
+        llol = [x for x in sweetie.split()]
+        IPIC = random.choice(llol)
         if sweetie == "OFF":
-            await eor(legendevent, caption)
+            legendevent = await eor(event, "<b><i>⚡ **Pong!** ⚡</b></i>", "html")
+            end = datetime.now()
+            ms = (end - start).microseconds / 1000
+            await legendevent.edit(
+                f"<b><i>👨‍💻 Pong </b></i>\n\n   🚩 {ms} <b><i>ms\n   Bot : {hmention}</b></i>",
+                parse_mode="html",
+            )
         else:
-            llol = [x for x in sweetie.split()]
-            IPIC = random.choice(llol)
+            legendevent = await eor(event, "<b><i>⚡ **Pong!** ⚡</b></i>", "html")
+            end = datetime.now()
+            ms = (end - start).microseconds / 1000
+            await legendevent.delete()
             await event.client.send_file(
                 event.chat_id,
                 IPIC,
-                caption=caption,
-                reply_to=reply_to_id,
+                caption=f"<b><i>👨‍💻 Pong </b></i>\n\n   🚩 {ms} <b><i>ms\n   Bot : {hmention}</b></i>",
+                parse_mode="html",
             )
-            await legendevent.delete()
 
 
 @legend.legend_cmd(
