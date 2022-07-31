@@ -13,7 +13,7 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _format, _legendtools, _legendutils, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("LegendDeepak")
+LOGS = logging.getLogger("LegendUse")
 
 
 def load_module(shortname, plugin_path=None):
@@ -58,37 +58,7 @@ def load_module(shortname, plugin_path=None):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Deepak.plugins." + shortname] = mod
-        LOGS.info("plugins installed. " + shortname)
-
-
-def start_spam(shortname):
-    if shortname.startswith("__"):
-        pass
-    elif shortname.endswith("_"):
-        import importlib
-        import sys
-        from pathlib import Path
-
-        path = Path(f"Deepak/plugins/Spam/{shortname}.py")
-        name = "Deepak.plugins.Spam.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        print("Starting Your Spam Bot.")
-        print("SpamBot Sucessfully imported " + shortname)
-    else:
-        import importlib
-        import sys
-        from pathlib import Path
-
-        path = Path(f"Deepak/plugins/Spam/{shortname}.py")
-        name = "Deepak.plugins.Spam.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.tgbot = legend.tgbot
-        spec.loader.exec_module(mod)
-        sys.modules["Spam" + shortname] = mod
-        print("[🔰Spam🔰 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
+        LOGS.info("💞Installed💞 " + shortname)
 
 
 def remove_plugin(shortname):
