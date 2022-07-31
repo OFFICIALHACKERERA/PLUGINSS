@@ -326,7 +326,7 @@ RAID = [
 
 
 @tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
-async def spam(e):
+async def raid(e):
     usage = "**CMD** : /raid <value> <text> <reply to anyone>"
     if
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
@@ -375,11 +375,8 @@ async def raidgoing(event):
 
 
 @tgbot.on(
-    events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
-)
+    events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
 async def replyraid(e):
-    global que
-    if
         usage = "/replyraid <reply to anyone>"
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -399,11 +396,8 @@ async def replyraid(e):
 
 
 @tgbot.on(
-    events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
-)
+    events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid))
 async def dreplyraid(e):
-    global que
-    if
         usage = "/dreplyraid <reply to person> "
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
