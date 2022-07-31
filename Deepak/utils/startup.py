@@ -224,7 +224,7 @@ async def spams():
     if spam == "ON":
         import glob
 
-        path = "userbot/plugins/Spam/*.py"
+        path = "Deepak/plugins/Spam/*.py"
         files = glob.glob(path)
         for name in files:
             with open(name) as f:
