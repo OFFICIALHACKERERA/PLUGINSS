@@ -13,7 +13,7 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _format, _legendtools, _legendutils, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("LegendUse")
+LOGS = logging.getLogger("🔥⚡Userẞø†⚡🔥")
 
 
 def load_module(shortname, plugin_path=None):
