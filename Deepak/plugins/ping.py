@@ -35,7 +35,7 @@ async def _(event):
     else:
         sweetie = (
             gvarstatus("PING_IMG")
-            or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+            or "https://telegra.ph/file/8c752e16b9254a4534a15.jpg"
         )
         llol = [x for x in sweetie.split()]
         IPIC = random.choice(llol)
@@ -44,7 +44,7 @@ async def _(event):
             end = datetime.now()
             ms = (end - start).microseconds / 1000
             await legendevent.edit(
-                f"(❛ ᑭσɳց ❜!\n\n 💞 ms {ms}\n 💞 my master: {hmention}</b></i>",
+                f" ᑭσɳց \n\n Ms {ms}\n My Master: {hmention}</b></i>",
                 parse_mode="html",
             )
         else:
@@ -55,7 +55,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 IPIC,
-                caption=f"(❛ ᑭσɳց ❜!\n\n 💞 ms {ms}\n💞 my master {hmention}</b></i>",
+                caption=f" ᑭσɳց \n\n Ms {ms}\n My Master {hmention}</b></i>",
                 parse_mode="html",
             )
 
