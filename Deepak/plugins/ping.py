@@ -35,7 +35,7 @@ async def _(event):
     else:
         sweetie = (
             gvarstatus("PING_IMG")
-            or "https://telegra.ph/file/8c752e16b9254a4534a15.jpg"
+            or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
         )
         llol = [x for x in sweetie.split()]
         IPIC = random.choice(llol)
