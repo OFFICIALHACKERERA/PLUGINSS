@@ -17,7 +17,7 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("⚡UserBot")
 
 print(Deepak.__copyright__)
 print("Licensed under the terms of the " + Deepak.__license__)
@@ -49,7 +49,7 @@ async def startup_process():
         await killer()
         print("----------------")
         print("Starting Bot Mode!")
-        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
+        print("⚡ UserBot Has Been Deployed Successfully ⚜")
         print("OWNER - @OFFICIALHACKERERA")
         print("----------------")
         await verifyLoggerGroup()
