@@ -1,7 +1,3 @@
-
-#official Hacker
-
-
 import asyncio
 import random
 
@@ -332,6 +328,7 @@ RAID = [
 @tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     usage = "**CMD** : /raid <value> <text> <reply to anyone>"
+    if Config.SPAM == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -382,6 +379,7 @@ async def raidgoing(event):
 )
 async def replyraid(e):
     global que
+    if Config.SPAM == "ON":
         usage = "/replyraid <reply to anyone>"
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -405,6 +403,7 @@ async def replyraid(e):
 )
 async def dreplyraid(e):
     global que
+    if Config.SPAM == "ON":
         usage = "/dreplyraid <reply to person> "
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
