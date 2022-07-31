@@ -31,31 +31,31 @@ async def _(event):
         end = datetime.now()
         tms = (end - start).microseconds / 1000
         ms = round((tms - 0.6) / 3, 3)
-        await legendevent.edit(f"**👨‍💻 Average Pong!**\n➥ {ms} ms")
+        await legendevent.edit(f"** Average Pong!**\n➥ {ms} ms")
     else:
         sweetie = (
             gvarstatus("PING_IMG")
-            or "https://telegra.ph/file/e15a2fe1430358e26713c.jpg"
+            or "https://telegra.ph/file/e0d5b405f757d267ed944.jpg"
         )
         llol = [x for x in sweetie.split()]
         IPIC = random.choice(llol)
         if sweetie == "OFF":
-            legendevent = await eor(event, "<b><i>⚡ **Pong!** ⚡</b></i>", "html")
+            legendevent = await eor(event, "<b><i>••**PONG..!**••</b></i>", "html")
             end = datetime.now()
             ms = (end - start).microseconds / 1000
             await legendevent.edit(
-                f"<b><i>👨‍💻 Pong </b></i>\n\n   🚩 {ms} <b><i>ms\n   Bot : {hmention}</b></i>",
+                f"<b><i> PONG </b></i>\n\n    {ms} <b><i> • MS\n MY MASTER • {hmention}</b></i>",
                 parse_mode="html",
             )
         else:
-            legendevent = await eor(event, "<b><i>⚡ **Pong!** ⚡</b></i>", "html")
+            legendevent = await eor(event, "<b><i>••**PONG..!**••</b></i>", "html")
             end = datetime.now()
             ms = (end - start).microseconds / 1000
             await legendevent.delete()
             await event.client.send_file(
                 event.chat_id,
                 IPIC,
-                caption=f"<b><i>👨‍💻 Pong </b></i>\n\n   🚩 {ms} <b><i>ms\n   Bot : {hmention}</b></i>",
+                caption=f"<b><i> PONG </b></i>\n\n  {ms} <b><i> • MS\n MY MASTER • {hmention}</b></i>",
                 parse_mode="html",
             )
 
