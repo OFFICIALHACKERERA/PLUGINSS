@@ -10,7 +10,7 @@ from .core.session import legend
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-__version__ = "α • 2.1"
+__version__ = "3.0"
 __license__ = "GNU Affero General Public License v3.0"
 __author__ = "LegendBot <https://github.com/ITS-LEGENDBOT/LEGENDBOT>"
 __copyright__ = f"LegendBot Copyright (C) 2020 - 2021  { __author__}"
