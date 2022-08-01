@@ -17,7 +17,7 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendUserBot")
+LOGS = logging.getLogger("🤍UserBot🤍")
 
 print(Deepak.__copyright__)
 print("Licensed under the terms of the " + Deepak.__license__)
