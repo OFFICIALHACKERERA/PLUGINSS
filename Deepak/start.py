@@ -8,7 +8,7 @@ from telethon import Button, events
 api_id = os.environ.get("APP_ID")
 api_hash = os.environ.get("API_HASH")
 
-from Deepak import *
+from userbot import *
 
 from . import *
 from .helpers.hack import *
@@ -20,15 +20,13 @@ legendboy = 2024465080
 
 from telethon import Button, custom, events
 
-from . import legendversion
 from .core.logger import logging
 from .core.session import legend, tgbot
 
-LOGS = logging.getLogger("LegendDeepak")
-LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
+LOGS = logging.getLogger("LegendUserBot")
+LEGEND_PIC = "https://te.legra.ph/file/d3785d49b2c5e6f00bc67.jpg"
 
-onbot = "start - Check if I am Alive \nhack - Hack Anyone Through String Session\nping - Pong!\nunban - userid/username \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
-
+onbot = "start - Check if I am Alive \nhelp - Check ALL Command\nalive- To Check alive status\nping - To check ping of bot\nuinfo - To Check info of assistant chat\nbroadcast - broadcast message to all the person who has started ur bot\nban - to ban person to block message in assistant chat\nunban - To Unban Person allw to message in assistant chat\neval - To run python code\npurge - To Purge Message from replied\ndel - To del replied message\nbigspam - To Spam Through Bot value > 100\ndelayspam - Spam With Delay \nraid - To Abuse Anyone By username/name/reply\nreplyraid - To Activate Raid On Anyone\ndreplyraid - To Stop Raid\nspam - To Spam With Chat value < 100\nhack - Hack Telegram account through StringSession"
 perf = "[ †hê Lêɠêɳ̃dẞø† ]"
 
 bot = legend
@@ -77,24 +75,16 @@ async def killer():
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_file("@BotFather", "Deepak/resources/pics/main.jpg")
+            await bot.send_file("@BotFather", "userbot/resources/pics/main.jpg")
             await asyncio.sleep(2)
         except Exception as e:
             print(e)
 
 
-async def legends():
-    LEGEND_USER = bot.me.first_name
-    The_LegendBoy = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
-    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {legendversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
-    try:
-        TRY = [(Button.inline("⭐ Start ⭐", data="start"))]
-        await tgbot.send_file(
-            bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY, incoming=True
-        )
-    except:
-        pass
+@legend.tgbot.on(events.NewMessage(pattern="/start", func=lambda x: x.is_group))
+async def stat(event):
+    keybard = [(Button.inline("⭐ Click Here ⭐", data="start"))]
+    await tgbot.send_message(event.chat_id, f"Click Below To Start", buttons=keybard)
 
 
 @legend.tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"start")))
@@ -105,17 +95,17 @@ async def help(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message=f"Hey Sir It's Me {bot_id}, Your Assistant! How Can I Help U?",
+            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [LegendBot](https://t.me/LegendBot_OP)",
             buttons=[
                 [
-                    Button.url("👨‍🏫 Support ", "https://t.me/LegendBot_OP"),
-                    Button.url("🤖 Updates ", "https://t.me/LegendBot_AI"),
+                    Button.url(" Support ", "https://t.me/LegendBot_OP"),
+                    Button.url(" Updates ", "https://t.me/LegendBot_AI"),
                 ],
                 [
-                    custom.Button.inline("👤 Users", data="users"),
-                    custom.Button.inline("⚙ Settings", data="osg"),
+                    custom.Button.inline(" Users ", data="users"),
+                    custom.Button.inline(" Settings ", data="osg"),
                 ],
-                [custom.Button.inline("🔥 Hack 🔥", data="hack")],
+                [custom.Button.inline(" Hack ", data="hack")],
             ],
         )
     else:
@@ -131,14 +121,13 @@ async def help(event):
             message="Which Type Of Setting Do U Want Sir",
             buttons=[
                 [
-                    custom.Button.inline("♻️ Restart", data="res_tart"),
-                    custom.Button.inline("🤖 Shut Down", data="shutdown"),
+                    custom.Button.inline(" Restart ", data="res_tart"),
+                    custom.Button.inline(" Shut Down ", data="shutdown"),
                 ],
                 [
-                    custom.Button.inline("🗒 Var", data="strvar"),
-                    custom.Button.inline("👨‍💻 Commmands", data="gibcmd"),
+                    custom.Button.inline(" Set Var", data="strvar"),
                 ],
-                [custom.Button.inline("✨ Back ✨", data="start")],
+                [custom.Button.inline(" Back ", data="start")],
             ],
         )
     else:
@@ -194,57 +183,55 @@ async def help(event):
             message="Which Type Of Setting Do U Want Sir",
             buttons=[
                 [
-                    custom.Button.inline("Var Explain", data="var"),
-                    custom.Button.inline("All Var", data="allvar"),
+                    custom.Button.inline(" Set var ", data="setvar"),
+                    custom.Button.inline(" Get Var ", data="gevar"),
                 ],
-                [custom.Button.inline("Back", data="osg")],
+                [custom.Button.inline(" Del Var ", data="delvar")],
             ],
         )
     else:
         await event.answer("Sorry This Button Only My Master", cache_time=0, alert=True)
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"var")))
+@legend.tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"setvar")))
 async def users(event):
-    if event.query.user_id == bot.uid:
-        await event.delete()
-        await tgbot.send_message(
-            event.chat_id,
-            message=".set var <varname> <value> ex:- .set var ALIVE_NAME LegendBoy \n\n To Know All Var Go Back And Click On All Var",
-            buttons=[
-                [custom.Button.inline("Back", data="osg")],
-            ],
-        )
-    else:
-        await event.answer("Sorry This Button Only My Master", cache_time=0, alert=True)
+    async with tgbot.conversation(event.chat_id) as x:
+        if (Config.API_KEY is None) or (Config.APP_NAME is None):
+            return await x.send_message(
+                "Set the required vars in heroku to function this normally `API_KEY` and `APP_NAME`.",
+            )
+        await x.send_message("👨‍💻 GIVE VAR NAME")
+        variable = await x.get_response()
+        await x.send_message("👨‍💻 GIVE VALUE")
+        value = await x.get_response()
+        await setvar(variable.text, value.text)
+        await event.reply("Done Now Wait For A Minute To Complete Logs")
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"allvar")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"getvar")))
 async def users(event):
-    if event.query.user_id == bot.uid:
-        await event.delete()
-        await tgbot.send_message(
-            event.chat_id,
-            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : LegendBot Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
-            buttons=[
-                [custom.Button.inline("Back", data="osg")],
-            ],
-        )
-    else:
-        await event.answer("Sorry This Button Only My Master", cache_time=0, alert=True)
+    async with tgbot.conversation(event.chat_id) as x:
+        if (Config.API_KEY is None) or (Config.APP_NAME is None):
+            return await x.send_message(
+                "Set the required vars in heroku to function this normally `API_KEY` and `APP_NAME`.",
+            )
+        await x.send_message("👨‍💻 GIVE VAR NAME")
+        variable = await x.get_response()
+        lol = await getvar(variable.text)
+        await event.reply(f"{lol}")
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"gibcmd")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"delvar")))
 async def users(event):
-    if event.query.user_id == bot.uid:
-        grabon = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot \n➤ /purge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \n➤ /del - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
-        await tgbot.send_message(event.chat_id, grabon)
-    else:
-        await event.answer(
-            "Wait A Min, U Are Not My Master So How Dare U Trying To Touch This Button",
-            cache_time=0,
-            alert=True,
-        )
+    async with tgbot.conversation(event.chat_id) as x:
+        if (Config.API_KEY is None) or (Config.APP_NAME is None):
+            return await x.send_message(
+                "Set the required vars in heroku to function this normally `API_KEY` and `APP_NAME`.",
+            )
+        await x.send_message("👨‍💻 GIVE VAR NAME")
+        variable = await x.get_response()
+        lol = await delvar(variable.text)
+        await event.reply(f"Done Now Wait For A Minute To Complete Logs \n\n {lol}")
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
@@ -304,6 +291,7 @@ keyboard = [
         Button.inline("L", data="Lhack"),
         Button.inline("M", data="Mhack"),
         Button.inline("N", data="Nhack"),
+        Button.inline("O", data="Ohack"),
     ],
     [Button.inline("Back", data="osg")],
 ]
@@ -622,8 +610,29 @@ async def users(event):
                 await event.respond("Something is wrong")
         except Exception as e:
             await event.respond(
-                "SEND THIS ERROR TO - @Legend_Deepak\n**LOGS**\n" + str(e)
+                "SEND THIS ERROR TO - @Legend_Userbot\n**LOGS**\n" + str(e)
             )
+
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Ohack")))
+async def users(event):
+    async with tgbot.conversation(event.chat_id) as x:
+        await x.send_message("GIVE STRING SESSION")
+        strses = await x.get_response()
+        op = await cu(strses.text)
+        if op:
+            pass
+        else:
+            return await event.respond(
+                "This StringSession Has Been Terminated.", buttons=keyboard
+            )
+        await x.send_message("NOW GIVE USER USERNAME")
+        user = await x.get_response()
+        await gpromote(strses.text, user.text)
+        await event.reply(
+            "I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For Using LegendBoy Bot.",
+            buttons=keyboard,
+        )
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Nhack")))
