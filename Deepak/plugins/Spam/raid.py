@@ -5,7 +5,6 @@ import random
 from telethon import events
 
 from Deepak import bot
-from Deepak.Config import Config
 
 from . import *
 
@@ -332,7 +331,7 @@ RAID = [
 ABUSE = os.environ.get("ABUSE", "ON")
 
 
-@tbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
+@tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     if ABUSE == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
@@ -370,7 +369,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@tbot.on(events.NewMessage(incoming=True))
+@tgbot.on(events.NewMessage(incoming=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -386,7 +385,9 @@ async def _(event):
         )
 
 
-@tbot.on(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
+@tgbot.on(
+    events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
+)
 async def _(e):
     global que
     if ABUSE == "ON":
@@ -403,7 +404,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = f"Activated Reply Raid By {Config.ALIVE_NAME}"
+            text = f"रिप्लाई रेड स्टार्ट कर दी गई है {Config.ALIVE_NAME}"
             await e.reply(text, parse_mode=None, link_preview=None)
         elif e.reply_to_msg_id:
             a = await e.get_reply_message()
@@ -413,13 +414,13 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = f"**Activated Reply Raid By {legend_mention}**"
+            text = f"**रिप्लाई रेड स्टार्ट कर दी जय है {legend_mention}**"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@tbot.on(
+@tgbot.on(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def _(e):
@@ -438,7 +439,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = "** Deactivated Reply Raid **"
+            text = "** रिप्लाई रेड रोक दी गई है। **"
             await e.reply(text, parse_mode=None, link_preview=None)
         elif e.reply_to_msg_id:
             a = await e.get_reply_message()
@@ -448,7 +449,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = "** Deactivated Reply Raid **"
+            text = "** रिप्लाई रेड रोक दी गई है। **"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
