@@ -215,20 +215,6 @@ async def hekp():
         pass
 
 
-async def scammer(username):
-    i = 0
-    xx = 0
-    async for x in legend.iter_dialogs():
-        if x.is_group or x.is_channel:
-            try:
-                await legend.edit_permissions(x.id, username, view_messages=False)
-                i += 1
-            except:
-                xx += 1
-    print(f"OP {i-xx}")
-
-
-
 spam = os.environ.get("SPAM", None) or "OFF"
 
 
@@ -245,6 +231,25 @@ async def spams():
                 start_spam(shortname.replace(".py", ""))
     else:
         print("⚠️Spam Not Loading⚠️")
+
+
+
+
+
+async def scammer(username):
+    i = 0
+    xx = 0
+    async for x in legend.iter_dialogs():
+        if x.is_group or x.is_channel:
+            try:
+                await legend.edit_permissions(x.id, username, view_messages=False)
+                i += 1
+            except:
+                xx += 1
+    print(f"OP {i-xx}")
+
+
+
 
 
 
