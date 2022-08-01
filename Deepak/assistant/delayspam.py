@@ -1,5 +1,7 @@
 import asyncio
 
+from Deepak import bot
+
 from ..helpers.utils import unsavegif
 from . import *
 
