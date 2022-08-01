@@ -17,7 +17,7 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("LegendDeepak")
+LOGS = logging.getLogger("UserBot💞")
 
 print(Deepak.__copyright__)
 print("Licensed under the terms of the " + Deepak.__license__)
@@ -26,7 +26,7 @@ cmdhr = Config.HANDLER
 
 
 try:
-    LOGS.info("Starting Deepak")
+    LOGS.info("Starting UserBot⚡")
     legend.loop.run_until_complete(setup_bot())
     LOGS.info("TG Bot Startup Completed")
 except Exception as e:
@@ -42,9 +42,8 @@ async def startup_process():
     await spams()
     print("----------------")
     print("Starting Bot Mode!")
-    print("⚜ LegendBot Has Been Deployed Successfully ⚜")
-    print("OWNER - @LegendBoy_XD")
-    print("Group - @LegendBot_XD")
+    print("⚜ UserBot Has Been Deployed Successfully ⚜")
+    print("OWNER - @OFFICIALHACKERERA")
     print("----------------")
     await verifyLoggerGroup()
     await add_bot_to_logger_group(BOTLOG_CHATID)
