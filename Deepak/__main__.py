@@ -6,7 +6,7 @@ from Deepak import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 from .Config import Config
 from .core.logger import logging
 from .core.session import legend
-from .start import killer, legends
+from .start import killer
 from .utils import (
     add_bot_to_logger_group,
     hekp,
