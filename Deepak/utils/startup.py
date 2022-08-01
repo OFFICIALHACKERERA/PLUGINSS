@@ -71,9 +71,10 @@ async def startupmessage():
         if BOTLOG:
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/294b4dbdb74334fb0a8c1.jpg",
-                caption=f"#START\n\n**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your LegendBot has been started successfully.**",
-                buttons=[(Button.url("Support", "https://t.me/LegendBot_XD"),)],
+                "https://telegra.ph/file/9fdec96f8f340b8946845.jpg",
+                caption=f"**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your UserBot has been started successfully.**",
+                buttons=[(Button.url("👨‍🏫 Support ", "https://t.me/HEPPYLIFI"),
+                Button.url("🤖 Updates ", "https://t.me/OFFICIALHACKER789"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -289,7 +290,7 @@ async def verifyLoggerGroup():
     else:
         descript = "A Logger Group For LegendBot.Don't delete this group or change to group(If you change group all your previous snips, welcome will be lost.)"
         _, groupid = await create_supergroup(
-            "LegendBot Logger", legend, Config.BOT_USERNAME, descript
+            "UserBot Logger", legend, Config.BOT_USERNAME, descript
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
