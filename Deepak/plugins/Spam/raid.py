@@ -1,4 +1,5 @@
 import asyncio
+import os
 import random
 
 from telethon import events
@@ -325,19 +326,27 @@ RAID = [
 ]
 
 
+ABUSE = os.environ.get("ABUSE", "ON")
+
+
 @tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
-    usage = "**CMD** : /raid <value> <text> <reply to anyone>"
-    if SPAM == "ON":
+    if ABUSE == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(lol) == 2:
-            message = str(lol[1])
-            counter = int(lol[0])
+        legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        await e.get_reply_message()
+        if len(legend) == 2:
+            message = str(legend[1])
+            print(message)
+            a = await e.client.get_entity(message)
+            g = a.id
+            c = a.first_name
+            username = f"[{c}](tg://user?id={g})"
+            counter = int(legend[0])
             for _ in range(counter):
                 reply = random.choice(RAID)
-                caption = f"{message}"
+                caption = f"{username} {reply}"
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, caption)
                     await asyncio.sleep(0.3)
@@ -346,7 +355,7 @@ async def spam(e):
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             c = b.first_name
-            counter = int(lol[0])
+            counter = int(legend[0])
             username = f"[{c}](tg://user?id={g})"
             for _ in range(counter):
                 reply = random.choice(RAID)
@@ -359,7 +368,7 @@ async def spam(e):
 
 
 @tgbot.on(events.NewMessage(incoming=True))
-async def raidgoing(event):
+async def _(event):
     global que
     queue = que.get(event.sender_id)
     if not queue:
@@ -377,14 +386,25 @@ async def raidgoing(event):
 @tgbot.on(
     events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
 )
-async def replyraid(e):
+async def _(e):
     global que
-    if SPAM == "ON":
-        usage = "/replyraid <reply to anyone>"
+    if ABUSE == "ON":
+        usage = "/replyraid"
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if e.reply_to_msg_id:
+        legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        await e.get_reply_message()
+        if len(e.text) > 11:
+            message = str(legend[0])
+            a = await e.client.get_entity(message)
+            g = a.id
+            que[g] = []
+            qeue = que.get(g)
+            appendable = [g]
+            qeue.append(appendable)
+            text = f"**🔱 Reply Raid Has Been Started. **"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        elif e.reply_to_msg_id:
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
@@ -392,7 +412,7 @@ async def replyraid(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = f"**Reply Raid Has Been Started By {legend_mention}**"
+            text = f"**🔱 Reply Raid Has Been Started. **"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
@@ -401,14 +421,25 @@ async def replyraid(e):
 @tgbot.on(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
-async def dreplyraid(e):
+async def _(e):
     global que
-    if SPAM == "ON":
-        usage = "/dreplyraid <reply to person> "
+    if ABUSE == "ON":
+        usage = "/dreplyraid "
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if e.reply_to_msg_id:
+        legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        await e.get_reply_message()
+        if len(e.text) > 11:
+            message = str(legend[0])
+            a = await e.client.get_entity(message)
+            g = a.id
+            que[g] = []
+            qeue = que.get(g)
+            appendable = [g]
+            qeue.append(appendable)
+            text = "**⚡ Reply raid has been stopped..**"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        elif e.reply_to_msg_id:
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
@@ -416,7 +447,7 @@ async def dreplyraid(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = "** Reply raid has been stopped**"
+            text = "**⚡ Reply raid has been stopped..**"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
