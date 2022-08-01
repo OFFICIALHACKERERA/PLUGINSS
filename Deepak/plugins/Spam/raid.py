@@ -4,7 +4,8 @@ import random
 
 from telethon import events
 
-from Deepak import bot
+from Deepak import bot, tbot
+from Deepak.Config import Config
 
 from . import *
 
@@ -385,9 +386,7 @@ async def _(event):
         )
 
 
-@legend.bot_cmd(
-    events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
-)
+@legend.bot_cmd(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
 async def _(e):
     global que
     if ABUSE == "ON":
@@ -404,7 +403,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = f"रिप्लाई रेड स्टार्ट कर दी गई है {Config.ALIVE_NAME}"
+            text = f"Activated Reply Raid By {Config.ALIVE_NAME}"
             await e.reply(text, parse_mode=None, link_preview=None)
         elif e.reply_to_msg_id:
             a = await e.get_reply_message()
@@ -414,7 +413,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = f"**रिप्लाई रेड स्टार्ट कर दी जय है {legend_mention}**"
+            text = f"**Activated Reply Raid By {legend_mention}**"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
@@ -439,7 +438,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = "** रिप्लाई रेड रोक दी गई है। **"
+            text = "** Deactivated Reply Raid **"
             await e.reply(text, parse_mode=None, link_preview=None)
         elif e.reply_to_msg_id:
             a = await e.get_reply_message()
@@ -449,7 +448,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = "** रिप्लाई रेड रोक दी गई है। **"
+            text = "** Deactivated Reply Raid **"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
