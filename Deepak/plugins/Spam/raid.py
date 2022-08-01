@@ -419,7 +419,7 @@ async def _(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@legend.bot_cmd(
+@legenBd.bot_cmd(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def _(e):
