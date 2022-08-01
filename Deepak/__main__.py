@@ -12,6 +12,7 @@ from .utils import (
     hekp,
     install_extrarepo,
     load_plugins,
+    spams,
     setup_bot,
     startupmessage,
     verifyLoggerGroup,
