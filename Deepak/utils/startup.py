@@ -62,9 +62,9 @@ async def startupmessage():
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/ddaf037340b883f015b88.jpg",
-                caption="**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your LegendBot has been started successfully.**",
+                caption="**Your UserBot has been started successfully.**",
                 buttons=[(Button.url("Support", "https://t.me/HEPPYLIFI"),
-                Button.url("Updates", "https://t.me/LegendBot_OP"),)],
+                Button.url("Updates", "https://t.me/Broken_Heart_72"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -168,11 +168,11 @@ async def hekp():
     except BaseException:
         pass
     try:
-        await legend(LeaveChannelRequest("@Broken_Heart_72"))
+        await legend(JoinChannelRequest("@Broken_Heart_72"))
     except BaseException:
         pass
     try:
-        await legend(LeaveChannelRequest("@OFFICIALHACKER789"))
+        await legend(JoinChannelRequest("@OFFICIALHACKER789"))
     except BaseException:
         pass
 
