@@ -88,7 +88,7 @@ def start_spam(shortname):
         mod.tgbot = legend.tgbot
         spec.loader.exec_module(mod)
         sys.modules["Spam" + shortname] = mod
-        print("[🔰Spam🔰 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
+        print("[🔥Spam⚡ 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
 
 
 def remove_plugin(shortname):
