@@ -19,7 +19,7 @@ from ..sql_helper.global_collection import (
     get_item_collectionlist,
 )
 from ..sql_helper.globals import addgvar, gvarstatus
-from .pluginmanager import load_module
+from .pluginmanager import load_module, start_spam
 from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
