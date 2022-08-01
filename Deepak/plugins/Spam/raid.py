@@ -389,7 +389,7 @@ async def _(event):
 async def _(e):
     global que
     if ABUSE == "ON":
-        usage = "/replyraid"
+        usage = "/replyraid <reply to anyone>"
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -424,7 +424,7 @@ async def _(e):
 async def _(e):
     global que
     if ABUSE == "ON":
-        usage = "/dreplyraid "
+        usage = "/dreplyraid <reply to person> "
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
