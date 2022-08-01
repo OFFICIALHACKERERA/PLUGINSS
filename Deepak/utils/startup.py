@@ -61,9 +61,12 @@ async def startupmessage():
         if BOTLOG:
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/294b4dbdb74334fb0a8c1.jpg",
-                caption="**Your LegendBot has been started successfully.**",
-                buttons=[(Button.url("Support", "https://t.me/LegendBot_OP"),)],
+                "https://telegra.ph/file/5754a1c5b7f00258f3f7c.jpg",
+                caption="**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your LegendBot has been started successfully.**",
+                buttons=[(
+Button.url("Support", "https://t.me/HEPPYLIFI"),
+Button.url("Updates", "https://t.me/LegendBot_OP"),
+)],
             )
     except Exception as e:
         LOGS.error(e)
