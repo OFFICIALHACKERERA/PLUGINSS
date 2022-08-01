@@ -369,7 +369,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@tgbot.on(events.NewMessage(incoming=True))
+@legend.tgbot.on(events.NewMessage(incoming=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -385,7 +385,7 @@ async def _(event):
         )
 
 
-@tgbot.on(
+@legend.tgbot.on(
     events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def _(e):
@@ -420,7 +420,7 @@ async def _(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@tgbot.on(
+@legend.tgbot.on(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def _(e):
