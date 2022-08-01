@@ -22,7 +22,7 @@ bot = legend
 
 
 StartTime = time.time()
-legendversion = "α • 2.1"
+legendversion = "3.0"
 
 
 def close_connection(*_):
