@@ -332,7 +332,7 @@ RAID = [
 ABUSE = os.environ.get("ABUSE", "ON")
 
 
-@legend.bot_cmd(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
+@tbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     if ABUSE == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
@@ -370,7 +370,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@legend.bot_cmd(events.NewMessage(incoming=True))
+@tbot.on(events.NewMessage(incoming=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -386,7 +386,7 @@ async def _(event):
         )
 
 
-@legend.bot_cmd(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
+@tbot.on(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
 async def _(e):
     global que
     if ABUSE == "ON":
@@ -419,7 +419,7 @@ async def _(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@legenBd.bot_cmd(
+@tbot.on(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def _(e):
