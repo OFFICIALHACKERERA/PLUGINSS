@@ -625,8 +625,8 @@ async def inline_handler(event):  # sourcery no-metrics
                 (
                     Button.url("Source code", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
                     Button.url(
-                        "Deploy",
-                        "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGEND-AI%2FLEGENDBOT&template=https%3A%2F%2Fgithub.com%2FLEGEND-AI%2FLEGENDBOT",
+                        "Support",
+                        "https://t.me/HEPPYLIFI",
                     ),
                 )
             ]
@@ -642,9 +642,9 @@ async def inline_handler(event):  # sourcery no-metrics
             result = types.InputBotInlineResult(
                 id=str(uuid4()),
                 type="photo",
-                title=f"Lêɠêɳ̃dẞø†",
-                description=f"Lêɠêɳ̃dẞø†\nhttps://t.me/LegendBot_OP",
-                url="https://github.com/LEGEND-AI/LEGENDBOT",
+                title=f"Owner",
+                description=f"Owner\nhttps://t.me/OFFICIALHACKERERA",
+                url="https://github.com/OFFICIALHACKERERA/USERBOTT",
                 thumb=photo,
                 content=photo,
                 send_message=types.InputBotInlineMessageMediaAuto(
