@@ -96,7 +96,7 @@ async def plugininfo(input_str, event, type):
 
 
 async def grpinfo():
-    outstr = "**Plugins in LegendBot are:**\n\n"
+    outstr = "**Plugins in Deepak UserBot are:**\n\n"
     outstr += f"**👨‍💻 Usage : ** `{cmdprefix}help <plugin name>`\n\n"
     category = ["admin", "bot", "fun", "misc", "tools", "utils", "extra", "useless"]
     for legend in category:
@@ -109,7 +109,7 @@ async def grpinfo():
 
 
 async def cmdlist():
-    outstr = "**Total list of Commands in your LegendBot are :**\n\n"
+    outstr = "**Total list of Commands in your Deepak UserBot are :**\n\n"
     category = ["admin", "bot", "fun", "misc", "tools", "utils", "extra"]
     for legend in category:
         plugins = GRP_INFO[legend]
@@ -128,7 +128,7 @@ async def cmdlist():
     pattern="help ?(-l|-p|-t)? ?([\s\S]*)?",
     command=("help", menu_category),
     info={
-        "header": "To get guide for LegendBot.",
+        "header": "To get guide for UserBot.",
         "description": "To get information or guide for the command or plugin",
         "note": "if command name and plugin name is same then you get guide for plugin. So by using this type you get command guide",
         "flags": {
