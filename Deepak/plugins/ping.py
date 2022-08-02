@@ -40,10 +40,10 @@ async def ping(event):
         legendevent = await eor(event, "<b><i>⚡ Pong! ⚡</b></i>", "html")
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        ping_temp = (gvarstatus("PING_TEMPLATE")) or "╰•★★ ℘ơŋɠ ★★•╯\n\n ᴍʏ ᴍᴀsᴛᴇʀ ➫ {mention}\n ᴘ ɪ ɴ ɢ ➫  {ping}\n ᴜ ᴘ ᴛ ɪ ᴍ ᴇ ➫ {uptime}"
+        ping_temp = (gvarstatus("PING_TEMPLATE")) or " ᴍʏ ᴍᴀsᴛᴇʀ ➫ {mention}\n ᴘ ɪ ɴ ɢ ➫  {ping}\n ᴜ ᴘ ᴛ ɪ ᴍ ᴇ ➫ {uptime}"
         sweetie = (
             gvarstatus("PING_IMG")
-            or "https://telegra.ph/file/4d96029d10af13b330df4.jpg"
+            or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
         )
         caption = ping_temp.format(
             mention=mention,
