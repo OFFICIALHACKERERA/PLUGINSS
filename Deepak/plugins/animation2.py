@@ -80,7 +80,7 @@ async def hand(event):
 
 
 @legend.legend_cmd(
-    pattern="^Think$",
+    pattern="think$",
     command=("think", menu_category),
     info={
         "header": "Fun animation try yourself to know more",
@@ -98,16 +98,16 @@ async def think(event):
 
 
 @legend.legend_cmd(
-    pattern="^Lol$",
-    command=("Lol", menu_category),
+    pattern="lmao$",
+    command=("lmao", menu_category),
     info={
         "header": "Fun animation try yourself to know more",
-        "usage": "{tr}Lol",
+        "usage": "{tr}lmao",
     },
 )
-async def Lol(event):
+async def lmao(event):
     "animation command"
-    event = await eor(event, "Lol")
+    event = await eor(event, "lmao")
     deq = deque(list("😂🤣😂🤣😂🤣"))
     for _ in range(48):
         await asyncio.sleep(0.2)
@@ -116,17 +116,17 @@ async def Lol(event):
 
 
 @legend.legend_cmd(
-    pattern="^Sad$",
-    command=("Sad", menu_category),
+    pattern="nothappy$",
+    command=("nothappy", menu_category),
     info={
         "header": "Fun animation try yourself to know more",
-        "usage": "{tr}Sad",
+        "usage": "{tr}nothappy",
     },
 )
 async def nothappy(event):
     "animation command"
-    event = await eor(event, "Sad")
-    deq = deque(list("🥺😫🙁😞☹️😟😓"))
+    event = await eor(event, "nathappy")
+    deq = deque(list("😁☹️😁☹️😁☹️😁"))
     for _ in range(48):
         await asyncio.sleep(0.2)
         await event.edit("".join(deq))
@@ -321,5 +321,3 @@ async def tmoon(event):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 32])
-
-#official Hacker 
