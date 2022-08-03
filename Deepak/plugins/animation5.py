@@ -118,12 +118,17 @@ async def anim(event):
         "😧",
         "😡",
         "😢",
-        "‎**Repo of LegendDeepak**",
+        "‎**Repo of Deepak**",
+        "Owner OFFICIAL HACKER",
         "😁",
         "😧",
         "😡",
         "😢",
-        "__**[Good to see you guys....]**__(github.com/LEGEND-AI/LEGENDBOT)",
+        "😐",
+        "🙄",
+        "😒",
+        "🤨",
+        "__**[Good to see you guys....]**__(github.com/OFFICIALHACKERERA/USERBOTT)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
