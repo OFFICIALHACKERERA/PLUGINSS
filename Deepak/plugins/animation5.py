@@ -111,7 +111,7 @@ async def hart(event):
 async def anim(event):
     "animation command"
     animation_interval = 1
-    animation_ttl = range(20)
+    animation_ttl = range(30)
     event = await eor(event, "😢")
     animation_chars = [
         "😁",
@@ -123,6 +123,7 @@ async def anim(event):
         "😁",
         "😧",
         "😡",
+        "🥺",
         "😢",
         "__**[Good to see you guys....]**__(github.com/OFFICIALHACKERERA/USERBOTT)",
     ]
