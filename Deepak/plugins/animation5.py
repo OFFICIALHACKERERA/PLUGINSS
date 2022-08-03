@@ -123,11 +123,11 @@ async def anim(event):
         "😁",
         "😧",
         "😡",
-        "😢",
         "😐",
         "🙄",
         "😒",
         "🤨",
+        "😢",
         "__**[Good to see you guys....]**__(github.com/OFFICIALHACKERERA/USERBOTT)",
     ]
     for i in animation_ttl:
