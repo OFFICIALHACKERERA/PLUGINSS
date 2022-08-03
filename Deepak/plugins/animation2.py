@@ -98,14 +98,14 @@ async def think(event):
 
 
 @legend.legend_cmd(
-    pattern="^Lol",
+    pattern="^Lol$",
     command=("Lol", menu_category),
     info={
         "header": "Fun animation try yourself to know more",
         "usage": "{tr}Lol",
     },
 )
-async def lmao(event):
+async def Lol(event):
     "animation command"
     event = await eor(event, "Lol")
     deq = deque(list("😂🤣😂🤣😂🤣"))
