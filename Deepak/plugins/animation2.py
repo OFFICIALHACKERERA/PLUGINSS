@@ -98,16 +98,16 @@ async def think(event):
 
 
 @legend.legend_cmd(
-    pattern="^Lol$",
-    command=("Lol", menu_category),
+    pattern="lol$",
+    command=("lol", menu_category),
     info={
         "header": "Fun animation try yourself to know more",
-        "usage": "{tr}Lol",
+        "usage": "{tr}lol",
     },
 )
-async def Lol(event):
+async def lol(event):
     "animation command"
-    event = await eor(event, "Lol")
+    event = await eor(event, "lol")
     deq = deque(list("😂🤣😂🤣😂🤣"))
     for _ in range(48):
         await asyncio.sleep(0.2)
