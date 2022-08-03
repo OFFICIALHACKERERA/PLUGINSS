@@ -118,12 +118,10 @@ async def anim(event):
         "😧",
         "😡",
         "😢",
-        "‎**Repo of Deepak**",
-        "**Owner OFFICIAL HACKER**",
+        "‎**Repo of OFFICIAL HACKER**",
         "😁",
         "😧",
         "😡",
-        "🥺",
         "😢",
         "__**[Good to see you guys....]**__(github.com/OFFICIALHACKERERA/USERBOTT)",
     ]
