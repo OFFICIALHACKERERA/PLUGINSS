@@ -119,7 +119,7 @@ async def anim(event):
         "😡",
         "😢",
         "‎**Repo of Deepak**",
-        "Owner OFFICIAL HACKER",
+        "**Owner OFFICIAL HACKER**",
         "😁",
         "😧",
         "😡",
