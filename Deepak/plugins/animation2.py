@@ -98,7 +98,7 @@ async def think(event):
 
 
 @legend.legend_cmd(
-    pattern="lol$",
+    pattern="^lol$",
     command=("lol", menu_category),
     info={
         "header": "Fun animation try yourself to know more",
