@@ -23,7 +23,6 @@ async def star(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-of
 @legend.legend_cmd(
     pattern="boxs$",
     command=("boxs", menu_category),
