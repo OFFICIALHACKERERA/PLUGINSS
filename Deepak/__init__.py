@@ -24,8 +24,7 @@ bot = legend
 StartTime = time.time()
 legendversion = "2.0"
 
-bot = kbot = deepak
-tbot = Deepak
+
 
 
 
