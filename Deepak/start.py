@@ -27,7 +27,7 @@ LOGS = logging.getLogger("DeepakUserBot")
 LEGEND_PIC = "https://te.legra.ph/file/d3785d49b2c5e6f00bc67.jpg"
 
 onbot = "start - Check if I am Alive \nhelp - Check ALL Command\nalive- To Check alive status\nping - To check ping of bot\nuinfo - To Check info of assistant chat\nbroadcast - broadcast message to all the person who has started ur bot\nban - to ban person to block message in assistant chat\nunban - To Unban Person allw to message in assistant chat\neval - To run python code\npurge - To Purge Message from replied\ndel - To del replied message\nbigspam - To Spam Through Bot value > 100\ndelayspam - Spam With Delay \nraid - To Abuse Anyone By username/name/reply\nreplyraid - To Activate Raid On Anyone\ndreplyraid - To Stop Raid\nspam - To Spam With Chat value < 100\nhack - Hack Telegram account through StringSession"
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = "[ THE DEEPAK ]"
 
 bot = legend
 
