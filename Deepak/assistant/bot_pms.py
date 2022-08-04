@@ -113,7 +113,7 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered by [LegendBot](https://t.me/LegendBot_OP)"
+            start_msg = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered by [OFFICIAL HACKER](https://t.me/OFFICIALHACKERERA)"
             buttons = [
                 (
                     Button.inline("🔰 Rules 🔰", data="rules"),
@@ -122,7 +122,7 @@ async def bot_start(event):
                 (Button.url("🔱 Support 🔱","https://t.me/HEPPYLIFI"),),
             ]
     else:
-        start_msg = f"Hey {mention} I am your {my_mention}'s assistant bot.\nI Am Here To Help U \n\nPowered By [LegendBot](https://t.me/LegendBot_OP)"
+        start_msg = f"Hey {mention} I am your {my_mention}'s assistant bot.\nI Am Here To Help U \n\nPowered By [OFFICIAL HACKERE](https://t.me/OFFICIALHACKERERA)"
         buttons = [
             (
                 Button.url(" Support ", "https://t.me/HEPPYLIFI"),
