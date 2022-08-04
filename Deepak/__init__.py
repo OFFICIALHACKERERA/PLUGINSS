@@ -24,6 +24,10 @@ bot = legend
 StartTime = time.time()
 legendversion = "2.0"
 
+bot = kbot = Legend
+tbot = LegendBot
+
+
 
 def close_connection(*_):
     print("Closing Deepak connection.")
