@@ -104,11 +104,11 @@ async def amireallyalive(event):
     kiss = list(a.split())
     EMOJI = random.choice(kiss)
     legend_caption = "**UserBot Is Online**\n\n"
-    legend_caption += f"**┣⪼{EMOJI} Telethon version :** `{version.__version__}\n`"
-    legend_caption += f"**┣⪼{EMOJI} Userbot Version :** `{legendversion}`\n"
-    legend_caption += f"**┣⪼{EMOJI} Python Version :** `{python_version()}\n`"
-    legend_caption += f"**┣⪼{EMOJI} Uptime :** {uptime}\n"
-    legend_caption += f"**┣⪼{EMOJI} Master:** {mention}\n"
+    legend_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
+    legend_caption += f"**{EMOJI} Userbot Version :** `{legendversion}`\n"
+    legend_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
+    legend_caption += f"**{EMOJI} Uptime :** {uptime}\n"
+    legend_caption += f"**{EMOJI} Master:** {mention}\n"
     
     results = await event.client.inline_query(Config.BOT_USERNAME, legend_caption)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
