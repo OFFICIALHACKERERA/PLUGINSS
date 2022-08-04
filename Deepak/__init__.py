@@ -10,7 +10,7 @@ from .core.session import legend
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-__version__ = "3.0"
+__version__ = "2.0"
 __license__ = "GNU Affero General Public License v3.0"
 __author__ = "LegendBot <https://github.com/ITS-LEGENDBOT/LEGENDBOT>"
 __copyright__ = f"LegendBot Copyright (C) 2020 - 2021  { __author__}"
@@ -22,7 +22,7 @@ bot = legend
 
 
 StartTime = time.time()
-legendversion = "3.0"
+legendversion = "2.0"
 
 
 def close_connection(*_):
