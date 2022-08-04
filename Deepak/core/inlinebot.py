@@ -290,15 +290,9 @@ async def inline_handler(event):  # sourcery no-metrics
                 text=f"**⚜ OFFICIALHACKERERA  ⚜**",
                 buttons=[
                     [
-                    Button.url("♥️ Tutorial ♥", "https://youtu.be/CH_KO1wim2o"),
-                    Button.url("💝 𝙍𝙚𝙥𝙤 💝 ", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
-                    ],
-                    [
-                        Button.url(
-                            "💞 Deploy 💞",
-                            "https://heroku.com/deploy?template=https://github.com/LEGEND-AI/LEGENDBOT",
-                        )
-                    ],
+                    Button.url("◆ Support ◆", "https://t.me/HEPPYLIFI"),
+                    Button.url("◆ Repo ◆", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
+                    ],                    
                 ],
             )
             await event.answer([result] if result else None)
