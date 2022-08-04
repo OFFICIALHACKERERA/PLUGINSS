@@ -4,7 +4,7 @@ import random
 
 from telethon import events
 
-from Deepak import bot, tbot
+from Deepak import bot
 
 from . import *
 
