@@ -95,11 +95,11 @@ async def help(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [LegendBot](https://t.me/LegendBot_OP)",
+            message=f"Hey, I am your {bot_id}'s assistant bot.\nI Am Here To Help U \n\nPowered By [OFFICIAL HACKER](https://t.me/OFFICIALHACKERERA)",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/LegendBot_OP"),
-                    Button.url(" Updates ", "https://t.me/LegendBot_AI"),
+                    Button.url(" Support ", "https://t.me/HEPPYLIFI"),
+                    Button.url(" Updates ", "https://t.me/OFFICIALHACKER789"),
                 ],
                 [
                     custom.Button.inline(" Users ", data="users"),
@@ -139,7 +139,7 @@ async def help(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"shutdown")))
 async def rel(event):
     if event.query.user_id == bot.uid:
-        await event.answer("ShutDown Lêɠêɳ̃dẞø†...", cache_time=0, alert=True)
+        await event.answer("ShutDown Userẞø†...", cache_time=0, alert=True)
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#SHUTDOWN \n" "Bot shut down"
