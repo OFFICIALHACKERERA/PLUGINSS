@@ -455,7 +455,7 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             oso = gvarstatus("HELP_IMG")
             if oso is None:
-                help_pic = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+                help_pic = "https://telegra.ph/file/a546ac14db23ef46ddf14.jpg"
             else:
                 lol = [x for x in oso.split()]
                 help_pic = random.choice(lol)
@@ -584,7 +584,7 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             PM_PIC = (
                 gvarstatus("PM_PIC")
-                or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+                or "https://telegra.ph/file/a546ac14db23ef46ddf14.jpg"
             )
             if PM_PIC:
                 legend = [x for x in PM_PIC.split()]
@@ -624,13 +624,13 @@ async def inline_handler(event):  # sourcery no-metrics
                     ),
                 )
             ]
-            ALV_PIC = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+            ALV_PIC = "https://telegra.ph/file/a546ac14db23ef46ddf14.jpg"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
             )
             text, msg_entities = await event.client._parse_message_text(
-                f"**UserBot**\n------------\n Owner {mention}\n\n Support {Legend_grp}",
+                f"**UserBot**\n------------\n Master {mention}\n\n Support {Legend_grp}",
                 "md",
             )
             result = types.InputBotInlineResult(
