@@ -5,7 +5,6 @@ import random
 from telethon import events
 
 from Deepak import bot, tbot
-from Deepak.Config import Config
 
 from . import *
 
