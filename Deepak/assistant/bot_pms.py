@@ -97,7 +97,7 @@ async def bot_start(event):
                     Button.inline("🔰 Rules 🔰", data="rules"),
                     Button.inline("❤ Deploy ❤", data="depy"),
                 ),
-                (Button.url("🔱 Support 🔱", "https://t.me/LegendBot_OP"),),
+                (Button.url("🔱 Support 🔱", "https://t.me/HEPPYLIFI"),),
             ]
             start_msg = customstrmsg.format(
                 mention=mention,
@@ -119,14 +119,14 @@ async def bot_start(event):
                     Button.inline("🔰 Rules 🔰", data="rules"),
                     Button.inline("❤ Deploy ❤", data="depy"),
                 ),
-                (Button.url("🔱 Support 🔱", "https://t.me/LegendBot_OP"),),
+                (Button.url("🔱 Support 🔱","https://t.me/HEPPYLIFI"),),
             ]
     else:
         start_msg = f"Hey {mention} I am your {my_mention}'s assistant bot.\nI Am Here To Help U \n\nPowered By [LegendBot](https://t.me/LegendBot_OP)"
         buttons = [
             (
-                Button.url(" Support ", "https://t.me/LegendBot_OP"),
-                Button.url(" Updates ", "https://t.me/LegendBot_AI"),
+                Button.url(" Support ", "https://t.me/HEPPYLIFI"),
+                Button.url(" Updates ", "https://t.me/OFFICIALHACKER789"),
             ),
             (
                 Button.inline(" Users ", data="users"),
@@ -207,15 +207,15 @@ async def help(event):
     else:
         await event.client.send_message(
             event.chat_id,
-            message="You Can Deploy/Install LegendBot In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            message="You Can Deploy/Install UserBot In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             link_preview=False,
             buttons=[
                 [
-                    Button.url("Tutorial", "https://youtu.be/9CtOErUFmrQ"),
+                    Button.url("Owner", "https://t.me/OFFICIALHACKERERA"),
                 ],
                 [
                     Button.url(
-                        "Github Repo ❓", "https://github.com/LEGEND-AI/LEGENDBOT"
+                        "Github Repo", "https://github.com/OFFICIALHACKERERA/USERBOTT"
                     ),
                 ],
             ],
