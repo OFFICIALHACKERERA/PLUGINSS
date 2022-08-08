@@ -17,7 +17,7 @@ if okvai == "69":
         APP_ID = int(input("\nEnter APP ID here: "))
         API_HASH = input("\nEnter API HASH here: ")
         with TelegramClient(StringSession(), APP_ID, API_HASH) as DEEPAK:
-            print("\nYour DEEPAK Session Is sent in your Telegram Saved Messages.")
+            print("\nYour String Session Is sent in your Telegram Saved Messages.")
             DEEPAK.send_message("me", f"#DEEPAK #DEEPAK_SESSION \n\n`{DEEPAK.session.save()}`")
     elif library == "2":
         print("Pyrogram Session for Music Bot")
