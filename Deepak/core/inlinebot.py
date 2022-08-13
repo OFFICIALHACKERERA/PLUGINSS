@@ -55,20 +55,20 @@ def ibuild_keyboard(buttons):
 async def on_plug_in_callback_query_handler(event):
     buttons = [
         (
-            Button.inline(f"❮ ᴀᴅᴍɪɴ ❯({len(GRP_INFO['❮ admin ❯'])})", data="admin_menu"),
-            Button.inline(f"❮ ʙᴏᴛ ❯({len(GRP_INFO['❮ bot ❯'])})", data="bot_menu"),
+            Button.inline(f"Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
+            Button.inline(f"Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
         ),
         (
-            Button.inline(f"❮ ғᴜɴ ❯({len(GRP_INFO['❮ fun ❯'])})", data="fun_menu"),
-            Button.inline(f"❮ ᴍɪsᴄ ❯({len(GRP_INFO['❮ misc ❯'])})", data="misc_menu"),
+            Button.inline(f"Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
+            Button.inline(f"Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
         ),
         (
-            Button.inline(f"❮ ᴛᴏᴏʟs ❯({len(GRP_INFO['❮ tools ❯'])})", data="tools_menu"),
-            Button.inline(f"❮ ᴜᴛɪʟs ❯({len(GRP_INFO['❮ utils ❯'])})", data="utils_menu"),
+            Button.inline(f"Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
+            Button.inline(f"Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
         ),
         (
-            Button.inline(f"❮ ᴇxᴛʀᴀ ❯({len(GRP_INFO['❮ extra ❯'])})", data="extra_menu"),
-            Button.inline(f"❮ ᴜsᴇʟᴇss ❯({len(GRP_INFO['❮ useless ❯'])})", data="useless_menu"),
+            Button.inline(f"Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
+            Button.inline(f"Useless ({len(GRP_INFO['useless'])})", data="useless_menu"),
         ),
         (Button.inline(f"❮ ᴍᴀɪɴ ᴍᴇɴᴜ ❯", data="mainmenu"),),
     ]
