@@ -122,7 +122,7 @@ async def bot_start(event):
                 (Button.url("🔱 Support 🔱","https://t.me/HEPPYLIFI"),),
             ]
     else:
-        start_msg = f"Hey {mention} I am your {my_mention}'s assistant bot.\nI Am Here To Help U \n\nPowered By [OFFICIAL HACKERE](https://t.me/OFFICIALHACKERERA)"
+        start_msg = f"Hey {mention} I am your {my_mention}'s assistant bot.\nI Am Here To Help U \n\nPowered By [OFFICIAL HACKER](https://t.me/OFFICIALHACKERERA)"
         buttons = [
             (
                 Button.url(" Support ", "https://t.me/HEPPYLIFI"),
