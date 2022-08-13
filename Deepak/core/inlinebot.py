@@ -55,25 +55,25 @@ def ibuild_keyboard(buttons):
 async def on_plug_in_callback_query_handler(event):
     buttons = [
         (
-            Button.inline(f"Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
-            Button.inline(f"Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
+            Button.inline(f"❮ ᴀᴅᴍɪɴ ❯({len(GRP_INFO['❮ admin ❯'])})", data="admin_menu"),
+            Button.inline(f"❮ ʙᴏᴛ ❯({len(GRP_INFO['❮ bot ❯'])})", data="bot_menu"),
         ),
         (
-            Button.inline(f"Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
-            Button.inline(f"Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
+            Button.inline(f"❮ ғᴜɴ ❯({len(GRP_INFO['❮ fun ❯'])})", data="fun_menu"),
+            Button.inline(f"❮ ᴍɪsᴄ ❯({len(GRP_INFO['❮ misc ❯'])})", data="misc_menu"),
         ),
         (
-            Button.inline(f"Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
-            Button.inline(f"Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
+            Button.inline(f"❮ ᴛᴏᴏʟs ❯({len(GRP_INFO['❮ tools ❯'])})", data="tools_menu"),
+            Button.inline(f"❮ ᴜᴛɪʟs ❯({len(GRP_INFO['❮ utils ❯'])})", data="utils_menu"),
         ),
         (
-            Button.inline(f"Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
-            Button.inline(f"Useless ({len(GRP_INFO['useless'])})", data="useless_menu"),
+            Button.inline(f"❮ ᴇxᴛʀᴀ ❯({len(GRP_INFO['❮ extra ❯'])})", data="extra_menu"),
+            Button.inline(f"❮ ᴜsᴇʟᴇss ❯({len(GRP_INFO['❮ useless ❯'])})", data="useless_menu"),
         ),
-        (Button.inline(f"👨‍💻 Main Menu", data="mainmenu"),),
+        (Button.inline(f"❮ ᴍᴀɪɴ ᴍᴇɴᴜ ❯", data="mainmenu"),),
     ]
     await event.edit(
-        f"💝『{mention}』💝",
+        f"🥀『{mention}』🥀",
         buttons=buttons,
         link_preview=False,
     )
@@ -81,18 +81,18 @@ async def on_plug_in_callback_query_handler(event):
 
 def main_menu():
     tol = gvarstatus("BOT_USERNAME")
-    text = f"⚜ {mention}  ⚜"
+    text = f"🥀 {mention}"
     buttons = [
-        [custom.Button.inline("👨‍💻 Info 👨‍💻", data="check")],
+        [custom.Button.inline("❮ ɪɴғᴏ ❯", data="check")],
         [
-            custom.Button.inline("🔰 Plugins 🔰", data="help_k_minu"),
-            Button.url("✨ Assistant ✨", f"https://t.me/{tol}"),
+            custom.Button.inline("❮ ᴘʟᴜɢɪɴs ❯", data="help_k_minu"),
+            Button.url("❮ ᴀssɪsᴛᴀɴᴛ ❯", f"https://t.me/{tol}"),
         ],
         [
-            custom.Button.inline("⚜ Alive ⚜", data="stats"),
-            Button.url("owner", "https://t.me/OFFICIALHACKERERA"),
+            custom.Button.inline("❮ ᴀʟɪᴠᴇ ❯", data="stats"),
+            Button.url("❮ ᴏᴡɴᴇʀ ❯", "https://t.me/OFFICIALHACKERERA"),
         ],
-        [custom.Button.inline("❌", data="clise")],
+        [custom.Button.inline("❮ ᴄʟᴏsᴇ ❯", data="clise")],
     ]
     return text, buttons
 
@@ -183,15 +183,15 @@ def paginate_help(
                 modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
             ] + [
                 (
-                    Button.inline("⬅️", data=f"{prefix}_prev({modulo_page})_plugin"),
+                    Button.inline("❮", data=f"{prefix}_prev({modulo_page})_plugin"),
                     Button.inline(
                         f"{HELP_EMOJI} Back {HELP_EMOJI}", data="help_k_minu"
                     ),
-                    Button.inline("➡️", data=f"{prefix}_next({modulo_page})_plugin"),
+                    Button.inline("❯", data=f"{prefix}_next({modulo_page})_plugin"),
                 )
             ]
         else:
-            pairs = pairs + [(Button.inline("⬅️ Back", data="help_k_minu"),)]
+            pairs = pairs + [(Button.inline("❮ Back", data="help_k_minu"),)]
     elif len(pairs) > number_of_rows:
         if category_pgno < 0:
             category_pgno = len(pairs) + category_pgno
@@ -200,7 +200,7 @@ def paginate_help(
         ] + [
             (
                 Button.inline(
-                    "⬅️",
+                    "❮",
                     data=f"{prefix}_prev({modulo_page})_command_{category_plugins}_{category_pgno}",
                 ),
                 Button.inline(
@@ -208,7 +208,7 @@ def paginate_help(
                     data=f"back_plugin_{category_plugins}_{category_pgno}",
                 ),
                 Button.inline(
-                    "➡️",
+                    "❯",
                     data=f"{prefix}_next({modulo_page})_command_{category_plugins}_{category_pgno}",
                 ),
             )
@@ -219,7 +219,7 @@ def paginate_help(
         pairs = pairs + [
             (
                 Button.inline(
-                    "⬅️ Back",
+                    "❮ Back",
                     data=f"back_plugin_{category_plugins}_{category_pgno}",
                 ),
             )
@@ -290,8 +290,8 @@ async def inline_handler(event):  # sourcery no-metrics
                 text=f"**⚜ OFFICIALHACKERERA  ⚜**",
                 buttons=[
                     [
-                    Button.url("◆ Support ◆", "https://t.me/HEPPYLIFI"),
-                    Button.url("◆ Repo ◆", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
+                    Button.url("❮ Support ❯", "https://t.me/HEPPYLIFI"),
+                    Button.url("❮ Repo ❯", "https://github.com/OFFICIALHACKERERA/USERBOTT"),
                     ],                    
                 ],
             )
