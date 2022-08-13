@@ -27,7 +27,7 @@ from . import vc_asst, get_string, inline_mention, add_to_queue, mediainfo, file
 from telethon.errors.rpcerrorlist import ChatSendMediaForbiddenError, MessageIdInvalidError
 
 
-@vc_asst("play")
+@vc_asst("/play")
 async def play_music_(event):
     if "playfrom" in event.text.split()[0]:
         return  # For PlayFrom Conflict
