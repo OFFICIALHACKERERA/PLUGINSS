@@ -249,7 +249,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("owner", "https://t.me/OFFICIALHACKERERA"),
+                    Button.url("❮ ᴏᴡɴᴇʀ ❯", "https://t.me/OFFICIALHACKERERA"),
                 ),
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -580,7 +580,7 @@ async def inline_handler(event):  # sourcery no-metrics
             await event.answer([result] if result else None)
         elif string == "pmpermit":
             buttons = [
-                Button.inline(text="👨‍💻 Open PM Menu 💝", data="show_pmpermit_options"),
+                Button.inline(text="❮ ᴏᴘᴇɴ ᴘᴍ ᴍᴇɴᴜ ❯", data="show_pmpermit_options"),
             ]
             PM_PIC = (
                 gvarstatus("PM_PIC")
