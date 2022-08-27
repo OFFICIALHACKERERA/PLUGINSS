@@ -1,4 +1,5 @@
 from telethon import events
+from Deepak import legend
 
 
 
@@ -8,7 +9,7 @@ from telethon import events
 
 
 #end
-@DEEPAK.on(events.NewMessage(pattern="^[/?!]end"))
+@legend.on(events.NewMessage(pattern="^[/?!]end"))
 @is_admin
 async def vc_end(event, perm):
     chat_id = event.chat_id
