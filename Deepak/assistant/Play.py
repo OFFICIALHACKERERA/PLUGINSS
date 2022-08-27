@@ -1,5 +1,12 @@
 from telethon import events
 from Deepak import legend
+from Deepak.helpers.queues import (
+    QUEUE,
+    add_to_queue,
+    clear_queue,
+    get_queue,
+    pop_an_item,
+)
 
 
 
