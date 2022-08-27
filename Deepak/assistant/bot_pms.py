@@ -4,10 +4,43 @@ from collections import defaultdict
 from datetime import datetime
 from typing import Optional, Union
 
+
+from asyncio.exceptions import TimeoutError
+from pyrogram import Client, filters
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import (
+    ApiIdInvalid,
+    PhoneNumberInvalid,
+    PhoneCodeInvalid,
+    PhoneCodeExpired,
+    SessionPasswordNeeded,
+    PasswordHashInvalid
+)
+from telethon.errors import (
+    ApiIdInvalidError,
+    PhoneNumberInvalidError,
+    PhoneCodeInvalidError,
+    PhoneCodeExpiredError,
+    SessionPasswordNeededError,
+    PasswordHashInvalidError
+)
+
+
+
+
+
 from telethon import Button, events
 from telethon.errors import UserIsBlockedError
 from telethon.events import CallbackQuery, StopPropagation
 from telethon.utils import get_display_name
+
+
+
+
+
+
 
 from Deepak import Config, legend
 
