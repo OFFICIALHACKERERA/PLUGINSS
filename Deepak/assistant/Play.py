@@ -9,8 +9,7 @@ from Deepak import legend
 
 
 #end
-@legend.on(events.NewMessage(pattern="^[/?!]end"))
-@is_admin
+@legend.bot_cmd(events.NewMessage(pattern="^[/?!]end"))
 async def vc_end(event, perm):
     chat_id = event.chat_id
     if chat_id in QUEUE:
