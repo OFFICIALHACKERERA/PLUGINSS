@@ -14,7 +14,7 @@ from pytgcalls.exceptions import (
     NoActiveGroupCall,
     NotInGroupCallError
 )
-from DEEPAK.status import *
+from Deepak.status import *
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 import telethon.utils
@@ -27,11 +27,11 @@ from youtubesearchpython import VideosSearch
  
 fotoplay = "https://telegra.ph/file/b6402152be44d90836339.jpg"
 ngantri = "https://telegra.ph/file/b6402152be44d90836339.jpg"
-from DEEPAK import call_py, DEEPAK, client as Client
+from Deepak import call_py, Deepak, client as Client
 owner = "1669178360"
-from DEEPAK.helpers.yt_dlp import bash
-from DEEPAK.helpers.chattitle import CHAT_TITLE
-from DEEPAK.helpers.queues import (
+from Deepak.helpers.yt_dlp import bash
+from Deepak.helpers.chattitle import CHAT_TITLE
+from Deepak.helpers.queues import (
     QUEUE,
     add_to_queue,
     clear_queue,
@@ -41,7 +41,7 @@ from DEEPAK.helpers.queues import (
 from telethon import Button, events
 from Config import Config
 
-from DEEPAK.helpers.thumbnail import gen_thumb
+from Deepak.helpers.thumbnail import gen_thumb
 
 
 def vcmention(user):
@@ -119,7 +119,7 @@ async def skip_current_song(chat_id: int):
     return [songname, link, type]
 
 
-@DEEPAK.on(events.callbackquery.CallbackQuery(data="cls"))
+@Deepak.on(events.callbackquery.CallbackQuery(data="cls"))
 async def _(event):
 
      await event.delete()
@@ -130,7 +130,7 @@ btnn =[
 
 
 #play
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]play"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]play"))
 async def play(event):
     title = ' '.join(event.text[5:])
     replied = await event.get_reply_message()
@@ -233,7 +233,7 @@ async def play(event):
 
 
 #end
-@DEEPAK.on(events.NewMessage(pattern="^[/?!]end"))
+@Deepak.on(events.NewMessage(pattern="^[/?!]end"))
 @is_admin
 async def vc_end(event, perm):
     chat_id = event.chat_id
@@ -251,7 +251,7 @@ async def vc_end(event, perm):
 
 
 
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]vplay"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]vplay"))
 async def vplay(event):
     if Config.HEROKU_MODE == "ENABLE":
         await event.reply("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Heroku Account__.")
@@ -414,7 +414,7 @@ async def vplay(event):
 
 
 #playlist
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]playlist"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]playlist"))
 @is_admin
 async def vc_playlist(event, perm):
     chat_id = event.chat_id
@@ -444,7 +444,7 @@ async def vc_playlist(event, perm):
 
 
 #leavevc
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]leavevc"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]leavevc"))
 @is_admin
 async def leavevc(event, perm):
     xnxx = await event.reply("Processing")
@@ -461,7 +461,7 @@ async def leavevc(event, perm):
 
 
 
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]skip"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]skip"))
 @is_admin
 async def vc_skip(event, perm):
     chat_id = event.chat_id
@@ -490,7 +490,7 @@ async def vc_skip(event, perm):
             await event.reply(DELQUE)
 
 
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]pause"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]pause"))
 @is_admin
 async def vc_pause(event, perm):
     chat_id = event.chat_id
@@ -505,7 +505,7 @@ async def vc_pause(event, perm):
 
 
 
-@DEEPAK.on(events.NewMessage(pattern="^[?!/]resume"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]resume"))
 @is_admin
 async def vc_resume(event, perm):
     chat_id = event.chat_id
