@@ -131,15 +131,6 @@ async def skip_current_song(chat_id: int):
     return [songname, link, type]
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data="cls"))
-async def _(event):
-
-     await event.delete()
-
-btnn =[
-    [Button.url("💁 Sᴜᴘᴘᴏʀᴛ", url=f"t.me/{SUPPORT}"), Button.url("Cʜᴀɴɴᴇʟ 🙋", url=f"t.me/{CHANNEL}")],
-    [Button.inline("Cʟᴏꜱᴇ 🗑️", data="cls")]]*
-
 
 
 
