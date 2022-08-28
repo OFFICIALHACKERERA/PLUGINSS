@@ -27,7 +27,7 @@ from youtubesearchpython import VideosSearch
  
 fotoplay = "https://telegra.ph/file/b6402152be44d90836339.jpg"
 ngantri = "https://telegra.ph/file/b6402152be44d90836339.jpg"
-from Deepak import call_py, Deepak, client as Client
+
 owner = "1669178360"
 from Deepak.HELPERS.yt_dlp import bash
 from Deepak.HELPERS.chattitle import CHAT_TITLE
