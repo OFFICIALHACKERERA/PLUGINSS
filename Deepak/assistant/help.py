@@ -19,4 +19,4 @@ CAPTION = f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 �
 @bot.on(events.NewMessage(pattern="^/p"))
 async def _(event):
     UMM = [[Button.url("⚜ Cԋαɳɳҽʅ ⚜", "https://t.me/TheUpdatesChannel")]]
-    await DEEPAK.send_file(event.chat_id, IMG, caption=CAPTION, buttons=UMM)
+    await bot.send_file(event.chat_id, IMG, caption=CAPTION, buttons=UMM)
