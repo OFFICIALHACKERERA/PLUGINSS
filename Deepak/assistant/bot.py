@@ -10,7 +10,7 @@ IMG = os.environ.get(
 ms = 4
 
 ALIVE = os.environ.get(
-    "ALIVE", "@Timesisnotwaiting"
+    "ALIVE", "@OFFICIALHACKERERA"
 )
 
 CAPTION = f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』"
