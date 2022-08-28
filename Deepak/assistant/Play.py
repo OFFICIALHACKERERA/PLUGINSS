@@ -136,7 +136,8 @@ btnn =[
 
 
 #play
-@tgbot.on(events.NewMessage(pattern="^[?!/]play"))
+
+@tgbot.on(events.NewMessage(pattern="/play", func=lambda e: e.sender_id == bot.uid))
 async def play(event):
     title = ' '.join(event.text[5:])
     replied = await event.get_reply_message()
