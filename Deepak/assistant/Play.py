@@ -1,3 +1,9 @@
+import asyncio
+
+from telethon import events
+
+from . import *
+
 from pytgcalls import StreamType
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
