@@ -12,7 +12,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
                     level=logging.INFO)
 
 
-from Config import Confil
+from Config import Config
 BOT_USERNAME = Config.BOT_USERNAME
 
 bot = TelegramClient('Deepak', api_id=Config.API_ID, api_hash=Config.API_HASH)
