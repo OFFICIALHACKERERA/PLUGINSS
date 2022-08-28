@@ -2,7 +2,7 @@ import os
 
 from telethon import Button, events
 
-from Deepak import *
+from Deepak import bot
 
 IMG = os.environ.get(
     "PING_PIC", "https://telegra.ph/file/5edf1b910c71e385e5d57.jpg"
@@ -16,7 +16,7 @@ ALIVE = os.environ.get(
 CAPTION = f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』"
 
 
-@Deepak.on(events.NewMessage(pattern="^/ping"))
+@bot.on(events.NewMessage(pattern="^/ping"))
 async def _(event):
     UMM = [[Button.url("⚜ Cԋαɳɳҽʅ ⚜", "https://t.me/TheUpdatesChannel")]]
-    await Deepak.send_file(event.chat_id, IMG, caption=CAPTION, buttons=UMM)
+    await bot.send_file(event.chat_id, IMG, caption=CAPTION, buttons=UMM)
