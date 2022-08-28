@@ -7,7 +7,7 @@ from Deepak.utils import load_assistant
 import logging
 from Deepak import Deepak
 
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+logging.basicsample_config(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.INFO)
 
 path = "Deepak/assistant/*.py"
