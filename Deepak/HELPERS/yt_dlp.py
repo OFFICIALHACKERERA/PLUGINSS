@@ -8,7 +8,7 @@ import os.path
 from PIL import Image
 from yt_dlp import YoutubeDL
 from typing import Optional, Union
-from DEEPAK import DEEPAK as bot
+from Deepak import Deepak as bot
 LOGS = {}
 SUDO_USERS = {}
 
