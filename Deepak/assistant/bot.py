@@ -25,7 +25,7 @@ async def _(event):
 
 
 
-@bot.on(events.NewMessage(pattern="^[/?!]end"))
+@bot.on(events.NewMessage(pattern="^/end"))
 async def vc_end(event, perm):
     chat_id = event.chat_id
     if chat_id in QUEUE:
