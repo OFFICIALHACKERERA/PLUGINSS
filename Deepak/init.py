@@ -17,7 +17,7 @@ BOT_USERNAME = sample_sample_config.BOT_USERNAME
 
 bot = TelegramClient('Deepak', api_id=sample_sample_config.API_ID, api_hash=sample_sample_config.API_HASH)
 Deepak = bot.start(bot_token=sample_sample_config.BOT_TOKEN)
-client = TelegramClient(StringSession(sample_sample_config.STRING_SESSION), sample_sample_config.API_ID, sample_sample_config.API_HASH)
+client = TelegramClient(StringSession(sample_sample_config.DEEPAK_STRING), sample_sample_config.API_ID, sample_sample_config.API_HASH)
 call_py = PyTgCalls(client)
 client.start()
 call_py.start()
