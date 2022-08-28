@@ -29,9 +29,9 @@ fotoplay = "https://telegra.ph/file/b6402152be44d90836339.jpg"
 ngantri = "https://telegra.ph/file/b6402152be44d90836339.jpg"
 from Deepak import call_py, Deepak, client as Client
 owner = "1669178360"
-from Deepak.helpers.yt_dlp import bash
-from Deepak.helpers.chattitle import CHAT_TITLE
-from Deepak.helpers.queues import (
+from Deepak.HELPERS.yt_dlp import bash
+from Deepak.HELPERS.chattitle import CHAT_TITLE
+from Deepak.HELPERS.queues import (
     QUEUE,
     add_to_queue,
     clear_queue,
@@ -41,7 +41,7 @@ from Deepak.helpers.queues import (
 from telethon import Button, events
 from Config import Config
 
-from Deepak.helpers.thumbnail import gen_thumb
+from Deepak.HELPERS.thumbnail import gen_thumb
 
 
 def vcmention(user):
