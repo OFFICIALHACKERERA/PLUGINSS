@@ -20,3 +20,20 @@ CAPTION = f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 �
 async def _(event):
     UMM = [[Button.url("⚜ Cԋαɳɳҽʅ ⚜", "https://t.me/TheUpdatesChannel")]]
     await bot.send_file(event.chat_id, IMG, caption=CAPTION, buttons=UMM)
+
+
+
+
+
+@bot.on(events.NewMessage(pattern="^[/?!]end"))
+async def vc_end(event, perm):
+    chat_id = event.chat_id
+    if chat_id in QUEUE:
+        try:
+            await call_py.leave_group_call(chat_id)
+            clear_queue(chat_id)
+            await event.reply("**Streaming Ended**")
+        except Exception as e:
+            await event.reply(f"**ERROR:** `{e}`")
+    else:
+        await event.reply("**Ntg is Streaming**")
