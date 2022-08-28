@@ -27,7 +27,7 @@ from youtubesearchpython import VideosSearch
  
 fotoplay = "https://telegra.ph/file/b6402152be44d90836339.jpg"
 ngantri = "https://telegra.ph/file/b6402152be44d90836339.jpg"
-
+from Deepak import call_py, Deepak, client as Client
 owner = "1669178360"
 from Deepak.HELPERS.yt_dlp import bash
 from Deepak.HELPERS.chattitle import CHAT_TITLE
@@ -43,7 +43,6 @@ from Config import Config
 
 from Deepak.HELPERS.thumbnail import gen_thumb
 
-from Deepak import bot
 
 def vcmention(user):
     full_name = get_display_name(user)
@@ -120,7 +119,7 @@ async def skip_current_song(chat_id: int):
     return [songname, link, type]
 
 
-@bot.on(events.callbackquery.CallbackQuery(data="cls"))
+@Deepak.on(events.callbackquery.CallbackQuery(data="cls"))
 async def _(event):
 
      await event.delete()
@@ -131,7 +130,7 @@ btnn =[
 
 
 #play
-@bot.on(events.NewMessage(pattern="^[?!/]play"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]play"))
 async def play(event):
     title = ' '.join(event.text[5:])
     replied = await event.get_reply_message()
@@ -234,7 +233,7 @@ async def play(event):
 
 
 #end
-@bot.on(events.NewMessage(pattern="^[/?!]end"))
+@Deepak.on(events.NewMessage(pattern="^[/?!]end"))
 @is_admin
 async def vc_end(event, perm):
     chat_id = event.chat_id
@@ -252,7 +251,7 @@ async def vc_end(event, perm):
 
 
 
-@bot.on(events.NewMessage(pattern="^[?!/]vplay"))
+@Deepak.on(events.NewMessage(pattern="^[?!/]vplay"))
 async def vplay(event):
     if Config.HEROKU_MODE == "ENABLE":
         await event.reply("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Heroku Account__.")
