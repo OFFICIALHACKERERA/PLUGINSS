@@ -2,7 +2,7 @@ import os
 
 from telethon import Button, events
 
-from Deepak import *
+from Deepak import bot
 
 IMG = os.environ.get(
     "PING_PIC", "https://telegra.ph/file/5edf1b910c71e385e5d57.jpg"
