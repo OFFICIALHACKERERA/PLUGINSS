@@ -119,7 +119,7 @@ async def skip_current_song(chat_id: int):
     return [songname, link, type]
 
 
-@Deepak.on(events.callbackquery.CallbackQuery(data="cls"))
+@tgbot.on(events.callbackquery.CallbackQuery(data="cls"))
 async def _(event):
 
      await event.delete()
@@ -130,7 +130,7 @@ btnn =[
 
 
 #play
-@Deepak.on(events.NewMessage(pattern="^[?!/]play"))
+@tgbot.on(events.NewMessage(pattern="^[?!/]play"))
 async def play(event):
     title = ' '.join(event.text[5:])
     replied = await event.get_reply_message()
@@ -233,7 +233,7 @@ async def play(event):
 
 
 #end
-@Deepak.on(events.NewMessage(pattern="^[/?!]end"))
+@tgbot.on(events.NewMessage(pattern="^[/?!]end"))
 @is_admin
 async def vc_end(event, perm):
     chat_id = event.chat_id
@@ -251,7 +251,7 @@ async def vc_end(event, perm):
 
 
 
-@Deepak.on(events.NewMessage(pattern="^[?!/]vplay"))
+@tgbot.on(events.NewMessage(pattern="^[?!/]vplay"))
 async def vplay(event):
     if Config.HEROKU_MODE == "ENABLE":
         await event.reply("__Currently Heroku Mode is ENABLED so You Can't Stream Video because Video Streaming Cause of Banning Your Heroku Account__.")
