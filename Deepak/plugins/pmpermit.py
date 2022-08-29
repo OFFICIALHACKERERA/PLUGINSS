@@ -50,7 +50,7 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
     try:
         MAX_FLOOD_IN_PMS = int(gvarstatus("MAX_FLOOD_IN_PMS") or 1)
     except (ValueError, TypeError):
-        MAX_FLOOD_IN_PMS = 1
+        MAX_FLOOD_IN_PMS = 4
     totalwarns = MAX_FLOOD_IN_PMS + 1
     warns = PM_WARNS[str(chat.id)] + 1
     remwarns = totalwarns - warns
