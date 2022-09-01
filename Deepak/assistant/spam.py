@@ -425,39 +425,30 @@ async def _(event):
 
 
 
-
-
-@legend.bot_cmd(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
-async def _(e):
+@legend.bot_cmd(
+    events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
+)
+async def replyraid(e):
     global que
     if ABUSE == "ON":
-        usage = "/replyraid"
+        usage = "/replyraid <reply to anyone>"
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        await e.get_reply_message()
-        if len(e.text) > 11:
-            message = str(legend[0])
-            a = await e.client.get_entity(message)
-            g = a.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = f"Activated Reply Raid By {Config.ALIVE_NAME}"
-            await e.reply(text, parse_mode=None, link_preview=None)
-        elif e.reply_to_msg_id:
+        lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if e.reply_to_msg_id:
             a = await e.get_reply_message()
-            b = await e.client.get_entity(a.sender_id)
+            b = await e.client.get_entity(a.sender_id*
             g = b.id
             que[g] = []
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = f"**Activated Reply Raid By {legend_mention}**"
+            text = f"**Reply Raid Has Been Started By {legend_mention}**"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
+
+
 
 
 @legend.bot_cmd(
