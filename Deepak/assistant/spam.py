@@ -367,9 +367,11 @@ que = {}
 hl = '/'
 
 
+
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def spam(e):
-    usage = "/raid <value> <text> <reply to anyone>"
+    usage = "/raid <count> <reply to a User>"
+    if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -379,11 +381,13 @@ async def spam(e):
             a = await e.client.get_entity(user)
             g = a.id
             if int(g) in Deadly:
-                text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
+                text = f"I can't raid on @deadly_spam_bot's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            
+            elif int(g) == OWNER_ID:
+                text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            
+            elif int(g) in SUDO_USERS:
+                text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
                 c = a.first_name
@@ -400,11 +404,13 @@ async def spam(e):
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             if int(g) in RAID:
-                text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
+                text = f"I can't raid on @deadly_spam_bot's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            
+            elif int(g) == OWNER_ID:
+                text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            
+            elif int(g) in SUDO_USERS:
+                text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
                 c = b.first_name
@@ -418,8 +424,6 @@ async def spam(e):
                         await asyncio.sleep(0.3)
         else:
             await e.reply(usage)
-
-
 
 @tgbot.on(events.NewMessage(incoming=True))
 async def _(event):
