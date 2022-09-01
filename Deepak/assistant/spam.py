@@ -370,8 +370,7 @@ ABUSE = os.environ.get("ABUSE", "ON")
 
 
 @tbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
-async def raid(e):
-    if ABUSE == "ON":
+async def spam(e):
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
