@@ -5,7 +5,7 @@ from telethon import events
 from ..helpers.utils import unsavegif
 from . import *
 
-from Deepak import Config, OWNER_ID, SUDO_USERS
+
  
 
 
@@ -364,8 +364,10 @@ RAID = [
     "TERI SEXY BAHEN KI CHUT OP",
 ]
 
-SUDO_USERS = Config.SUDO_USERS
-OWNER_ID = Config.OWNER_ID
+OWNER_ID = int(os.environ.get("OWNER_ID","2035388821") or 0)
+
+
+
 
 que = {}
 hl = '/'
@@ -387,7 +389,7 @@ async def spam(e):
             if int(g) in Deadly:
                 text = f"I can't raid on @deadly_spam_bot's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) == Config.OWNER_ID:
+            elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) in Config.SUDO_USERS:
@@ -410,7 +412,7 @@ async def spam(e):
             if int(g) in RAID:
                 text = f"I can't raid on @deadly_spam_bot's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) == Config.OWNER_ID:
+            elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) in Config.SUDO_USERS:
@@ -460,7 +462,7 @@ async def _(e):
             if int(user_id) in Deadly:
                 text = f" can't raid on @OFFICIALHACKERERA_BOT's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(user_id) == Config.OWNER_ID:
+            elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."            
                 await event.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) in Config.SUDO_USERS:
@@ -481,7 +483,7 @@ async def _(e):
             if int(user_id) in RAID:
                 text = f" can't raid on @OFFICIALHACKERERA_BOT's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(user_id) == Config.OWNER_ID:
+            elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await event.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) in Config.SUDO_USERS:
@@ -546,7 +548,7 @@ async def _(event):
              if int(e) in DEEPAK:
                     text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                     await event.reply(text, parse_mode=None, link_preview=None )
-             elif int(e) == Config.OWNER_ID:
+             elif int(e) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await event.reply(text, parse_mode=None, link_preview=None )
              elif int(e) in Config.SUDO_USERS:
@@ -570,7 +572,7 @@ async def _(event):
                if int(e) in DEEPAK:
                        text = f"I can't raid on @@OFFICIALHACKERERA_BOT's Owner"
                        await event.reply(text, parse_mode=None, link_preview=None )
-               elif int(e) == Config.OWNER_ID:
+               elif int(e) == OWNER_ID:
                        text = f"This guy is a owner Of this Bots."
                        await event.reply(text, parse_mode=None, link_preview=None )
                elif int(e) in Config.SUDO_USERS:
