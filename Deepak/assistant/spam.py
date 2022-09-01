@@ -449,4 +449,32 @@ async def replyraid(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
+@tgbot.on(
+    events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
+)
+async def dreplyraid(e):
+    global que
+    if ABUSE == "ON":
+        usage = "/dreplyraid <reply to person> "
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None)
+        lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if e.reply_to_msg_id:
+            a = await e.get_reply_message()
+            b = await e.client.get_entity(a.sender_id)
+            g = b.id
+            que[g] = []
+            qeue = que.get(g)
+            appendable = [g]
+            qeue.append(appendable)
+            text = "** Reply raid has been stopped**"
+            await e.reply(text, parse_mode=None, link_preview=None)
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None)
+
+
+
+
+
+
 
