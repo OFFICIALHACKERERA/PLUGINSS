@@ -2,6 +2,8 @@ import json
 import os
 import re
 
+from . import *
+
 from telethon.events import CallbackQuery
 
 from Deepak import legend
