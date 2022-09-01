@@ -11,6 +11,7 @@ class Config(object):
     # MUST NEEDED VARS
     # set this value with your name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    ABUSE = os.environ.get("ABUSE", None)
     AUTONAME = os.environ.get("AUTONAME", None)
     # Get the values for following 2 from my.telegram.org
     APP_ID = int(os.environ.get("APP_ID", 6))
