@@ -1,4 +1,4 @@
-import os
+import os import getenv
 import random
 import asyncio
 from telethon import events
