@@ -123,8 +123,7 @@ async def bot_start(event):
             buttons = [
                 (
                     Button.inline("🔰 Rules 🔰", data="rules"),
-                    Button.inline("❤ Deploy ❤", data="depy"),
-                    Button.inline("❤ Deploy ❤", data="telethon"),
+                    Button.inline("❤ Deploy ❤", data="depy"),                    
 
                 ),                 
                 (Button.url("🔱 Support 🔱","https://t.me/HEPPYLIFI"),),
