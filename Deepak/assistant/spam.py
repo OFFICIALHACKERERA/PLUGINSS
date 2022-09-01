@@ -591,39 +591,3 @@ async def _(event):
                              await asyncio.sleep(sleeptimem)
          else:
             await event.reply(usage)
-
-
-
-
-@tbot.on(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
-async def replyraid(e):
-    global que
-    if event.fwd_from:
-        return
-    if event.reply_to_msg_id:
-        a = await event.get_reply_message()
-        b = await event.client.get_entity(a.sender_id)
-        e = b.id
-        c = b.first_name
-        username = f"[{c}](tg://user?id={e})"
-        event = await edit_or_reply(event, "Activating Reply Raid")
-        que[e] = []
-        qeue = que.get(e)
-        appendable = [e]
-        qeue.append(appendable)
-        await event.edit(f"STARTING RAID")
-    else:
-        user = event.pattern_match.group(1)
-        event = await edit_or_reply(event, "REPLY TO USER")
-        a = await event.client.get_entity(user)
-        e = a.id
-        c = a.first_name
-        username = f"[{c}](tg://user?id={e})"
-        que[e] = []
-        qeue = que.get(e)
-        appendable = [e]
-        qeue.append(appendable)
-        await event.edit(f"Started Raid")
-
-
-
