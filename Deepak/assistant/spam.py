@@ -364,7 +364,8 @@ RAID = [
     "TERI SEXY BAHEN KI CHUT OP",
 ]
 
-
+SUDO_USERS = Config.SUDO_USERS
+OWNER_ID = Config.OWNER_ID
 
 que = {}
 hl = '/'
