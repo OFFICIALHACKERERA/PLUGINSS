@@ -473,3 +473,38 @@ async def dreplyraid(e):
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
+
+
+
+
+@legend.bot_cmd(
+    events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
+)
+async def _(event):
+    global que
+    if event.fwd_from:
+        return
+    if event.reply_to_msg_id:
+        a = await event.get_reply_message()
+        b = await event.client.get_entity(a.sender_id)
+        e = b.id
+        c = b.first_name
+        username = f"[{c}](tg://user?id={e})"
+        event = await edit_or_reply(event, "Raid is Stoping")
+        queue = que.get(e)
+        queue.pop(0)
+        await event.edit(f" HAS STOPED RAID NOW U ARE FREE AS BIRD")
+    else:
+        user = event.pattern_match.group(1)
+        event = await edit_or_reply(event, "Reply to user to stop RAID")
+        a = await event.client.get_entity(user)
+        e = a.id
+        c = a.first_name
+        username = f"[{c}](tg://user?id={e})"
+        queue = que.get(e)
+        queue.pop(0)
+        await event.edit(f"STOPPING RAID BY {ALIVE_NAME}")
+
+
+
+
