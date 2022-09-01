@@ -402,7 +402,7 @@ async def spam(e):
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if int(g) in DEEPAK:
+            if int(g) in RAID:
                 text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
