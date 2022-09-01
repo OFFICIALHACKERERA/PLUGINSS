@@ -425,7 +425,7 @@ async def _(event):
 
 
 
-@legend.bot_cmd(
+@tgbot.on(
     events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def replyraid(e):
@@ -471,10 +471,4 @@ async def dreplyraid(e):
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-
-
-
-
 
