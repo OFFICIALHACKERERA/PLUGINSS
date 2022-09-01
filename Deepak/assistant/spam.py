@@ -366,7 +366,7 @@ RAID = [
 
 
 
-
+SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 
 OWNER_ID = SUDO_USERS
 que = {}
