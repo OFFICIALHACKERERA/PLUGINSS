@@ -4,7 +4,8 @@ import asyncio
 from telethon import events
 from ..helpers.utils import unsavegif
 from . import *
-from sample_config import SUDO_USERS
+ 
+..Config import SUDO_USERS
 
 @tgbot.on(events.NewMessage(pattern="/spam", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
