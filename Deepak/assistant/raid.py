@@ -12,7 +12,7 @@ NUMBER = ["0", "1"]
 
 SPAM = os.environ.get("SPAM", "ON")
 
-
+from Config import Config
 que = {}
 
 RAID = [
