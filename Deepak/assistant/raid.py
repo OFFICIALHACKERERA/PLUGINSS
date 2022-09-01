@@ -2,6 +2,8 @@ import os
 import asyncio
 import random
 
+from Deepak import bot
+
 from telethon import events
 
 from . import *
