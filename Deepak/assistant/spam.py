@@ -370,7 +370,6 @@ hl = '/'
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def spam(e):
     usage = "/raid <value> <text> <reply to anyone>"
-    if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -382,11 +381,9 @@ async def spam(e):
             if int(g) in Deadly:
                 text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) == OWNER_ID:
-                text = f"This guy is a owner Of this Bots."
+            
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
-                text = f"This guy is a sudo user."
+            
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
                 c = a.first_name
@@ -405,11 +402,9 @@ async def spam(e):
             if int(g) in RAID:
                 text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) == OWNER_ID:
-                text = f"This guy is a owner Of this Bots."
+            
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
-                text = f"This guy is a sudo user."
+            
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
                 c = b.first_name
