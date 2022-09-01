@@ -368,10 +368,13 @@ RAID = [
 
 SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 
+OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
+
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 OWNER_ID = SUDO_USERS
-SUDO_USERS = OWNER_ID
+
+OWNER_ID = OWNER_ID
 
 que = {}
 hl = '/'
