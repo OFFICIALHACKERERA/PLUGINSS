@@ -5,7 +5,7 @@ from telethon import events
 from ..helpers.utils import unsavegif
 from . import *
 
-..Config import Config
+
  
 
 
@@ -374,7 +374,7 @@ hl = '/'
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def spam(e):
     usage = "/raid <count> <reply to a User>"
-    if e.sender_id in Config.SUDO_USERS:
+    if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -389,7 +389,7 @@ async def spam(e):
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in Config.SUDO_USERS:
+            elif int(g) in SUDO_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -412,7 +412,7 @@ async def spam(e):
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in Config.SUDO_USERS:
+            elif int(g) in SUDO_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
