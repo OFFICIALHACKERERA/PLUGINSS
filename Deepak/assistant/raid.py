@@ -335,7 +335,7 @@ RAID = [
 ABUSE = os.environ.get("ABUSE", "ON")
 
 
-@tbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
+@tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     if ABUSE == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
