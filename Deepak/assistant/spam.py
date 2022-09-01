@@ -493,7 +493,7 @@ async def _(event):
     async with event.client.action(event.chat_id, "typing"):
         await event.client.send_message(
             entity=event.chat_id,
-            message="""{}""".format(random.choice(REPLYRAID)),
+            message="""{}""".format(random.choice(RAID)),
             reply_to=event.message.id,
         )
 
