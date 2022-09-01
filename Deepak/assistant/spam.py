@@ -596,7 +596,7 @@ async def _(event):
 
 
 @tbot.on(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
-async def _(e):
+async def replyraid(e):
     global que
     if event.fwd_from:
         return
