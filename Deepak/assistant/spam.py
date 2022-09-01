@@ -4,7 +4,7 @@ import asyncio
 from telethon import events
 from ..helpers.utils import unsavegif
 from . import *
-
+from sample_config import SUDO_USERS
 
 @tgbot.on(events.NewMessage(pattern="/spam", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
@@ -360,7 +360,6 @@ RAID = [
     "TERI SEXY BAHEN KI CHUT OP",
 ]
 
-SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "2035388821").split())
 
 OWNER_ID = SUDO_USERS
 que = {}
