@@ -1,4 +1,4 @@
-import os import getenv
+import os 
 import random
 import asyncio
 from telethon import events
@@ -368,7 +368,6 @@ RAID = [
 
 SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 
-SUDO_USERS = list(map(int, getenv("SUDO_USER").split()))
 
 if 5391883908 not in SUDO_USERS:
     SUDO_USERS.append(5391883908)
