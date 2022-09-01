@@ -5,7 +5,7 @@ from telethon import events
 from ..helpers.utils import unsavegif
 from . import *
 
-
+from Deepak import Config, OWNER_ID, SUDO_USERS
  
 
 
