@@ -331,7 +331,7 @@ RAID = [
 ]
 
 
-@legend.bot_cmd(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
+@tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     usage = "**CMD** : /raid <value> <text> <reply to anyone>"
     if SPAM == "ON":
