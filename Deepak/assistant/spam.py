@@ -368,7 +368,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID","2035388821") or 0)
 
 
 
-
+OWNER_ID = SUDO_USERS
 que = {}
 hl = '/'
 
