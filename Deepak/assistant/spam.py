@@ -437,7 +437,7 @@ async def replyraid(e):
         lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if e.reply_to_msg_id:
             a = await e.get_reply_message()
-            b = await e.client.get_entity(a.sender_id*
+            b = await e.client.get_entity(a.sender_id)
             g = b.id
             que[g] = []
             qeue = que.get(g)
