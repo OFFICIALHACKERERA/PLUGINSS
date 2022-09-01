@@ -374,7 +374,7 @@ Config.OWNER_ID
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def spam(e):
     usage = "/raid <count> <reply to a User>"
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id in Config.SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -389,7 +389,7 @@ async def spam(e):
             elif int(g) == Config.OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in Config.SUDO_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -412,7 +412,7 @@ async def spam(e):
             elif int(g) == Config.OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in Config.SUDO_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -448,7 +448,7 @@ async def _(event):
 async def _(e):
     global que
     usage = f"/replyraid <reply to a User>."
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id in Config.SUDO_USERS:
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         SAMx = await e.get_reply_message()
         if len(e.text) > 11:
@@ -462,7 +462,7 @@ async def _(e):
             elif int(user_id) == Config.OWNER_ID:
                 text = f"This guy is a owner Of this Bots."            
                 await event.reply(text, parse_mode=None, link_preview=None )
-            elif int(user_id) in SUDO_USERS:
+            elif int(user_id) in Config.SUDO_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -483,7 +483,7 @@ async def _(e):
             elif int(user_id) == Config.OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await event.reply(text, parse_mode=None, link_preview=None )
-            elif int(user_id) in SUDO_USERS:
+            elif int(user_id) in Config.SUDO_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -501,7 +501,7 @@ async def _(e):
 async def _(e):
     usage = "/dreplyraid <reply to a User>."
     global que    
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id in Config.SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -534,7 +534,7 @@ async def _(e):
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sdelayraid(?: |$)(.*)" % hl))
 async def _(event):
    usage = "/dreplyraid <reply to a User>."        
-   if event.sender_id in SUDO_USERS:
+   if event.sender_id in Config.SUDO_USERS:
          if event.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
          Deadly = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -548,7 +548,7 @@ async def _(event):
              elif int(e) == Config.OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await event.reply(text, parse_mode=None, link_preview=None )
-             elif int(e) in SUDO_USERS:
+             elif int(e) in Config.SUDO_USERS:
                     text = f"This guy is a sudo user."
                     await event.reply(text, parse_mode=None, link_preview=None )
              else:
@@ -572,7 +572,7 @@ async def _(event):
                elif int(e) == Config.OWNER_ID:
                        text = f"This guy is a owner Of this Bots."
                        await event.reply(text, parse_mode=None, link_preview=None )
-               elif int(e) in SUDO_USERS:
+               elif int(e) in Config.SUDO_USERS:
                        text = f"This guy is a sudo user."
                        await event.reply(text, parse_mode=None, link_preview=None )
                else:
