@@ -365,7 +365,7 @@ RAID = [
 ]
 
 
-OWNER_ID = SUDO_USERS
+
 que = {}
 hl = '/'
 
