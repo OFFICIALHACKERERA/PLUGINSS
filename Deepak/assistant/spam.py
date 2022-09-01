@@ -501,7 +501,7 @@ async def _(event):
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sreplyraid(?: |$)(.*)" % hl))
 async def _(e):
     global que
-    usage = f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.replyraid <Username of User>\n\n.replyraid <reply to a User>."
+    usage = f"/replyraid <reply to a User>."
     if e.sender_id in SUDO_USERS:
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         SAMx = await e.get_reply_message()
@@ -531,7 +531,7 @@ async def _(e):
             umser = await e.client.get_entity(a.sender_id)
             user_idd = umser.id
             user_id = int(user_idd)
-            if int(user_id) in DEADLYSPAM:
+            if int(user_id) in RAID:
                 text = f" can't raid on @deadly_spam_bot's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
@@ -553,7 +553,7 @@ async def _(e):
 
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sdreplyraid(?: |$)(.*)" % hl))
 async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.dreplyraid <Username of User>\n\n.dreplyraid <reply to a User>"
+    usage = "/dreplyraid <reply to a User>."
     global que    
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
