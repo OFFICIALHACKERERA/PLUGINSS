@@ -1,18 +1,14 @@
-
 import os
 import random
-
 import asyncio
-
 from telethon import events
-
 from ..helpers.utils import unsavegif
 from . import *
 
 
 @tgbot.on(events.NewMessage(pattern="/spam", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
-    usage = "**CMD** :/spam <value> <text>"
+    usage = "/spam <value> <text>"
     if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
         return await e.reply(usage, parse_mode=None, link_preview=None)
     legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -43,7 +39,6 @@ async def spam(e):
 
         await e.reply(usage, parse_mode=None, link_preview=None)
 
-ABUSE = os.environ.get("ABUSE", "ON")
 
 
 NUMBER = ["0", "1"]
@@ -366,66 +361,15 @@ RAID = [
 ]
 
 SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "2035388821").split())
-ABUSE = os.environ.get("ABUSE", "ON")
 
 OWNER_ID = SUDO_USERS
 que = {}
 hl = '/'
 
 
-@tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
-async def spam(e):
-    usage = "**CMD** : /raid <value> <text> <reply to anyone>"
-    if ABUSE == "ON":
-        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None)
-        lol = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(lol) == 2:
-            message = str(lol[1])
-            counter = int(lol[0])
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{message}"
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.3)
-        elif e.reply_to_msg_id:
-            a = await e.get_reply_message()
-            b = await e.client.get_entity(a.sender_id)
-            g = b.id
-            c = b.first_name
-            counter = int(lol[0])
-            username = f"[{c}](tg://user?id={g})"
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.3)
-    else:
-        await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@tgbot.on(events.NewMessage(incoming=True))
-async def raidgoing(event):
-    global que
-    queue = que.get(event.sender_id)
-    if not queue:
-        return
-    async with event.client.action(event.chat_id, "typing"):
-        await asyncio.sleep(0.3)
-    async with event.client.action(event.chat_id, "typing"):
-        await event.client.send_message(
-            entity=event.chat_id,
-            message="""{}""".format(random.choice(RAID)),
-            reply_to=event.message.id,
-        )
-
-
-
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
+    usage = "/raid <value> <text> <reply to anyone>"
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
@@ -436,7 +380,7 @@ async def spam(e):
             a = await e.client.get_entity(user)
             g = a.id
             if int(g) in Deadly:
-                text = f"I can't raid on @deadly_spam_bot's Owner"
+                text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -458,8 +402,8 @@ async def spam(e):
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if int(g) in DEADLYSPAM:
-                text = f"I can't raid on @deadly_spam_bot's Owner"
+            if int(g) in DEEPAK:
+                text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -511,7 +455,7 @@ async def _(e):
             user_idd = a.id
             user_id = int(user_idd)
             if int(user_id) in Deadly:
-                text = f" can't raid on @deadly_spam_bot's Owner."
+                text = f" can't raid on @OFFICIALHACKERERA_BOT's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."            
@@ -524,7 +468,7 @@ async def _(e):
                 gey = que.get(user_id)
                 phucker = [user_id]
                 gey.append(phucker)
-                text = f"Activated replyraid"
+                text = f"✅ Activated replyraid"
                 await e.reply(text, parse_mode=None, link_preview=None )
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
@@ -532,7 +476,7 @@ async def _(e):
             user_idd = umser.id
             user_id = int(user_idd)
             if int(user_id) in RAID:
-                text = f" can't raid on @deadly_spam_bot's Owner."
+                text = f" can't raid on @OFFICIALHACKERERA_BOT's Owner."
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -545,7 +489,7 @@ async def _(e):
                 gey = que.get(user_id)
                 phucker = [user_id]
                 gey.append(phucker)
-                text = f"Activated Replyraid"
+                text = f"✅ Activated Replyraid"
                 await e.reply(text, parse_mode=None, link_preview=None )
         else:
             await e.reply(usage)
@@ -569,7 +513,7 @@ async def _(e):
                 queue.pop(0)
             except Exception as f:
                 pass
-            text = "De-Activated Reply Raid"
+            text = "✅ De-Activated Reply Raid"
             await e.reply(text, parse_mode=None, link_preview=None )
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
@@ -580,14 +524,14 @@ async def _(e):
                 queue.pop(0)
             except Exception as f:
                 pass
-            text = "De-Activated Reply Raid"
+            text = "✅ De-Activated Reply Raid"
             await e.reply(text, parse_mode=None, link_preview=None )
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
     
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sdelayraid(?: |$)(.*)" % hl))
 async def _(event):
-   usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗘𝗟𝗔𝗬𝗥𝗔𝗜𝗗\n\nCommand:\n\n.delayraid <delay> <count> <Username of User>\n\n.delayraid <delay> <count> <reply to a User>\n\nCount and Sleeptime must be a integer."        
+   usage = "/dreplyraid <reply to a User>."        
    if event.sender_id in SUDO_USERS:
          if event.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
@@ -596,8 +540,8 @@ async def _(event):
              user = str(Deadly[2])
              a = await event.client.get_entity(user)
              e = a.id
-             if int(e) in DEADLYSPAM:
-                    text = f"I can't raid on @deadly_spam_bot's Owner"
+             if int(e) in DEEPAK:
+                    text = f"I can't raid on @OFFICIALHACKERERA_BOT's Owner"
                     await event.reply(text, parse_mode=None, link_preview=None )
              elif int(e) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
@@ -620,8 +564,8 @@ async def _(event):
                a = await event.get_reply_message()
                b = await event.client.get_entity(a.sender_id)
                e = b.id
-               if int(e) in DEADLYSPAM:
-                       text = f"I can't raid on @deadly_spam_bot's Owner"
+               if int(e) in DEEPAK:
+                       text = f"I can't raid on @@OFFICIALHACKERERA_BOT's Owner"
                        await event.reply(text, parse_mode=None, link_preview=None )
                elif int(e) == OWNER_ID:
                        text = f"This guy is a owner Of this Bots."
@@ -642,5 +586,3 @@ async def _(event):
                              await asyncio.sleep(sleeptimem)
          else:
             await event.reply(usage)
-
-
