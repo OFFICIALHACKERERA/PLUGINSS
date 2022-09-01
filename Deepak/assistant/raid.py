@@ -1,3 +1,4 @@
+import os
 import asyncio
 import random
 
@@ -6,6 +7,9 @@ from telethon import events
 from . import *
 
 NUMBER = ["0", "1"]
+
+SPAM = os.environ.get("SPAM", "ON")
+
 
 que = {}
 
@@ -379,7 +383,7 @@ async def raidgoing(event):
 )
 async def replyraid(e):
     global que
-    if Config.SPAM == "ON":
+    if SPAM == "ON":
         usage = "/replyraid <reply to anyone>"
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -403,7 +407,7 @@ async def replyraid(e):
 )
 async def dreplyraid(e):
     global que
-    if Config.SPAM == "ON":
+    if SPAM == "ON":
         usage = "/dreplyraid <reply to person> "
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
