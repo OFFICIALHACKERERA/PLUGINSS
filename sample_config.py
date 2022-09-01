@@ -152,7 +152,6 @@ class Config(object):
     COUNTRY = str(os.environ.get("COUNTRY", ""))
     SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID", None)
     SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", None)
-    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
     # For updater plugin
     UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "master")
