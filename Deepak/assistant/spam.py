@@ -369,7 +369,7 @@ OWNER_ID = SUDO_USERS
 que = {}
 hl = '/'
 
-Config.OWNER_ID
+
 
 @tgbot.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def spam(e):
