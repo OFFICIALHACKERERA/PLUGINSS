@@ -44,8 +44,7 @@ legend.tgbot = tgbot = LegendClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=logging.INFO)
+
 
 BOT_USERNAME = Config.BOT_USERNAME
 
