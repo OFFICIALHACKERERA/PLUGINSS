@@ -27,7 +27,7 @@ ENV = bool(os.environ.get("ENV", False))
 LOGS = logging.getLogger(" ♥️ Userbot")
 cmdhr = Config.HANDLER
 
-DEEPAK_PIC = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
+
 
 if ENV:
     VPS_NOLOAD = ["vps"]
@@ -72,7 +72,7 @@ async def startupmessage():
         if BOTLOG:
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/9fdec96f8f340b8946845.jpg",
+                "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4",
                 caption=f"**Your UserBot has been started successfully\n\n__Version__** : {legendversion}\n\n__Sudo__** : {is_sudo}**",
                 buttons=[(Button.url("👨‍🏫 Support ", "https://t.me/HEPPYLIFI"),
                 Button.url("🤖 Updates ", "https://t.me/OFFICIALHACKER789"),)],
