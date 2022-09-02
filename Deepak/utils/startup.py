@@ -203,7 +203,7 @@ async def hekp():
             "DEEPAK_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By Deepak"
         if OWNER_ID != 0:
-            await bot.send_file(
+            await tgbot.send_file(
                 OWNER_ID,
                 DEEPAK_PIC,
                 caption=f"Deployed Userbot Successfully\n\n Userbot ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
