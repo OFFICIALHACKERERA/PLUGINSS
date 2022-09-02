@@ -29,11 +29,6 @@ cmdhr = Config.HANDLER
 
 DEEPAK_PIC = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
 
-OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
-
-OWNER_ID = OWNER_ID
-
-
 if ENV:
     VPS_NOLOAD = ["vps"]
 elif os.path.exists("config.py"):
@@ -202,9 +197,9 @@ async def hekp():
         os.environ[
             "DEEPAK_STRING"        
         ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
-        if OWNER_ID != 0:
+        if Config.LOGGER_ID != 0:
             await tgbot.send_file(
-                OWNER_ID,
+                Config.LOGGER_ID,
                 DEEPAK_PIC,
                 caption=f"Deployed Userbot Successfully\n\n Userbot \n\nType `.help` or `.ping` to check!\nFor Assistant Type `.on` \n\nJoin [OWNER](t.me/OFFICIALHACKERERA) for Updates & [OFFICIAL CHANNEL](t.me/OFFICIALHACKER789) for any query regarding USERBOT",
             )
