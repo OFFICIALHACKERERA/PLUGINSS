@@ -12,5 +12,9 @@ RUN pip3 install -U -r requirements.txt
 
 ENV PATH="/home/Deepak/bin:$PATH"
 
+RUN apt-get install -y nodejs
+
 CMD ["python3","-m","Deepak"]
+
+
 
