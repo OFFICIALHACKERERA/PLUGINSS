@@ -8,8 +8,14 @@ from .client import LegendClient
 
 #Music Bot import
 import os
+
 from telethon import TelegramClient
+from telethon import TelegramClient, events
+from telethon.sessions import StringSession
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from pytgcalls import PyTgCalls
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
+
 
 __version__ = "1.10.6"
 
