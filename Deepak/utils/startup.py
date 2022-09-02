@@ -27,6 +27,13 @@ ENV = bool(os.environ.get("ENV", False))
 LOGS = logging.getLogger(" ♥️ Userbot")
 cmdhr = Config.HANDLER
 
+DEEPAK_PIC = "https://te.legra.ph/file/25af8dcd17cf3535118ec.jpg"
+
+
+LOGGER_ID = os.environ.get("LOGGER_ID", None)
+        if LOGGER_ID:
+            LOGGER_ID = int(LOGGER_ID)
+
 
 if ENV:
     VPS_NOLOAD = ["vps"]
@@ -196,7 +203,13 @@ async def hekp():
         os.environ[
             "DEEPAK_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
-    except Exception as e:
+        if LOGGER_ID != 0:
+            await bot.send_file(
+                LOGGER_ID,
+                DEEPAK_PIC,
+                caption=f"Deployed Userbot Successfully\n\n Userbot ~ \n\nType `help` or `ping` to check!\nFor Assistant Type `.on` \n\nJoin [OWNER](t.me/OFFICIALHACKERERA) for Updates & [OFFICIAL CHAT](t.me/HEPPYLIFI) for any query regarding DEEPAK USERBOT",
+            )
+   except Exception as e:
         print(str(e))
     try:
         await legend(JoinChannelRequest("@Broken_Heart_72"))
@@ -227,11 +240,6 @@ async def scammer(username):
             except:
                 xx += 1
     print(f"OP {i-xx}")
-
-
-
-
-
 
 
 
