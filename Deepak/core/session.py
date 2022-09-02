@@ -6,6 +6,8 @@ from telethon.sessions import StringSession
 from ..Config import Config
 from .client import LegendClient
 
+#Music Bot import
+import os
 from telethon import TelegramClient
 from pytgcalls import PyTgCalls
 
