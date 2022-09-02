@@ -81,8 +81,7 @@ yt-dlp
 aiofiles
 youtube-search-python
 speedtest-cli
-py-Ultroid==2022.6.6
-pytgcalls==3.0.0.dev21
+
 
 
 git+https://github.com/alexmercerind/youtube-search-python
