@@ -206,7 +206,7 @@ async def hekp():
             await legend.tgbot.send_file(
                 OWNER_ID,
                 DEEPAK_PIC,
-                caption=f"Deployed Userbot Successfully\n\n Userbot ~ {legendversion}\n\nType `.help` or `.ping` to check!\nFor Assistant Type `.on` \n\nJoin [OWNER](t.me/OFFICIALHACKERERA) for Updates & [OFFICIAL CHANNEL](t.me/OFFICIALHACKER789) for any query regarding USERBOT",
+                caption=f"Deployed Userbot Successfully\n\n Userbot \n\nType `.help` or `.ping` to check!\nFor Assistant Type `.on` \n\nJoin [OWNER](t.me/OFFICIALHACKERERA) for Updates & [OFFICIAL CHANNEL](t.me/OFFICIALHACKER789) for any query regarding USERBOT",
             )
     except Exception as e:
         print(str(e))
