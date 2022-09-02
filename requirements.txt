@@ -72,15 +72,7 @@ youtube_search
 fake_useragent
 faker
 htmlwebshot
-telethon==1.24.0
-py-tgcalls
-requests
-pillow
-aiofile
-yt-dlp
-aiofiles
-youtube-search-python
-speedtest-cli
+
 
 
 git+https://github.com/alexmercerind/youtube-search-python
