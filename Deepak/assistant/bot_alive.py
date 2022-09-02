@@ -14,7 +14,7 @@ menu_category = "bot"
 botusername = Config.BOT_USERNAME
 
 
-PM_IMG = "https://telegra.ph/file/320f3073cf2f910c7c8cf.jpg"
+PM_IMG = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
 pm_caption = f"ASSISTANT IS ONLINE\n\n"
 pm_caption += f"Ôwñêř ~ 『{mention}』\n"
 pm_caption += f"**╭───────────**\n"
