@@ -196,13 +196,7 @@ async def hekp():
     try:
         os.environ[
             "DEEPAK_STRING"        
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
-        if Config.LOGGER_ID != 0:
-            await legend.tgbot.send_file(
-                Config.LOGGER_ID,
-                DEEPAK_PIC,
-                caption=f"Deployed Userbot Successfully\n\nType `.help` or `.ping` to check!\n\n🥀 𝗼𝘄𝗻𝗲𝗿 : [𝗼𝘄𝗻𝗲𝗿](t.me/OFFICIALHACKERERA)",
-            )
+        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"        
     except Exception as e:
         print(str(e))
     try:
