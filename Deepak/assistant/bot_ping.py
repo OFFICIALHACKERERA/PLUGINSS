@@ -30,7 +30,7 @@ async def bot_start(event):
     buttons = [(Button.url("OFFICIAL HACKER", "https://t.me/OFFICIALHACKERERA"))]
     PM_IMG = (
         gvarstatus("BOT_PING_PIC")
-        or "https://telegra.ph/file/320f3073cf2f910c7c8cf.jpg"
+        or "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
     )
     start = datetime.now()
     end = datetime.now()
