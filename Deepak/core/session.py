@@ -49,12 +49,12 @@ legend.tgbot = tgbot = LegendClient(
 BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
 API_ID = int(os.environ.get("APP_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
-
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 BOT_USERNAME = BOT_USERNAME
 
 bot = TelegramClient('Deepak', api_id=API_ID, api_hash=API_HASH)
 Deepak = bot.start(bot_token=BOT_TOKEN)
-client = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
+client = TelegramClient(StringSession(Config.DEEPAK_STRING), API_ID, API_HASH)
 call_py = PyTgCalls(client)
 client.start()
 call_py.start()
