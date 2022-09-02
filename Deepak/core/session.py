@@ -36,7 +36,22 @@ legend.tgbot = tgbot = LegendClient(
     api_hash=Config.API_HASH,
     loop=loop,
     app_version=__version__,
+    call_py = PyTgCalls(tgbot)
+    client.start()
+    call_py.start()
     connection=ConnectionTcpAbridged,
     auto_reconnect=True,
     connection_retries=None,
 ).start(bot_token=Config.BOT_TOKEN)
+
+
+
+
+
+
+
+
+
+
+
+
