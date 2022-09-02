@@ -73,7 +73,7 @@ async def startupmessage():
             Config.LEGENDUBLOGO = await legend.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/9fdec96f8f340b8946845.jpg",
-                caption=f"**Your UserBot has been started successfully\n🥀 𝗼𝘄𝗻𝗲𝗿 : [𝗼𝘄𝗻𝗲𝗿](t.me/OFFICIALHACKERERA)\n__Version__** : {legendversion}\n__Sudo__** : {is_sudo}",
+                caption=f"**Your UserBot has been started successfully\n\n__Version__** : {legendversion}\n\n__Sudo__** : {is_sudo}**",
                 buttons=[(Button.url("👨‍🏫 Support ", "https://t.me/HEPPYLIFI"),
                 Button.url("🤖 Updates ", "https://t.me/OFFICIALHACKER789"),)],
             )
