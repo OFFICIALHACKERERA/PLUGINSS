@@ -8,13 +8,6 @@ from telethon import Button, events
 from telethon.errors import UserIsBlockedError
 from telethon.events import CallbackQuery, StopPropagation
 from telethon.utils import get_display_name
-
-
-
-
-
-
-
 from Deepak import Config, legend
 
 from ..core import check_owner, pool
@@ -40,6 +33,8 @@ LOGS = logging.getLogger(__name__)
 menu_category = "bot"
 botusername = Config.BOT_USERNAME
 
+
+custompic = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
 
 class FloodConfig:
     BANNED_USERS = set()
@@ -94,7 +89,7 @@ async def bot_start(event):
     my_last = user.last_name
     my_fullname = f"{my_first} {my_last}" if my_last else my_first
     my_username = f"@{user.username}" if user.username else my_mention
-    custompic = gvarstatus("BOT_START_PIC","https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4")
+    custompic = gvarstatus("BOT_START_PIC") or None
     if chat.id != Config.OWNER_ID:
         customstrmsg = gvarstatus("START_TEXT") or None
         if customstrmsg is not None:
