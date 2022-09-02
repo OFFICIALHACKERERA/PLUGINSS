@@ -9,7 +9,7 @@ WORKDIR /root/userbot
 
 # Install requirements
 RUN pip3 install -U -r requirements.txt
-RUN apt-get install -y nodejs
+
 ENV PATH="/home/Deepak/bin:$PATH"
 
 CMD ["python3","-m","Deepak"]
