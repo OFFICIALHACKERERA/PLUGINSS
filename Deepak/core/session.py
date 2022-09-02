@@ -6,6 +6,8 @@ from telethon.sessions import StringSession
 from ..Config import Config
 from .client import LegendClient
 
+from pytgcalls import PyTgCalls
+
 __version__ = "1.10.6"
 
 loop = None
@@ -36,15 +38,18 @@ legend.tgbot = tgbot = LegendClient(
     api_hash=Config.API_HASH,
     loop=loop,
     app_version=__version__,
-    call_py = PyTgCalls(tgbot)
-    client.start()
-    call_py.start()
     connection=ConnectionTcpAbridged,
     auto_reconnect=True,
     connection_retries=None,
 ).start(bot_token=Config.BOT_TOKEN)
 
 
+bot = TelegramClient('Deepak', api_id=Config.API_ID, api_hash=Config.API_HASH)
+Deepak = bot.start(bot_token=Config.BOT_TOKEN)
+client = TelegramClient(StringSession(Config.DEEPAK_STRING), Config.API_ID, Config.API_HASH)
+call_py = PyTgCalls(client)
+client.start()
+call_py.start()
 
 
 
