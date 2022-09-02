@@ -27,7 +27,7 @@ ENV = bool(os.environ.get("ENV", False))
 LOGS = logging.getLogger(" ♥️ Userbot")
 cmdhr = Config.HANDLER
 
-DEEPAK_PIC = "https://te.legra.ph/file/25af8dcd17cf3535118ec.jpg"
+DEEPAK_PIC = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
 
 
 LOGGER_ID = os.environ.get("LOGGER_ID", None)
