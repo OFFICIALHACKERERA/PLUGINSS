@@ -81,7 +81,7 @@ yt-dlp
 aiofiles
 youtube-search-python
 speedtest-cli
-Node.js 15.0.0+
+Node.js=15.0.0+
 
 
 git+https://github.com/alexmercerind/youtube-search-python
