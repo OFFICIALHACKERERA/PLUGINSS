@@ -48,7 +48,7 @@ legend.tgbot = tgbot = LegendClient(
 API_ID = int(os.environ.get("APP_ID", "6435225"))
 API_HASH = os.environ.get("API_HASH", "4e984ea35f854762dcde906dce426c2d")
 
-BOT_USERNAME = Config.BOT_USERNAME
+BOT_USERNAME = BOT_USERNAME
 
 bot = TelegramClient('Deepak', api_id=API_ID, api_hash=API_HASH)
 Deepak = bot.start(bot_token=BOT_TOKEN)
