@@ -263,7 +263,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 PIC = list(legend)
                 I_IMG = random.choice(PIC)
             elif not IALIVE_PIC:
-                I_IMG = "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+                I_IMG = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
             if I_IMG and I_IMG.endswith((".jpg", ".png")):
                 result = builder.photo(
                     I_IMG,
@@ -455,7 +455,7 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             oso = gvarstatus("HELP_IMG")
             if oso is None:
-                help_pic = "https://telegra.ph/file/a546ac14db23ef46ddf14.jpg"
+                help_pic = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
             else:
                 lol = [x for x in oso.split()]
                 help_pic = random.choice(lol)
@@ -584,7 +584,7 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             PM_PIC = (
                 gvarstatus("PM_PIC")
-                or "https://telegra.ph/file/a546ac14db23ef46ddf14.jpg"
+                or "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
             )
             if PM_PIC:
                 legend = [x for x in PM_PIC.split()]
@@ -624,7 +624,7 @@ async def inline_handler(event):  # sourcery no-metrics
                     ),
                 )
             ]
-            ALV_PIC = "https://telegra.ph/file/a546ac14db23ef46ddf14.jpg"
+            ALV_PIC = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
