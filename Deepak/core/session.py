@@ -15,7 +15,7 @@ loop = None
 if Config.DEEPAK_STRING:
     session = StringSession(str(Config.DEEPAK_STRING))
 else:
-    session = "🩸USERBOT"
+    session = "USERBOT✅"
 
 try:
     legend = LegendClient(
@@ -44,19 +44,14 @@ legend.tgbot = tgbot = LegendClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.INFO)
+
+BOT_USERNAME = Config.BOT_USERNAME
+
 bot = TelegramClient('Deepak', api_id=Config.API_ID, api_hash=Config.API_HASH)
 Deepak = bot.start(bot_token=Config.BOT_TOKEN)
-client = TelegramClient(StringSession(Config.DEEPAK_STRING), Config.API_ID, Config.API_HASH)
+client = TelegramClient(StringSession(Config.STRING_SESSION), Config.API_ID, Config.API_HASH)
 call_py = PyTgCalls(client)
 client.start()
 call_py.start()
-
-
-
-
-
-
-
-
-
-
