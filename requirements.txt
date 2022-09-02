@@ -72,6 +72,7 @@ youtube_search
 fake_useragent
 faker
 htmlwebshot
+py-tgcalls
 
 git+https://github.com/alexmercerind/youtube-search-python
 git+https://github.com/LEGEND-AI/Telethon
