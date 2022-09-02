@@ -29,10 +29,9 @@ cmdhr = Config.HANDLER
 
 DEEPAK_PIC = "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
 
+OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
 
-LOGGER_ID = os.environ.get("LOGGER_ID", None)
-        if LOGGER_ID:
-            LOGGER_ID = int(LOGGER_ID)
+OWNER_ID = OWNER_ID
 
 
 if ENV:
