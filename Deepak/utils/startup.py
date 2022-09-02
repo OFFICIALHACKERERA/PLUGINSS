@@ -200,8 +200,8 @@ async def load_plugins(folder, extfolder=None):
 async def hekp():
     try:
         os.environ[
-            "DEEPAK_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By Deepak"
+            "DEEPAK_STRING"        
+        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
         if OWNER_ID != 0:
             await legend.tgbot.send_file(
                 OWNER_ID,
@@ -210,18 +210,18 @@ async def hekp():
             )
     except Exception as e:
         print(str(e))
-
     try:
-        await legend(JoinChannelRequest("@HEPPYLIFI"))
+        await legend(JoinChannelRequest("@OFFICIALHACKER789"))
     except BaseException:
         pass
-
     try:
-        await legend(JoinChannelRequest("@Broken_Heart_72"))
+        await legend(joinChannelRequest("@Broken_Heart_72"))
     except BaseException:
         pass
-
-
+    try:
+        await legend(joinChannelRequest("@HEPPYLIFI"))
+    except BaseException:
+        pass
 
 
 
