@@ -94,10 +94,10 @@ async def bot_start(event):
         if customstrmsg is not None:
             buttons = [
                 (
-                    Button.inline("🔰 Rules 🔰", data="rules"),
-                    Button.inline("❤ Deploy ❤", data="depy"),
+                    Button.inline("❮ ʀᴜʟᴇs ❯", data="rules"),
+                    Button.inline("❮ ᴅᴇᴘʟᴏʏ ❯", data="depy"),
                 ),
-                (Button.url("🔱 Support 🔱", "https://t.me/HEPPYLIFI"),),
+                (Button.url("❮ sᴜᴘᴘᴏʀᴛ ❯", "https://t.me/HEPPYLIFI"),),
             ]
             start_msg = customstrmsg.format(
                 mention=mention,
@@ -113,20 +113,20 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered by [OFFICIAL HACKER](https://t.me/OFFICIALHACKERERA)"
+            start_msg = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered By : [ᴏғғɪᴄɪᴀʟ ʜᴀᴄᴋᴇʀ](https://t.me/OFFICIALHACKERERA)"
             buttons = [
                 (
-                    Button.inline("🔰 Rules 🔰", data="rules"),
-                    Button.inline("❤ Deploy ❤", data="depy"),                    
+                    Button.inline("❮ ʀᴜʟᴇs ❯", data="rules"),
+                    Button.inline("❮ ᴅᴇᴘʟᴏʏ ❯", data="depy"),                    
 
                 ),                 
-                (Button.url("🔱 Support 🔱","https://t.me/HEPPYLIFI"),),
+                (Button.url("❮ sᴜᴘᴘᴏʀᴛ ❯","https://t.me/HEPPYLIFI"),),
             ]
     else:
         start_msg = f"Hey {mention} I am your {my_mention}'s assistant bot.\nI Am Here To Help U \n\nPowered By [OFFICIAL HACKER](https://t.me/OFFICIALHACKERERA)"
         buttons = [
             (
-                Button.url(" Support ", "https://t.me/HEPPYLIFI"),
+                Button.url("❮ sᴜᴘᴘᴏʀᴛ ❯", "https://t.me/HEPPYLIFI"),
                 Button.url(" Updates ", "https://t.me/OFFICIALHACKER789"),
             ),
             (
