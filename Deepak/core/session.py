@@ -46,9 +46,9 @@ legend.tgbot = tgbot = LegendClient(
     connection_retries=None,
 ).start(bot_token=Config.BOT_TOKEN)
 
-
-API_ID = int(os.environ.get("APP_ID", "6435225"))
-API_HASH = os.environ.get("API_HASH", "4e984ea35f854762dcde906dce426c2d")
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
+API_ID = int(os.environ.get("APP_ID", ""))
+API_HASH = os.environ.get("API_HASH", "")
 
 BOT_USERNAME = BOT_USERNAME
 
