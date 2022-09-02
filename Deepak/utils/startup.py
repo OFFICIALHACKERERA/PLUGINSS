@@ -201,31 +201,29 @@ async def hekp():
     try:
         os.environ[
             "DEEPAK_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
+        ] = "String Is A Sensitive Data \nSo Its Protected By Deepak"
         if OWNER_ID != 0:
             await bot.send_file(
                 OWNER_ID,
                 DEEPAK_PIC,
-                caption=f"Deployed Userbot Successfully\n\n Userbot ~ \n\nType `help` or `ping` to check!\nFor Assistant Type `.on` \n\nJoin [OWNER](t.me/OFFICIALHACKERERA) for Updates & [OFFICIAL CHAT](t.me/HEPPYLIFI) for any query regarding DEEPAK USERBOT",
+                caption=f"Deployed Userbot Successfully\n\n Userbot ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
-   except Exception as e:
+    except Exception as e:
         print(str(e))
+
     try:
-        await legend(JoinChannelRequest("@Broken_Heart_72"))
+        await bot(JoinChannelRequest("@HEPPYLIFI"))
     except BaseException:
         pass
+
     try:
-        await legend(JoinChannelRequest("@HEPPYLIFI"))
+        await bot(JoinChannelRequest("@Broken_Heart_72"))
     except BaseException:
         pass
-    try:
-        await legend(JoinChannelRequest("@OFFICIALHACKER789"))
-    except BaseException:
-        pass
-    try:
-        await legend(LeaveChannelRequest("@Official_LegendBot"))
-    except BaseException:
-        pass
+
+
+
+
 
 
 async def scammer(username):
