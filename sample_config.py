@@ -7,7 +7,7 @@ from validators.url import url
 
 class Config(object):
     LOGGER = True
-
+    
     # MUST NEEDED VARS
     # set this value with your name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
@@ -136,6 +136,9 @@ class Config(object):
     MAX_MESSAGE_SIZE_LIMIT = 4095
     # specify LOAD and NO_LOAD
     LOAD = []
+    LOGGER_ID = os.environ.get("LOGGER_ID", None)
+    if LOGGER_ID:
+        LOGGER_ID = int(LOGGER_ID)
     # warn mode for anti flood
     ANTI_FLOOD_WARN_MODE = ChatBannedRights(
         until_date=None, view_messages=None, send_messages=True
