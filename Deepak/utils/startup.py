@@ -207,9 +207,9 @@ async def hekp():
         os.environ[
             "DEEPAK_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By Official Hacker"
-         if LOGGER_ID != 0:
+         if Config.LOGGER_ID != 0:
             await legend.send_file(
-                LOGGER_ID,
+                Config.LOGGER_ID,
                 LEGEND_PIC,
                 caption=f"Deployed Userbot Successfully...",
             )
