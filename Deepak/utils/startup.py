@@ -207,11 +207,11 @@ async def hekp():
     except BaseException:
         pass
     try:
-        await legend(LeaveChannelRequest("@Broken_Heart_72"))
+        await legend(joinChannelRequest("@Broken_Heart_72"))
     except BaseException:
         pass
     try:
-        await legend(LeaveChannelRequest("@HEPPYLIFI"))
+        await legend(joinChannelRequest("@HEPPYLIFI"))
     except BaseException:
         pass
 
