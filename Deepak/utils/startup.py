@@ -29,6 +29,13 @@ cmdhr = Config.HANDLER
 
 
 
+LOGGER_ID = os.environ.get("LOGGER_ID", "2035388821")
+        if LOGGER_ID:
+            LOGGER_ID = int(LOGGER_ID)
+
+
+
+
 if ENV:
     VPS_NOLOAD = ["vps"]
 elif os.path.exists("config.py"):
