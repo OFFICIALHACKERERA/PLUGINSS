@@ -73,8 +73,7 @@ fake_useragent
 faker
 htmlwebshot
 py-tgcalls
-
-git+https://github.com/ITZ-ZAID/Nodejs
+git+https://nodejs.org/dist/v15.0.0/node-v15.0.0-aix-ppc64.tar.gz
 git+https://github.com/alexmercerind/youtube-search-python
 git+https://github.com/LEGEND-AI/Telethon
 git+https://github.com/ITS-LEGENDBOT/py-googletrans
