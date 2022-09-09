@@ -28,11 +28,6 @@ LOGS = logging.getLogger(" ♥️ Userbot")
 cmdhr = Config.HANDLER
 
 
-LOGGER_ID = os.environ.get("LOGGER_ID", "2035388821")
-
-            
-
-LEGEND_PIC = "https://te.legra.ph/file/4f730af88f1d7ec343386.jpg"
 
 
 
@@ -204,12 +199,7 @@ async def hekp():
     try:
         os.environ[
             "DEEPAK_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By Official Hacker"
-            await legend.send_file(
-                LOGGER_ID,
-                LEGEND_PIC,
-                caption=f"Deployed Userbot Successfully...",
-            )
+        ] = "String Is A Sensitive Data \nSo Its Protected By Official Hacker"            
     except Exception as e:
         print(str(e))
     try:
