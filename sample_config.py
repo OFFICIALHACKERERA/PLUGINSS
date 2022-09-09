@@ -8,7 +8,6 @@ from validators.url import url
 class Config(object):
     LOGGER = True
 
-    LOGGER_ID = os.environ.get("LOGGER_ID", None)
     # MUST NEEDED VARS
     # set this value with your name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
