@@ -44,7 +44,6 @@ legend.tgbot = tgbot = LegendClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-Deepak = bot.start(bot_token=Config.BOT_TOKEN)
 client = TelegramClient(StringSession(Config.DEEPAK_STRING), Config.APP_ID, Config.API_HASH)
 call_py = PyTgCalls(client)
 client.start()
