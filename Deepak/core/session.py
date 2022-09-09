@@ -6,6 +6,7 @@ from telethon.sessions import StringSession
 from ..Config import Config
 from .client import LegendClient
 
+from telethon import TelegramClient
 from pytgcalls import PyTgCalls
 
 __version__ = "1.10.6"
