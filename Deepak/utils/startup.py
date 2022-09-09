@@ -192,11 +192,18 @@ async def load_plugins(folder, extfolder=None):
         )
 
 
+
 async def hekp():
     try:
         os.environ[
-            "DEEPAK_STRING"        
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"        
+            "DEEPAK_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By Official Hacker"
+         if Config.LOGGER_ID != 0:
+            await legend.send_file(
+                Config.LOGGER_ID,
+                LEGEND_PIC,
+                caption=f"Deployed Userbot Successfully...",
+            )
     except Exception as e:
         print(str(e))
     try:
@@ -204,14 +211,13 @@ async def hekp():
     except BaseException:
         pass
     try:
-        await legend(joinChannelRequest("@Broken_Heart_72"))
+        await legend(LeaveChannelRequest("@Broken_Heart_72"))
     except BaseException:
         pass
     try:
-        await legend(joinChannelRequest("@HEPPYLIFI"))
+        await legend(LeaveChannelRequest("@HEPPYLIFI"))
     except BaseException:
         pass
-
 
 
 
