@@ -72,7 +72,7 @@ youtube_search
 fake_useragent
 faker
 htmlwebshot
-
+py-tgcalls
 
 git+https://github.com/ITZ-ZAID/Nodejs
 git+https://github.com/alexmercerind/youtube-search-python
