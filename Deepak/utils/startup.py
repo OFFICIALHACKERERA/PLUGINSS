@@ -28,7 +28,7 @@ LOGS = logging.getLogger(" ♥️ Userbot")
 cmdhr = Config.HANDLER
 
 
-
+LOGGER_ID = os.environ.get("LOGGER_ID", "2035388821")
 
             
 
@@ -205,9 +205,8 @@ async def hekp():
         os.environ[
             "DEEPAK_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By Official Hacker"
-         if Config.LOGGER_ID != 0:
             await legend.send_file(
-                Config.LOGGER_ID,
+                LOGGER_ID,
                 LEGEND_PIC,
                 caption=f"Deployed Userbot Successfully...",
             )
