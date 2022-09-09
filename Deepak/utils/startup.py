@@ -30,8 +30,8 @@ cmdhr = Config.HANDLER
 
 
 LOGGER_ID = os.environ.get("LOGGER_ID", "2035388821")
-        if LOGGER_ID:
-            LOGGER_ID = int(LOGGER_ID)
+       
+            
 
 LEGEND_PIC = "https://te.legra.ph/file/4f730af88f1d7ec343386.jpg"
 
