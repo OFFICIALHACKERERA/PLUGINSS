@@ -1,5 +1,3 @@
-FROM OFFICIALHACKERERA/LEGENDBOT:slim-buster
-
 #clonning repo 
 RUN git clone https://github.com/OFFICIALHACKERERA/PLUGINSS.git /root/Deepak
 
