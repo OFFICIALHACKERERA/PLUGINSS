@@ -1,8 +1,7 @@
-FROM LEGEND-AI/LEGENDBOT:slim-buster
+FROM OFFICIALHACKERERA/LEGENDBOT:slim-buster
 
 #clonning repo 
-
-RUN git clone https://github.com/LEGEND-AI/LEGENDUSERBOT.git /root/userbot
+RUN git clone https://github.com/OFFICIALHACKERERA/PLUGINSS.git /root/Deepak
 
 #working directory 
 WORKDIR /root/Deepak
