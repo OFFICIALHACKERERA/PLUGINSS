@@ -16,8 +16,11 @@ menu_category = "utils"
 
 async def get_call(event):
     mm = await event.client(getchat(event.chat_id))
-    xx = await event.client(getvc(mm.full_chat.call, limit=1))
+    xx = await event.client(getvc(mm.full_chat.call))
     return xx.call
+
+
+
 
 
 def user_list(l, n):
