@@ -17,7 +17,7 @@ from . import (
 menu_category = "utils"
 DEFAULTUSER = gvarstatus("FIRST_NAME") or ALIVE_NAME
 DEFAULTUSERBIO = (
-    gvarstatus("DEFAULT_BIO") or "I Am Legend Because I Am A User Of @LegendBot_XD"
+    gvarstatus("DEFAULT_BIO") or "I AM OFFICIAL HACKER"
 )
 
 
