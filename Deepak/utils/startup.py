@@ -24,7 +24,7 @@ from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
 
-LOGS = logging.getLogger(" ♥️ Userbot")
+LOGS = logging.getLogger("UserBot")
 cmdhr = Config.HANDLER
 
 
