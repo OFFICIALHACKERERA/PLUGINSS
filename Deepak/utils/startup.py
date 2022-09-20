@@ -28,7 +28,7 @@ LOGS = logging.getLogger("UserBot")
 cmdhr = Config.HANDLER
 
 
-LOGGER_ID = os.environ.get("LOGGER_ID", "5551991981")
+
 
 
 if ENV:
