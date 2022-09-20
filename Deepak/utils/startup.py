@@ -193,31 +193,28 @@ async def load_plugins(folder, extfolder=None):
             f'Your external repo plugins have imported \n**No of imported plugins :** `{success}`\n**Failed plugins to import :** `{", ".join(failure)}`',
         )
 
+
+
+
 async def hekp():
     try:
         os.environ[
             "DEEPAK_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
-            await legend.send_file(
-                LOGGER_ID,
-                LEGEND_PIC,
-                caption=f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
-            )
+        ] = "String Is A Sensitive Data \nSo Its Protected By Official Hacker"            
     except Exception as e:
         print(str(e))
-
     try:
-        await legend(JoinChannelRequest(""))
+        await legend(JoinChannelRequest("@OFFICIALHACKER789"))
     except BaseException:
         pass
-
     try:
-        await legend(JoinChannelRequest(""))
+        await legend(JoinChannelRequest("@Broken_Heart_72"))
     except BaseException:
         pass
-
-
-
+    try:
+        await legend(JoinChannelRequest("@HEPPYLIFI"))
+    except BaseException:
+        pass
 
 
 
