@@ -580,7 +580,9 @@ async def inline_handler(event):  # sourcery no-metrics
             await event.answer([result] if result else None)
         elif string == "pmpermit":
             buttons = [
-                Button.inline(text="❮ ᴏᴘᴇɴ ᴘᴍ ᴍᴇɴᴜ ❯", data="show_pmpermit_options"),
+                Button.inline(text="Open pm mene", data="show_pmpermit_options"),
+                Button.url("Support", "https://t.me/HEPPYLIFI"),
+
             ]
             PM_PIC = (
                 gvarstatus("PM_PIC")
