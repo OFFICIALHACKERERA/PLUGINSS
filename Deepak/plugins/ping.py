@@ -43,7 +43,7 @@ async def ping(event):
         ping_temp = (gvarstatus("PING_TEMPLATE")) or " ᴍʏ ᴍᴀsᴛᴇʀ ➫ {mention}\n ᴘ ɪ ɴ ɢ ➫  {ping}\n ᴜ ᴘ ᴛ ɪ ᴍ ᴇ ➫ {uptime}"
         sweetie = (
             gvarstatus("PING_IMG")
-            or "https://telegra.ph/file/9fdec96f8f340b8946845.jpg"
+            or "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4"
         )
         caption = ping_temp.format(
             mention=mention,
