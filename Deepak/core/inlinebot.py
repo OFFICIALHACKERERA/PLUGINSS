@@ -584,7 +584,7 @@ async def inline_handler(event):  # sourcery no-metrics
                  Button.inline(text="Open pm mene", data="show_pmpermit_options"),
                 ),
                 (
-                    Button.url("Support", "https://t.me/HEPPYLIFI"),
+                    Button.url("Support", "https://t.me/Bhutiya_Haveli"),
                     Button.url("Owner", "https://t.me/OFFICIALHACKERERA"),
                 ),
             ]
