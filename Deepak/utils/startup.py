@@ -76,7 +76,7 @@ async def startupmessage():
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/6bb3994d5789d8e7f2c99.mp4",
                 caption=f"**Your UserBot has been started successfully\n\n__Version__** : {legendversion}\n\n__Sudo__** : {is_sudo}**",
-                buttons=[(Button.url("👨‍🏫 Support ", "https://t.me/HEPPYLIFI"),
+                buttons=[(Button.url("👨‍🏫 Support ", "https://t.me/Bhutiya_Haveli"),
                 Button.url("🤖 Updates ", "https://t.me/OFFICIALHACKER789"),)],
             )
     except Exception as e:
